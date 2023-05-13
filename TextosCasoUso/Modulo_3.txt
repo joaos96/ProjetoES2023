@@ -1,0 +1,66 @@
+Caso de Uso "Registar Progresso dos Combates" 
+
+Caminho Principal
+1. O utilizador está autenticado e é mostrada a página "Homepage"
+2. O utilizador escolhe a opção "Ver" na lista de eventos disponíveis na página "Homepage" e é mostrada a página do "Evento X"
+3. O utilizador escolhe a opção "Ver" na lista de provas disponíveis na página "Evento X" e é mostrada a página da "Prova X"
+4. O utilizador escolhe a fase em que a prova se encontra (caso de uso "Escolher Fase da Prova")
+5. O utilizador escolhe a opção "Registar Resultado" de um combate que ainda não tenha sido registado
+6. A aplicação mostra o formulário de registar o resultado do combate
+7. O utilizador insere os pontos que cada atleta teve, seleciona o vencedor e o motivo de ter ganho
+8. O utilizador escolhe a opção "Registar Resultado"
+9. A aplicação mostra uma janela para confirmar o registo do resultado e o utilizador escolha a opção "Sim"
+10. A aplicação valida os resultados (caso de uso "Validar Registo de Combate") e é mostrada uma mensagem de sucesso
+11. A aplicação regista os valores inseridos
+
+Caminhos Alternativos 
+1.1 O utilizador não está autenticado
+1.1.1 O caso de usa continua no caso de uso "Login"
+2.1 Não existem eventos criados
+2.1.1 O caso de usa continua no caso de uso "Criar Evento"
+2.1.2 O caso de usa continua no caso de uso "Importar Evento"
+3.1 Não existem provas criadas
+3.1.1 O caso de usa continua no caso de uso "Criar Prova"
+3.1.2 O caso de usa continua no caso de uso "Importar Prova"
+3.2 As provas listadas já se encontram finalizadas
+3.2.1 O caso de uso continua no ponto 3
+8.1 O utilizador escolhe a opção "Cancelar"
+8.1.1 O caso de uso continua no ponto 4
+9.1 O utilizador escolhe a opção "Cancelar"
+9.1.1 O caso de uso continua no ponto 7
+10.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Registo de Combate")
+10.1.1 O caso de uso de continua no ponto 4
+11.1 Caso o combate se encontra na fase final da prova o caso de uso continua no caso de uso "Registar Resultado da Prova"
+
+Caso de uso "Validar Registo de Combate"
+
+Caminho Principal
+1. O valor do campo pontos do atleta 1 é validado
+2. O valor do campo pontos do atleta 2 é validado
+3. O valor do campo vencedor é validado 
+4. O valor do campo razão da vitória é validado
+5. A validação é feita com sucesso
+
+Caminhos Alternativos
+1.1 O valor do campo de pontos do atleta 1 não está preenchido
+1.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+1.2 O valor do campo de pontos do atleta 1 contém letras
+1.2.1 A aplicação mostra a mensagem de erro "Este campo é numérico"
+1.3 O valor do campo de pontos do atleta 1 contém um valor inferior a 0
+1.3.1 A aplicação mostra a mensagem de erro "O valor deste campo é inferior a 0"
+1.4 O valor do campo de pontos do atleta 1 contém um valor superior a 999*
+1.4.1 A aplicação mostra a mensagem de erro "O valor deste campo é superior a 999"
+2.1 O valor do campo de pontos do atleta 2 não está preenchido
+2.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+2.2 O valor do campo de pontos do atleta 2 contém letras
+2.2.1 A aplicação mostra a mensagem de erro "Este campo é numérico"
+2.3 O valor do campo de pontos do atleta 1 contém um valor inferior a 0
+2.3.1 A aplicação mostra a mensagem de erro "O valor deste campo é inferior a 0"
+2.4 O valor do campo de pontos do atleta 2 contém um valor superior a 999*
+2.4.1 A aplicação mostra a mensagem de erro "O valor deste campo é superior a 999"
+3.1 O utilizador não escolheu um vencedor
+3.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+4.1 utilizador não escolheu uma razão de vitória
+4.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+
+*(no Jiu-Jitsu é extremamente improvável o valor de pontos de um combate ultrapassar 100 pontos)
