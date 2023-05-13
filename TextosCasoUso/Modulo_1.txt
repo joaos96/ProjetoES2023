@@ -1,0 +1,93 @@
+
+ 	Criar Evento 
+Cenário  Principal
+
+1. Programa mostra Página de Login;
+2. O Utilizador introduz os dados para realizar o login;
+3. A app verifica se os dados estão corretos e valida a operação;
+4. Plataforma mostra página "Home" (Com possibilidade de Gerir Atletas e Gerir Eventos);
+5. Utilizador escolhe opção "Criar Evento";
+6. Plataforma mostra-lhe janela para inserir dados do evento;
+7. Utilizador insere os dados pretendidos para o evento;
+8. Utilizador clica em "Criar Evento";
+9. Plataforma valida os dados;
+10. Plataforma regista evento e abre-o para os atletas poderem se inscrever.
+
+
+Cenário Secundário
+
+2.1 O Utilizador introduz os dados incorretos;
+2.1.2 Aparece mensagem de erro "Dados introduzidos inválidos";
+2.2 O Utilizador carrega no botão "Sair";
+2.2.1 Programa fecha;
+5.1 Utilizador carrega no botão "Sair";
+5.1.1 Programa fecha;
+7.1 Utilizador carrega no botão "Cancelar";
+7.1.1 Plataforma volta à página "Home";
+9.1 Plataforma verifica que nem todos os campos foram completos;
+9.1.1 Plataforma dá aviso sobre os campos em falta;
+9.1.2 O caso de uso continua no ponto 7;
+9.2 Plataforma verifica que evento a ser criado já existe;
+9.2.1 Plataforma dá aviso sobre um evento igual já existir;
+9.2.2 O caso de uso continua no ponto 7;
+9.3 Plataforma verifica que os dados inseridos são inválidos;
+9.3.1 Plataforma dá aviso sobre os campos inseridos inválidos;
+9.3.2 O caso de uso continua no ponto 7.
+
+
+
+
+------------------------------------------
+
+
+ 	Importar Prova(s) de Ficheiro
+Cenário  Principal
+
+1. Programa mostra Página de Login;
+2. O Utilizador introduz os dados para realizar o login;
+3. A app verifica se os dados estão corretos e valida a operação;
+4. Plataforma mostra página "Home" (com possibilidade de Gerir Atletas e Gerir Eventos);
+5 Utilizador carrega no botão "Ver" de um evento da lista;
+6 Plataforma mostra página desse Evento (com lista das suas provas);
+7 Utilizador carrega no botão "Importar Provas";
+8 Plataforma mostra janela com opçao para fazer upload de ficheiros com as provas a serem importadas;
+9 Utilizador carrega no botão "Procurar ficheiro";
+10 Plataforma mostra janela para escolha do ficheiro;
+11 Utilizador navega pelos diretórios e seleciona ficheiro pretendido a importar;
+12 Utilizado carrega no botão "Importar";
+13 Plataforma valida ficheiro;
+14 Plataforma importa dados do ficheiro;
+15 Plataforma indica que a importação foi bem sucedida e provas aparecerão na lista.
+
+
+Cenário Secundário
+
+2.1 O Utilizador introduz os dados incorretos;
+2.1.2 Aparece mensagem de erro "Dados introduzidos inválidos";
+2.2 O Utilizador carrega no botão "Sair";
+2.2.1 Programa fecha;
+5.1 Utilizador carrega no botão "Sair";
+5.1.1 Programa fecha;
+7.1 Utilizador clica em "Voltar";
+7.1.1 Plataforma volta à página "Home";
+9.1 Utilizador carrega no botão "Cancelar";
+9.1.1 Plataforma volta à página do Evento;
+9.2 Utilizador cola ou escreve caminho para o ficheiro;
+9.2.1 O caso de uso continua no ponto 12;
+11.1 Utilizador clica em "Cancelar";
+11.1.2 Plataforma fecha janela de procura de ficheiro;
+11.1.3 O caso de uso continua no ponto 8;
+13.1 Plataforma verifica que nenhum ficheiro foi selecionado;
+13.1.1 Plataforma indica "Nenhum ficheiro selecionado" ao utilizador;
+13.1.2 O caso de uso continua no ponto 8;
+13.2 Plataforma verifica que o formato do ficheiro é inválido;
+13.2.1 Plataforma indica "Formato de ficheiro inválido" ao utilizador;
+13.2.2 O caso de uso continua no ponto 8;
+13.3 Plataforma verifica que os dados do ficheiro são inválidos ou corrompidos;
+13.3.1 Plataforma indica "Dados de ficheiro inválidos ou corrompidos" ao utilizador;
+13.3.2 O caso de uso continua no ponto 8;
+14.1 Importação não é bem sucedida;
+14.1.1 Plataforma indica "Erro ao importar ficheiro" ao utilizador;
+14.1.2 O caso de uso continua no ponto 8.
+
+----------------------------------------------
