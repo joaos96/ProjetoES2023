@@ -1,0 +1,81 @@
+CASO DE USO CRIAR DADOS DADOS DO ATLETA
+
+Caminho principal
+
+
+1. O Utilizador introduz os dados para realizar o login;
+2. A app verifica se os dados estão corretos e valida a operação;
+3. Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+4. O Utilizador carrega no botão Criar Atleta;
+5. A página Criar Atleta é aberta;
+6. O utilizador preenche todos os dados do atleta: Primeiro Nome, Último Nome, País,
+Cinturão, Género, Peso e Telefone;
+7. O Utilizador carrega no botão inserir;
+8. A app valida a operação (Caso de uso Verificar Atleta);
+9. O Utilizador volta para Home/Dashboard "Gestão Jiu-Jitsu";
+
+
+Caminho secundário
+
+1.1 O Utilizador introduz os dados incorretos e parece mensagem de erro "Dados introduzidos inválidos!"
+1.2 O Utilizador carrega no botão "Sair";
+5.1 O Utilizador carrega na seta voltar para trás;
+5.1.1 O caso de uso continua no ponto 3 do CP;
+6.1 O Utilizador não preenche todos os dados do atleta;
+7.1 O Utilizador carrega no botão cancelar;
+7.1.1 A operação é cancelada e o caso de uso continua no ponto 1 do CP; 
+8.1 A operação não é validada pela falta de dados inseridos, a app apresenta a mensagem "Faltam parametros!";
+8.1.1 O caso de uso continua no ponto 6 do CP;
+8.2 A operação não é validada por um ou mais parametros serem iguais a outro atleta;
+8.2.1 O caso de uso continua no ponto 6 do CP;
+
+
+
+CASO DE USO INSCRICAO DO ATLETA NO EVENTO
+
+
+
+
+Caminho principal
+
+
+1. O Utilizador introduz os dados para realizar o login;
+2. A app verifica se os dados estão corretos e valida a operação;
+3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+4. Na secção "Gestão Atletas" o Ultilizador carrega no Atleta que pretende inscrever;
+5. O Ultizador carrega no botão "Ver Inscriões";
+6. É aberta a página "Inscrição - Atleta "Nome Atleta" ";
+7. O Utilizador carrega no botão verde "Criar Inscrição";
+8. São mostrados os Eventos que estão criados;
+9. O Utilizador carrega no Evento que pretende inscrever o Atleta;
+10. O Utilizador carrega no botão "Criar Inscrição";
+11. A app valida a operação (Caso de uso Verificar Inscrição);
+12. O Utilizador retorna ao Home/Dashboard "Gestão Jiu-Jitsu";
+
+
+Caminho secundário
+
+1.1 O Utilizador introduz os dados incorretos e parece mensagem de erro "Dados introduzidos inválidos!"
+1.2 O Utilizador carrega no botão "Sair";
+4.1 Na secção "Gestão Atletas" o Ultilizador não carrega no Atleta que pretende inscrever;
+5.1 Não é possivel carregar no botão "Ver Inscrições" pois o Atleta não foi selecionado;
+5.1.1 O caso de uso continua no ponto 4 do CP;
+6.1 O Utilizador carrega na seta para voltar a trás;
+6.1.1 O caso de uso continua no ponto 3 do CP;
+8.1 Não são mostrados eventos pois estes ainda não foram criados;
+8.1.1 Não é possivel inscrever o Atleta no Evento;
+9.1 O utilizador carrega na seta para voltar a trás;
+9.1.1 O caso de uso continua no ponto 6 do CP;
+9.2 O Utilizador não seleciona o Evento pretendido;
+10.1 O Utilizador não consegue carregar no botão "Criar Inscrição" pois o Evento não foi selecionado;
+10.1.1 O caso de uso continua no ponto 9 do CP;
+11.1 A app invalida a operação e aparece uma mensagem de erro;
+11.1.1 O caso de uso continua no ponto 9 do CP;
+
+
+____________________________//__________________________________________//________________________________________
+
+
+
+
+
