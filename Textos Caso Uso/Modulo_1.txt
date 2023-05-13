@@ -1,6 +1,10 @@
 
- 	Criar Evento 
-Cenário  Principal
+-----------------------------------------
+
+
+Caso de Uso "Criar Evento"
+
+Caminho  Principal
 
 1. Programa mostra Página de Login;
 2. O Utilizador introduz os dados para realizar o login;
@@ -14,7 +18,7 @@ Cenário  Principal
 10. Plataforma regista evento e abre-o para os atletas poderem se inscrever.
 
 
-Cenário Secundário
+Caminhos Alternativos
 
 2.1 O Utilizador introduz os dados incorretos;
 2.1.2 Aparece mensagem de erro "Dados introduzidos inválidos";
@@ -40,8 +44,9 @@ Cenário Secundário
 ------------------------------------------
 
 
- 	Importar Prova(s) de Ficheiro
-Cenário  Principal
+Caso de Uso "Importar Prova(s) de Ficheiro"
+
+Caminho  Principal
 
 1. Programa mostra Página de Login;
 2. O Utilizador introduz os dados para realizar o login;
@@ -60,7 +65,7 @@ Cenário  Principal
 15 Plataforma indica que a importação foi bem sucedida e provas aparecerão na lista.
 
 
-Cenário Secundário
+Caminhos Alternativos
 
 2.1 O Utilizador introduz os dados incorretos;
 2.1.2 Aparece mensagem de erro "Dados introduzidos inválidos";
