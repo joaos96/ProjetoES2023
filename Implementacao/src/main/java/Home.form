@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Home">
+  <grid id="27dc6" binding="home" layout-manager="GridLayoutManager" row-count="11" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1024" height="720"/>
+    </constraints>
+    <properties>
+      <minimumSize width="1024" height="720"/>
+      <opaque value="false"/>
+      <preferredSize width="1200" height="720"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="1c38e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Home / Dashboard"/>
+        </properties>
+      </component>
+      <component id="4777e" class="javax.swing.JList" binding="list1" default-binding="true">
+        <constraints>
+          <grid row="2" column="0" row-span="3" col-span="2" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Lista Eventos"/>
+          </model>
+        </properties>
+      </component>
+      <component id="754dc" class="javax.swing.JList" binding="list2" default-binding="true">
+        <constraints>
+          <grid row="6" column="0" row-span="4" col-span="2" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Lista Atletas"/>
+          </model>
+        </properties>
+      </component>
+      <component id="52f74" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Gestão de Eventos"/>
+        </properties>
+      </component>
+      <component id="cb3e7" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Gestão de Atletas"/>
+        </properties>
+      </component>
+      <component id="e8345" class="javax.swing.JButton" binding="editarEventoButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Editar Evento"/>
+        </properties>
+      </component>
+      <component id="b6543" class="javax.swing.JButton" binding="criarEventoButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Criar Evento"/>
+        </properties>
+      </component>
+      <component id="976dc" class="javax.swing.JButton" binding="eliminarEventoButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Eliminar Evento"/>
+        </properties>
+      </component>
+      <component id="a8b15" class="javax.swing.JButton" binding="verInscriçõesButton" default-binding="true">
+        <constraints>
+          <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Ver Inscrições"/>
+        </properties>
+      </component>
+      <component id="8f7" class="javax.swing.JButton" binding="verHistóricoButton" default-binding="true">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Ver Histórico"/>
+        </properties>
+      </component>
+      <component id="8206e" class="javax.swing.JButton" binding="criarAtletaButton" default-binding="true">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Criar Atleta"/>
+        </properties>
+      </component>
+      <component id="a770" class="javax.swing.JButton" binding="editarAtletaButton" default-binding="true">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Editar Atleta"/>
+        </properties>
+      </component>
+      <component id="f937e" class="javax.swing.JButton" binding="sairButton" default-binding="true">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Sair"/>
+        </properties>
+      </component>
+      <component id="f7232" class="javax.swing.JButton" binding="importarEventosButton" default-binding="true">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Importar Eventos"/>
+        </properties>
+      </component>
+      <component id="f9000" class="javax.swing.JButton" binding="importarAtletasButton" default-binding="true">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Importar Atletas"/>
+        </properties>
+      </component>
+      <component id="2816a" class="javax.swing.JButton" binding="verPaísesMaisMedalhadosButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Ver Países Mais Medalhados"/>
+        </properties>
+      </component>
+      <component id="9ffb6" class="javax.swing.JButton" binding="temporarioVerProvaButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Temporario - Ver Prova"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

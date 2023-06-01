@@ -21,9 +21,16 @@ public class PaginaLogin extends JFrame {
         sairButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                // TODO
+                    System.exit(0);
                 }
             });
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new Home("Home/Dash");
+            }
+        });
     }
     public static void main(String[] args) {
         new PaginaLogin("Gestão Jiu-Jitsu").setVisible(true);
