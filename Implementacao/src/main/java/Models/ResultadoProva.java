@@ -1,13 +1,15 @@
 package Models;
 
+import Models.Enumerations.TipoMedalha;
+
 import java.util.LinkedList;
 
 public class ResultadoProva {
     private Prova prova;
-    private Medalha medalha;
+    private TipoMedalha medalha;
     private LinkedList<Combate> combates;
 
-    public ResultadoProva(Prova prova, Medalha medalha, LinkedList<Combate> combates) {
+    public ResultadoProva(Prova prova, TipoMedalha medalha, LinkedList<Combate> combates) {
         this.prova = prova;
         this.medalha = medalha;
         this.combates = combates;
@@ -17,7 +19,7 @@ public class ResultadoProva {
         return prova;
     }
 
-    public Medalha getMedalha() {
+    public TipoMedalha getMedalha() {
         return medalha;
     }
 

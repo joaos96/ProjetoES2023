@@ -1,6 +1,10 @@
-package Models.Enumerations;
+package Models;
 
-public enum Combate {
+import Models.Enumerations.Fase;
+import Models.Enumerations.TipoVitoria;
+
+public class Combate
+{
     private Prova prova;
     private Fase fase;
     private Atleta atleta1;
