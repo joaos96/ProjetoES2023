@@ -1,5 +1,8 @@
 package Models;
 
+import Models.Enumerations.EscalaoEtario;
+import Models.Enumerations.Genero;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;

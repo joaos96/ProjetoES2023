@@ -8,6 +8,6 @@ package Models.Enumerations;
         MENOS57,
         MENOS63,
         MENOS70,
-        MAIS70;
+        MAIS70
     }
 }

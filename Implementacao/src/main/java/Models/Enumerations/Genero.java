@@ -4,5 +4,5 @@ import java.util.EnumMap;
 
 public enum Genero {
     MASCULINO,
-    FEMININO;
+    FEMININO
 }

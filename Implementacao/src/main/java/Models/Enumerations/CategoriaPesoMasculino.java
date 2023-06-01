@@ -8,5 +8,5 @@ public enum CategoriaPesoMasculino
     MENOS77,
     MENOS85,
     MENOS94,
-    MAIS94;
+    MAIS94
 }

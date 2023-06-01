@@ -6,5 +6,5 @@ public enum Fase {
     QUARTOSFINAL,
     SEMIFINAL,
     DISPUTAMEDALHABRONZE,
-    FINAL;
+    FINAL
 }
