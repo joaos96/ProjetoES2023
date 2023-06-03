@@ -33,6 +33,7 @@ public class Inscricao {
     }
 
     public void setResultadoProva(ResultadoProva resultadoProva) {
-        this.resultadoProva = resultadoProva;
+        if (this.resultadoProva != null)
+            this.resultadoProva = resultadoProva;
     }
 }
