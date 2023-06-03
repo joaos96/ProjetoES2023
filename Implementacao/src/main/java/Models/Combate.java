@@ -5,10 +5,10 @@ import Models.Enumerations.TipoVitoria;
 
 public class Combate
 {
-    private Prova prova;
-    private Fase fase;
-    private Atleta atleta1;
-    private Atleta atleta2;
+    private final Prova prova;
+    private final Fase fase;
+    private final Atleta atleta1;
+    private final Atleta atleta2;
     private Atleta vencedor;
     private TipoVitoria tipoVitoria;
 
@@ -17,6 +17,7 @@ public class Combate
         this.prova = prova;
         this.fase = fase;
         this.atleta1 = atleta1;
+        this.atleta2 = null;
     }
 
     //Tapete Completo

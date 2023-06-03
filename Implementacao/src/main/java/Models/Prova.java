@@ -8,16 +8,16 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public abstract class Prova {
-    private Evento evento;
-    private EscalaoEtario escalao;
-    private LinkedList<Atleta> atletas;
-    private HashMap<Fase, LinkedList<Combate>> fases;
-    private HashMap<TipoMedalha, Atleta> medalhas;
+    private final Evento evento;
+    private final EscalaoEtario escalao;
+    private final LinkedList<Atleta> atletas;
+    private final HashMap<Fase, LinkedList<Combate>> fases;
+    private final HashMap<TipoMedalha, Atleta> medalhas;
 
     public Prova(Evento evento, EscalaoEtario escalao, LinkedList<Atleta> atletas) {
         this.evento = evento;
         this.escalao = escalao;
-        atletas = atletas;
+        this.atletas = atletas;
         fases = new HashMap<>(); //aqui as fases podiam geradas automaticamente...
         medalhas = new HashMap<>();
     }

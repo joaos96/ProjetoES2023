@@ -3,7 +3,6 @@ package Models;
 import Models.Enumerations.CategoriaPesoFeminino;
 import Models.Enumerations.CategoriaPesoMasculino;
 import Models.Enumerations.EscalaoEtario;
-import Models.Enumerations.Genero;
 
 import java.util.*;
 
@@ -13,9 +12,9 @@ public class Evento {
     private String nome;
     private String local;
     private String pais;
-    private LinkedList<Inscricao> inscritos;
-    private HashMap<EscalaoEtario, HashMap<CategoriaPesoMasculino, ProvaMasculino>> provasMasculinas;
-    private HashMap<EscalaoEtario, HashMap<CategoriaPesoFeminino, ProvaFeminino>> provasFemininas;
+    private final LinkedList<Inscricao> inscritos;
+    private final HashMap<EscalaoEtario, HashMap<CategoriaPesoMasculino, ProvaMasculino>> provasMasculinas;
+    private final HashMap<EscalaoEtario, HashMap<CategoriaPesoFeminino, ProvaFeminino>> provasFemininas;
     private boolean finalizado;
 
     public Evento(Date dataInicio, Date dataFim, String nome, String local, String pais) {
@@ -24,7 +23,7 @@ public class Evento {
         this.nome = nome;
         this.local = local;
         this.pais = pais;
-        inscritos = new LinkedList<Inscricao>();
+        inscritos = new LinkedList<>();
         provasMasculinas = new HashMap<>();
         provasFemininas = new HashMap<>();
         finalizado = false;
@@ -92,7 +91,7 @@ public class Evento {
     }
 
     public void setFinalizado(boolean finalizado) {
-        if (!isFinalizado() && finalizado == true)
+        if (!isFinalizado() && finalizado)
             this.finalizado = true;
     }
 }

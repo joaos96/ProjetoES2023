@@ -3,9 +3,9 @@ package Models;
 import java.util.Date;
 
 public class Inscricao {
-    private Evento evento;
-    private Atleta atleta;
-    private Date dataInscricao;
+    private final Evento evento;
+    private final Atleta atleta;
+    private final Date dataInscricao;
 
     //nullable
     private ResultadoProva resultadoProva;

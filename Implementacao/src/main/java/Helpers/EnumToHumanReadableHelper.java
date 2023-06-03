@@ -6,7 +6,7 @@ import javax.naming.OperationNotSupportedException;
 public final class EnumToHumanReadableHelper
 {
     public static String Convert(CategoriaPesoFeminino categoriaPesoFeminino) throws OperationNotSupportedException {
-        String humanReadable = "";
+        String humanReadable;
         switch (categoriaPesoFeminino){
             case MENOS45 -> humanReadable = "Menos 45";
             case MENOS48 -> humanReadable = "Menos 48";
@@ -21,7 +21,7 @@ public final class EnumToHumanReadableHelper
     }
 
     public static String Convert(CategoriaPesoMasculino categoriaPesoMasculino) throws OperationNotSupportedException {
-        String humanReadable = "";
+        String humanReadable;
         switch (categoriaPesoMasculino)
         {
             case MENOS56 -> humanReadable = "Menos 56";
@@ -37,7 +37,7 @@ public final class EnumToHumanReadableHelper
     }
 
     public static String Convert(Cinturao cinturao) throws OperationNotSupportedException {
-        String humanReadable = "";
+        String humanReadable;
         switch (cinturao)
         {
             case BRANCO   -> humanReadable = "Branco";
@@ -52,7 +52,7 @@ public final class EnumToHumanReadableHelper
     }
 
     public static String Convert(EscalaoEtario escalaoEtario) throws OperationNotSupportedException {
-        String humanReadable = "";
+        String humanReadable;
         switch (escalaoEtario)
         {
             case JUNIOR   -> humanReadable = "Junior";
@@ -64,7 +64,7 @@ public final class EnumToHumanReadableHelper
     }
 
     public static String Convert(Fase fase) throws OperationNotSupportedException {
-        String humanReadable = "";
+        String humanReadable;
         switch (fase)
         {
             case DEZASSEISAVOSFINAL   -> humanReadable = "Dezasseis Avos de Final";
@@ -79,7 +79,7 @@ public final class EnumToHumanReadableHelper
     }
 
     public static String Convert(Genero genero) throws OperationNotSupportedException {
-        String humanReadable = "";
+        String humanReadable;
         switch (genero)
         {
             case MASCULINO -> humanReadable = "Masculino";
@@ -90,7 +90,7 @@ public final class EnumToHumanReadableHelper
     }
 
     public static String Convert(TipoMedalha tipoMedalha) throws OperationNotSupportedException {
-        String humanReadable = "";
+        String humanReadable;
         switch (tipoMedalha)
         {
             case BRONZE -> humanReadable = "Medalha de Bronze";
@@ -102,7 +102,7 @@ public final class EnumToHumanReadableHelper
     }
 
     public static String Convert(TipoVitoria tipoVitoria) throws OperationNotSupportedException {
-        String humanReadable = "";
+        String humanReadable;
         switch (tipoVitoria)
         {
             case PONTOS           -> humanReadable = "Vitória por Pontos";

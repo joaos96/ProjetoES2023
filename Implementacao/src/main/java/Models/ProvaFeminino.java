@@ -6,7 +6,7 @@ import Models.Enumerations.EscalaoEtario;
 import java.util.LinkedList;
 
 public class ProvaFeminino extends Prova {
-    private CategoriaPesoFeminino categoriaPeso;
+    private final CategoriaPesoFeminino categoriaPeso;
 
     public ProvaFeminino(Evento evento, EscalaoEtario escalao, LinkedList<Atleta> atletas, CategoriaPesoFeminino categoriaPeso) {
         super(evento, escalao, atletas);

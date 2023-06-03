@@ -13,7 +13,7 @@ public class Atleta {
     private Cinturao cinturao;
     private float peso;
     private String telefone;
-    private LinkedList<Inscricao> inscricoes;
+    private final LinkedList<Inscricao> inscricoes;
 
     public Atleta(String primeiroNome, String ultimoNome, Date dataNascimento,
                   String pais, Cinturao cinturao, float peso, String telefone, LinkedList<Inscricao> inscricoes) {
@@ -30,7 +30,7 @@ public class Atleta {
     public Atleta(String primeiroNome, String ultimoNome, Date dataNascimento,
                   String pais, Cinturao cinturao, float peso, String telefone)
     {
-        this(primeiroNome, ultimoNome, dataNascimento, pais, cinturao, peso, telefone, new LinkedList<Inscricao>());
+        this(primeiroNome, ultimoNome, dataNascimento, pais, cinturao, peso, telefone, new LinkedList<>());
     }
 
     public String getPrimeiroNome() {
