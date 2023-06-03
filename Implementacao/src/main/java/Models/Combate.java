@@ -11,4 +11,17 @@ public class Combate
     private Atleta atleta2;
     private Atleta vencedor;
     private TipoVitoria tipoVitoria;
+
+    public Combate(Prova prova, Fase fase, Atleta atleta1) {
+        this.prova = prova;
+        this.fase = fase;
+        this.atleta1 = atleta1;
+    }
+
+    public Combate(Prova prova, Fase fase, Atleta atleta1, Atleta atleta2) {
+        this.prova = prova;
+        this.fase = fase;
+        this.atleta1 = atleta1;
+        this.atleta2 = atleta2;
+    }
 }
