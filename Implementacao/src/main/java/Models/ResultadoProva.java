@@ -5,9 +5,9 @@ import Models.Enumerations.TipoMedalha;
 import java.util.LinkedList;
 
 public class ResultadoProva {
-    private Prova prova;
-    private TipoMedalha medalha;
-    private LinkedList<Combate> combates;
+    private final Prova prova;
+    private final TipoMedalha medalha;
+    private final LinkedList<Combate> combates;
 
     public ResultadoProva(Prova prova, TipoMedalha medalha, LinkedList<Combate> combates) {
         this.prova = prova;
