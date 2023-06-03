@@ -32,6 +32,13 @@ public class Home extends JFrame {
                 System.exit(0);
             }
         });
+        criarAtletaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new CriarAtleta("Criar Atleta");
+            }
+        });
     }
 
 

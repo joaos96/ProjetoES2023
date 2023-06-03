@@ -28,7 +28,7 @@ public class PaginaLogin extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                new Home("Home/Dash");
+                new Home("Home/Dashboard");
             }
         });
     }
