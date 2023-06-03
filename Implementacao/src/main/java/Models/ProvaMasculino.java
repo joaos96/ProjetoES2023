@@ -9,6 +9,11 @@ public class ProvaMasculino extends Prova{
 
     private final CategoriaPesoMasculino categoriaPeso;
 
+    public ProvaMasculino()
+    {
+        this.categoriaPeso = CategoriaPesoMasculino.MAIS94;
+    }
+
     public ProvaMasculino(Evento evento, EscalaoEtario escalao, LinkedList<Atleta> atletas, CategoriaPesoMasculino categoriaPeso) {
         super(evento, escalao, atletas);
         this.categoriaPeso = categoriaPeso;

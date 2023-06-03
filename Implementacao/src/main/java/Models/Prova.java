@@ -14,6 +14,14 @@ public abstract class Prova {
     private final HashMap<Fase, LinkedList<Combate>> fases;
     private final HashMap<TipoMedalha, Atleta> medalhas;
 
+    public Prova(){
+        this.evento = null;
+        this.escalao = EscalaoEtario.ADULTO;
+        this.atletas = new LinkedList<>();
+        fases = new HashMap<>();
+        medalhas = new HashMap<>();
+    }
+
     public Prova(Evento evento, EscalaoEtario escalao, LinkedList<Atleta> atletas) {
         this.evento = evento;
         this.escalao = escalao;
