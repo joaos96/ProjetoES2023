@@ -14,12 +14,12 @@ import javax.swing.UIManager;
  *
  * @author joaom
  */
-public class PaginaProva extends javax.swing.JFrame {
+public class PaginaEventoIncritos extends javax.swing.JFrame {
 
     /**
      * Creates new form Home
      */
-    public PaginaProva() {
+    public PaginaEventoIncritos() {
         initComponents();
     }
 
@@ -33,7 +33,6 @@ public class PaginaProva extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        registerResultBtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -43,28 +42,16 @@ public class PaginaProva extends javax.swing.JFrame {
         deleteCompetitionBtn6 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
-        unlinkEventBtn1 = new javax.swing.JButton();
-        showEnrollmentsBtn = new javax.swing.JButton();
-        linkToEventBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
 
-        registerResultBtn.setBackground(new java.awt.Color(153, 153, 153));
-        registerResultBtn.setForeground(new java.awt.Color(255, 255, 255));
-        registerResultBtn.setText("Registar Resultado");
-        registerResultBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registerResultBtnActionPerformed(evt);
-            }
-        });
-
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Prova X");
+        jLabel1.setText("Evento X - Inscritos");
         jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0));
 
         jButton1.setText("<-");
@@ -91,7 +78,7 @@ public class PaginaProva extends javax.swing.JFrame {
         );
 
         competionList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Combate X - 2023-06-23 | Pontos Atleta 4:  Atleta 1:  | Vencedor:  | Razão da Vitória: Ainda não ocorreu", "Combate X - 2023-06-23 | Pontos Atleta 3: 50 Atleta 2: 10 | Vencedor: Atleta 1 | Razão da Vitória: Submissão" };
+            String[] strings = { "Atleta X", "Atleta Y", "Atleta Z" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -125,37 +112,9 @@ public class PaginaProva extends javax.swing.JFrame {
         );
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Combates");
+        jLabel2.setText("Inscritos - Prova X");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Quartos-Final", "Semi-Final", "Final" }));
-        jComboBox1.setSelectedIndex(1);
-
-        unlinkEventBtn1.setBackground(new java.awt.Color(153, 153, 153));
-        unlinkEventBtn1.setForeground(new java.awt.Color(255, 255, 255));
-        unlinkEventBtn1.setText("Desassociar Evento");
-        unlinkEventBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                unlinkEventBtn1ActionPerformed(evt);
-            }
-        });
-
-        showEnrollmentsBtn.setBackground(new java.awt.Color(153, 153, 153));
-        showEnrollmentsBtn.setForeground(new java.awt.Color(255, 255, 255));
-        showEnrollmentsBtn.setText("Ver Inscritos");
-        showEnrollmentsBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showEnrollmentsBtnActionPerformed(evt);
-            }
-        });
-
-        linkToEventBtn.setBackground(new java.awt.Color(153, 153, 153));
-        linkToEventBtn.setForeground(new java.awt.Color(255, 255, 255));
-        linkToEventBtn.setText("Associar a Evento");
-        linkToEventBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                linkToEventBtnActionPerformed(evt);
-            }
-        });
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Prova X", "Prova Y", "Prova Z" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -168,13 +127,8 @@ public class PaginaProva extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(unlinkEventBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(showEnrollmentsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(linkToEventBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(registerResultBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -186,16 +140,7 @@ public class PaginaProva extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(registerResultBtn)
-                        .addGap(16, 16, 16)
-                        .addComponent(linkToEventBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(unlinkEventBtn1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(showEnrollmentsBtn)
-                        .addGap(12, 12, 12)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
 
@@ -229,22 +174,6 @@ public class PaginaProva extends javax.swing.JFrame {
         home.show();
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void registerResultBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerResultBtnActionPerformed
-
-    }//GEN-LAST:event_registerResultBtnActionPerformed
-
-    private void unlinkEventBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unlinkEventBtn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_unlinkEventBtn1ActionPerformed
-
-    private void showEnrollmentsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showEnrollmentsBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_showEnrollmentsBtnActionPerformed
-
-    private void linkToEventBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_linkToEventBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_linkToEventBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,9 +221,5 @@ public class PaginaProva extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton linkToEventBtn;
-    private javax.swing.JButton registerResultBtn;
-    private javax.swing.JButton showEnrollmentsBtn;
-    private javax.swing.JButton unlinkEventBtn1;
     // End of variables declaration//GEN-END:variables
 }
