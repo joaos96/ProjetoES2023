@@ -31,7 +31,7 @@ Caminho secundário
 
 
 
-CASO DE USO INSCRICAO DO ATLETA NO EVENTO
+CASO DE USO FAZER INSCRICAO DO ATLETA NO EVENTO
 
 
 
@@ -71,6 +71,102 @@ Caminho secundário
 10.1.1 O caso de uso continua no ponto 9 do CP;
 11.1 A app invalida a operação e aparece uma mensagem de erro;
 11.1.1 O caso de uso continua no ponto 9 do CP;
+
+
+CASO DE USO EDITAR O ATLETA
+
+
+Caminho principal
+
+
+1. O Utilizador introduz os dados para realizar o login;
+2. A app verifica se os dados estão corretos e valida a operação;
+3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+
+
+
+CASO DE USO IMPORTAR O ATLETA
+
+
+Caminho principal
+
+
+1. O Utilizador introduz os dados para realizar o login;
+2. A app verifica se os dados estão corretos e valida a operação;
+3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+
+
+
+CASO DE USO VER HISTÓRICO ATLETA
+
+
+Caminho principal
+
+
+1. O Utilizador introduz os dados para realizar o login;
+2. A app verifica se os dados estão corretos e valida a operação;
+3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+
+
+
+CASO DE USO VER ATLETA
+
+
+Caminho principal
+
+
+1. O Utilizador introduz os dados para realizar o login;
+2. A app verifica se os dados estão corretos e valida a operação;
+3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+
+
+
+CASO DE USO VER INSCRIÇOES ATLETA
+
+
+Caminho principal
+
+
+1. O Utilizador introduz os dados para realizar o login;
+2. A app verifica se os dados estão corretos e valida a operação;
+3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+
+
+CASO DE USO VER HISTÓRICO ATLETA
+
+
+Caminho principal
+
+
+1. O Utilizador introduz os dados para realizar o login;
+2. A app verifica se os dados estão corretos e valida a operação;
+3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+
+
+
+CASO DE USO IMPORTAR INSCRICAO
+
+
+Caminho principal
+
+
+1. O Utilizador introduz os dados para realizar o login;
+2. A app verifica se os dados estão corretos e valida a operação;
+3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+
+
+
+CASO DE USO CANCELAR INSCRICAO
+
+
+Caminho principal
+
+
+1. O Utilizador introduz os dados para realizar o login;
+2. A app verifica se os dados estão corretos e valida a operação;
+3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+
+
 
 
 ____________________________//__________________________________________//________________________________________
