@@ -34,23 +34,23 @@ public class PaginaAtleta extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        exitBtn = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        exitBtn1 = new javax.swing.JButton();
-        exitBtn2 = new javax.swing.JButton();
+        lblPrimeiroNome = new javax.swing.JLabel();
+        lblUltimoNome = new javax.swing.JLabel();
+        lblPais = new javax.swing.JLabel();
+        lblCinturao = new javax.swing.JLabel();
+        lblPeso = new javax.swing.JLabel();
+        lblGenero = new javax.swing.JLabel();
+        lblTelemovel = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
+        txtUltimoNome = new javax.swing.JTextField();
+        txtPais = new javax.swing.JTextField();
+        cbCinturao = new javax.swing.JComboBox<>();
+        cbGenero = new javax.swing.JComboBox<>();
+        txtPeso = new javax.swing.JTextField();
+        txtTelemovel = new javax.swing.JTextField();
+        btnVerHistoricoAtleta = new javax.swing.JButton();
+        btnEditarAtleta = new javax.swing.JButton();
+        btnVerInscricoesAtleta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,67 +86,67 @@ public class PaginaAtleta extends javax.swing.JFrame {
                 .addComponent(jButton1))
         );
 
-        exitBtn.setBackground(new java.awt.Color(153, 153, 153));
-        exitBtn.setForeground(new java.awt.Color(255, 255, 255));
-        exitBtn.setText("Ver Inscrições");
-        exitBtn.addActionListener(new java.awt.event.ActionListener() {
+        lblPrimeiroNome.setText("Primeiro Nome:");
+
+        lblUltimoNome.setText("Último Nome:");
+
+        lblPais.setText("País:");
+
+        lblCinturao.setText("Cinturão:");
+
+        lblPeso.setText("Peso:");
+
+        lblGenero.setText("Género");
+
+        lblTelemovel.setText("Telemóvel:");
+
+        txtNome.setEditable(false);
+        txtNome.setText("Manuel");
+
+        txtUltimoNome.setEditable(false);
+        txtUltimoNome.setText("Silva");
+
+        txtPais.setEditable(false);
+        txtPais.setText("Portugal");
+
+        cbCinturao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Branco", "Azul", "Roxo", "Castanho", "Preto", "Vermelho" }));
+        cbCinturao.setSelectedIndex(4);
+        cbCinturao.setToolTipText("");
+        cbCinturao.setEnabled(false);
+
+        cbGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
+        cbGenero.setEnabled(false);
+
+        txtPeso.setEditable(false);
+        txtPeso.setText("90");
+
+        txtTelemovel.setEditable(false);
+        txtTelemovel.setText("+351935313932");
+
+        btnVerHistoricoAtleta.setBackground(new java.awt.Color(153, 153, 153));
+        btnVerHistoricoAtleta.setForeground(new java.awt.Color(255, 255, 255));
+        btnVerHistoricoAtleta.setText("Ver Histórico");
+        btnVerHistoricoAtleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBtnActionPerformed(evt);
+                btnVerHistoricoAtletaActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Primeiro Nome:");
-
-        jLabel3.setText("Último Nome:");
-
-        jLabel4.setText("País:");
-
-        jLabel5.setText("Cinturão:");
-
-        jLabel6.setText("Peso:");
-
-        jLabel7.setText("Género");
-
-        jLabel8.setText("Telemóvel:");
-
-        jTextField1.setEditable(false);
-        jTextField1.setText("Manuel");
-
-        jTextField2.setEditable(false);
-        jTextField2.setText("Silva");
-
-        jTextField3.setEditable(false);
-        jTextField3.setText("Portugal");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Branco", "Azul", "Roxo", "Castanho", "Preto", "Vermelho" }));
-        jComboBox1.setSelectedIndex(4);
-        jComboBox1.setToolTipText("");
-        jComboBox1.setEnabled(false);
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
-        jComboBox2.setEnabled(false);
-
-        jTextField5.setEditable(false);
-        jTextField5.setText("90");
-
-        jTextField6.setEditable(false);
-        jTextField6.setText("+351935313932");
-
-        exitBtn1.setBackground(new java.awt.Color(153, 153, 153));
-        exitBtn1.setForeground(new java.awt.Color(255, 255, 255));
-        exitBtn1.setText("Ver Histórico");
-        exitBtn1.addActionListener(new java.awt.event.ActionListener() {
+        btnEditarAtleta.setBackground(new java.awt.Color(153, 153, 153));
+        btnEditarAtleta.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditarAtleta.setText("Editar");
+        btnEditarAtleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBtn1ActionPerformed(evt);
+                btnEditarAtletaActionPerformed(evt);
             }
         });
 
-        exitBtn2.setBackground(new java.awt.Color(153, 153, 153));
-        exitBtn2.setForeground(new java.awt.Color(255, 255, 255));
-        exitBtn2.setText("Editar");
-        exitBtn2.addActionListener(new java.awt.event.ActionListener() {
+        btnVerInscricoesAtleta.setBackground(new java.awt.Color(153, 153, 153));
+        btnVerInscricoesAtleta.setForeground(new java.awt.Color(255, 255, 255));
+        btnVerInscricoesAtleta.setText("Ver Inscrições");
+        btnVerInscricoesAtleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBtn2ActionPerformed(evt);
+                btnVerInscricoesAtletaActionPerformed(evt);
             }
         });
 
@@ -159,40 +159,40 @@ public class PaginaAtleta extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(exitBtn2)
+                        .addComponent(btnEditarAtleta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(exitBtn1)
+                        .addComponent(btnVerHistoricoAtleta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(exitBtn))
+                        .addComponent(btnVerInscricoesAtleta))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel8)
+                            .addComponent(lblTelemovel)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 641, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtTelemovel, javax.swing.GroupLayout.PREFERRED_SIZE, 641, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel5)
+                            .addComponent(lblCinturao)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(cbCinturao, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel4)
+                            .addComponent(lblPais)
                             .addGap(18, 18, 18)
-                            .addComponent(jTextField3))
+                            .addComponent(txtPais))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel3)
+                            .addComponent(lblUltimoNome)
                             .addGap(18, 18, 18)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtUltimoNome, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblPrimeiroNome)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel7)
+                            .addComponent(lblGenero)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(cbGenero, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel6)
+                            .addComponent(lblPeso)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextField5))))
+                            .addComponent(txtPeso))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -201,37 +201,37 @@ public class PaginaAtleta extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblPrimeiroNome)
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblUltimoNome)
+                    .addComponent(txtUltimoNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblPais)
+                    .addComponent(txtPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblCinturao)
+                    .addComponent(cbCinturao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblGenero)
+                    .addComponent(cbGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblPeso)
+                    .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblTelemovel)
+                    .addComponent(txtTelemovel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 228, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(exitBtn)
-                    .addComponent(exitBtn1)
-                    .addComponent(exitBtn2))
+                    .addComponent(btnVerInscricoesAtleta)
+                    .addComponent(btnVerHistoricoAtleta)
+                    .addComponent(btnEditarAtleta))
                 .addGap(40, 40, 40))
         );
 
@@ -262,26 +262,26 @@ public class PaginaAtleta extends javax.swing.JFrame {
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
+    private void btnVerInscricoesAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerInscricoesAtletaActionPerformed
 
         JFrame home = new PaginaInscricoesAtleta();
         home.show();
         dispose();
-    }//GEN-LAST:event_exitBtnActionPerformed
+    }//GEN-LAST:event_btnVerInscricoesAtletaActionPerformed
 
-    private void exitBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtn1ActionPerformed
+    private void btnVerHistoricoAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerHistoricoAtletaActionPerformed
         
         JFrame home = new PaginaHistoricoResultadosAtleta();
         home.show();
         dispose();
-    }//GEN-LAST:event_exitBtn1ActionPerformed
+    }//GEN-LAST:event_btnVerHistoricoAtletaActionPerformed
 
-    private void exitBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtn2ActionPerformed
+    private void btnEditarAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarAtletaActionPerformed
         
         JFrame home = new PaginaEditarAtleta();
         home.show();
         dispose();
-    }//GEN-LAST:event_exitBtn2ActionPerformed
+    }//GEN-LAST:event_btnEditarAtletaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -319,26 +319,26 @@ public class PaginaAtleta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton exitBtn;
-    private javax.swing.JButton exitBtn1;
-    private javax.swing.JButton exitBtn2;
+    private javax.swing.JButton btnEditarAtleta;
+    private javax.swing.JButton btnVerHistoricoAtleta;
+    private javax.swing.JButton btnVerInscricoesAtleta;
+    private javax.swing.JComboBox<String> cbCinturao;
+    private javax.swing.JComboBox<String> cbGenero;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JLabel lblCinturao;
+    private javax.swing.JLabel lblGenero;
+    private javax.swing.JLabel lblPais;
+    private javax.swing.JLabel lblPeso;
+    private javax.swing.JLabel lblPrimeiroNome;
+    private javax.swing.JLabel lblTelemovel;
+    private javax.swing.JLabel lblUltimoNome;
+    private javax.swing.JTextField txtNome;
+    private javax.swing.JTextField txtPais;
+    private javax.swing.JTextField txtPeso;
+    private javax.swing.JTextField txtTelemovel;
+    private javax.swing.JTextField txtUltimoNome;
     // End of variables declaration//GEN-END:variables
 }

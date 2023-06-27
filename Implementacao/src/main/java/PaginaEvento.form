@@ -62,26 +62,26 @@
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel2" alignment="0" min="-2" pref="372" max="-2" attributes="0"/>
+                      <Component id="lblProvas" alignment="0" min="-2" pref="372" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="importEnrollmentBtn" min="-2" pref="132" max="-2" attributes="0"/>
+                                  <Component id="btnImportarInscricao" min="-2" pref="132" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="showMostMedalsBtn" min="-2" pref="180" max="-2" attributes="0"/>
+                                  <Component id="btnMostrarMedalhas" min="-2" pref="180" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="showEnrollmentsBtn" alignment="0" min="-2" pref="114" max="-2" attributes="0"/>
-                              <Component id="importCompetitionBtn" alignment="0" min="-2" pref="114" max="-2" attributes="0"/>
-                              <Component id="showCompetitionBtn" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
-                              <Component id="editCompetitionBtn" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
-                              <Component id="createCompetitionBtn" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
-                              <Component id="deleteCompetitionBtn" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
-                              <Component id="showCalendarBtn" min="-2" max="-2" attributes="0"/>
-                              <Component id="startEventBtn" min="-2" pref="108" max="-2" attributes="0"/>
+                              <Component id="btnVerInscritos" alignment="0" min="-2" pref="114" max="-2" attributes="0"/>
+                              <Component id="btnImportarProva" alignment="0" min="-2" pref="114" max="-2" attributes="0"/>
+                              <Component id="btnMostrarProva" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
+                              <Component id="btnEditarProva" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
+                              <Component id="btnCriarProva" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
+                              <Component id="btnEliminarProva" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
+                              <Component id="btnVerCalendario" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnLancarEvento" min="-2" pref="108" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -94,32 +94,32 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblProvas" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="showCompetitionBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMostrarProva" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="createCompetitionBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnCriarProva" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="editCompetitionBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnEditarProva" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="deleteCompetitionBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnEliminarProva" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="importCompetitionBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnImportarProva" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="showEnrollmentsBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnVerInscritos" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="showCalendarBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnVerCalendario" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="startEventBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnLancarEvento" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jPanel3" min="-2" pref="398" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="showMostMedalsBtn" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="importEnrollmentBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnMostrarMedalhas" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnImportarInscricao" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="29" max="32767" attributes="0"/>
               </Group>
@@ -138,7 +138,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jButton1" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="btnVoltar" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="760" max="-2" attributes="0"/>
                   </Group>
@@ -148,7 +148,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="jLabel1" alignment="3" pref="40" max="32767" attributes="0"/>
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnVoltar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -167,12 +167,12 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="btnVoltar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="&lt;-"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -183,18 +183,12 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jScrollPane1" alignment="0" pref="631" max="32767" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="deleteCompetitionBtn6" min="-2" pref="196" max="-2" attributes="0"/>
-                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jScrollPane1" min="-2" pref="402" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="deleteCompetitionBtn6" min="-2" pref="28" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -208,7 +202,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JList" name="competionList">
+                <Component class="javax.swing.JList" name="provasList">
                   <Properties>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                       <StringArray count="2">
@@ -223,23 +217,9 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="deleteCompetitionBtn6">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="99" green="99" red="99" type="rgb"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Ver Pa&#xed;ses mais Medalhados"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteCompetitionBtn6ActionPerformed"/>
-              </Events>
-            </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lblProvas">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="1"/>
@@ -247,7 +227,7 @@
             <Property name="text" type="java.lang.String" value="Provas"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="createCompetitionBtn">
+        <Component class="javax.swing.JButton" name="btnCriarProva">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -258,10 +238,10 @@
             <Property name="text" type="java.lang.String" value="Criar Prova"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createCompetitionBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCriarProvaActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="editCompetitionBtn">
+        <Component class="javax.swing.JButton" name="btnEditarProva">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -272,10 +252,10 @@
             <Property name="text" type="java.lang.String" value="Editar Prova"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editCompetitionBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarProvaActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="deleteCompetitionBtn">
+        <Component class="javax.swing.JButton" name="btnEliminarProva">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -286,10 +266,10 @@
             <Property name="text" type="java.lang.String" value="Eliminar Prova"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteCompetitionBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarProvaActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="showCompetitionBtn">
+        <Component class="javax.swing.JButton" name="btnMostrarProva">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -300,10 +280,10 @@
             <Property name="text" type="java.lang.String" value="Ver Prova"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="showCompetitionBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarProvaActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="showEnrollmentsBtn">
+        <Component class="javax.swing.JButton" name="btnVerInscritos">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -314,10 +294,10 @@
             <Property name="text" type="java.lang.String" value="Ver Inscritos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="showEnrollmentsBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVerInscritosActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="importEnrollmentBtn">
+        <Component class="javax.swing.JButton" name="btnImportarInscricao">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -328,10 +308,10 @@
             <Property name="text" type="java.lang.String" value="Importar Inscri&#xe7;&#xe3;o"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="importEnrollmentBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnImportarInscricaoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="startEventBtn">
+        <Component class="javax.swing.JButton" name="btnLancarEvento">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -342,10 +322,10 @@
             <Property name="text" type="java.lang.String" value="Lan&#xe7;ar Evento"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="startEventBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLancarEventoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="showCalendarBtn">
+        <Component class="javax.swing.JButton" name="btnVerCalendario">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -356,10 +336,10 @@
             <Property name="text" type="java.lang.String" value="Ver Calend&#xe1;rio"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="showCalendarBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVerCalendarioActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="showMostMedalsBtn">
+        <Component class="javax.swing.JButton" name="btnMostrarMedalhas">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -370,10 +350,10 @@
             <Property name="text" type="java.lang.String" value="Ver Pa&#xed;ses mais Medalhados"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="showMostMedalsBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarMedalhasActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="importCompetitionBtn">
+        <Component class="javax.swing.JButton" name="btnImportarProva">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -384,7 +364,7 @@
             <Property name="text" type="java.lang.String" value="Importar Prova"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="importCompetitionBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnImportarProvaActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

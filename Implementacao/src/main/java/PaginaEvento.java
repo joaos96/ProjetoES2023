@@ -36,22 +36,21 @@ public class PaginaEvento extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        competionList = new javax.swing.JList<>();
-        deleteCompetitionBtn6 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        createCompetitionBtn = new javax.swing.JButton();
-        editCompetitionBtn = new javax.swing.JButton();
-        deleteCompetitionBtn = new javax.swing.JButton();
-        showCompetitionBtn = new javax.swing.JButton();
-        showEnrollmentsBtn = new javax.swing.JButton();
-        importEnrollmentBtn = new javax.swing.JButton();
-        startEventBtn = new javax.swing.JButton();
-        showCalendarBtn = new javax.swing.JButton();
-        showMostMedalsBtn = new javax.swing.JButton();
-        importCompetitionBtn = new javax.swing.JButton();
+        provasList = new javax.swing.JList<>();
+        lblProvas = new javax.swing.JLabel();
+        btnCriarProva = new javax.swing.JButton();
+        btnEditarProva = new javax.swing.JButton();
+        btnEliminarProva = new javax.swing.JButton();
+        btnMostrarProva = new javax.swing.JButton();
+        btnVerInscritos = new javax.swing.JButton();
+        btnImportarInscricao = new javax.swing.JButton();
+        btnLancarEvento = new javax.swing.JButton();
+        btnVerCalendario = new javax.swing.JButton();
+        btnMostrarMedalhas = new javax.swing.JButton();
+        btnImportarProva = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,10 +63,10 @@ public class PaginaEvento extends javax.swing.JFrame {
         jLabel1.setText("Evento X");
         jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0));
 
-        jButton1.setText("<-");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnVoltar.setText("<-");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnVoltarActionPerformed(evt);
             }
         });
 
@@ -76,7 +75,7 @@ public class PaginaEvento extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -84,133 +83,119 @@ public class PaginaEvento extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                .addComponent(jButton1))
+                .addComponent(btnVoltar))
         );
 
-        competionList.setModel(new javax.swing.AbstractListModel<String>() {
+        provasList.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Prova X - 2023-06-23/2023-06-26 - A decorrer", "Prova Y - 2023-06-23/2023-04-24 - Finalizada" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(competionList);
-
-        deleteCompetitionBtn6.setBackground(new java.awt.Color(153, 153, 153));
-        deleteCompetitionBtn6.setForeground(new java.awt.Color(255, 255, 255));
-        deleteCompetitionBtn6.setText("Ver Países mais Medalhados");
-        deleteCompetitionBtn6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteCompetitionBtn6ActionPerformed(evt);
-            }
-        });
+        jScrollPane1.setViewportView(provasList);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(deleteCompetitionBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(deleteCompetitionBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Provas");
+        lblProvas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblProvas.setText("Provas");
 
-        createCompetitionBtn.setBackground(new java.awt.Color(153, 153, 153));
-        createCompetitionBtn.setForeground(new java.awt.Color(255, 255, 255));
-        createCompetitionBtn.setText("Criar Prova");
-        createCompetitionBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnCriarProva.setBackground(new java.awt.Color(153, 153, 153));
+        btnCriarProva.setForeground(new java.awt.Color(255, 255, 255));
+        btnCriarProva.setText("Criar Prova");
+        btnCriarProva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createCompetitionBtnActionPerformed(evt);
+                btnCriarProvaActionPerformed(evt);
             }
         });
 
-        editCompetitionBtn.setBackground(new java.awt.Color(153, 153, 153));
-        editCompetitionBtn.setForeground(new java.awt.Color(255, 255, 255));
-        editCompetitionBtn.setText("Editar Prova");
-        editCompetitionBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnEditarProva.setBackground(new java.awt.Color(153, 153, 153));
+        btnEditarProva.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditarProva.setText("Editar Prova");
+        btnEditarProva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editCompetitionBtnActionPerformed(evt);
+                btnEditarProvaActionPerformed(evt);
             }
         });
 
-        deleteCompetitionBtn.setBackground(new java.awt.Color(153, 153, 153));
-        deleteCompetitionBtn.setForeground(new java.awt.Color(255, 255, 255));
-        deleteCompetitionBtn.setText("Eliminar Prova");
-        deleteCompetitionBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnEliminarProva.setBackground(new java.awt.Color(153, 153, 153));
+        btnEliminarProva.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminarProva.setText("Eliminar Prova");
+        btnEliminarProva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteCompetitionBtnActionPerformed(evt);
+                btnEliminarProvaActionPerformed(evt);
             }
         });
 
-        showCompetitionBtn.setBackground(new java.awt.Color(153, 153, 153));
-        showCompetitionBtn.setForeground(new java.awt.Color(255, 255, 255));
-        showCompetitionBtn.setText("Ver Prova");
-        showCompetitionBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnMostrarProva.setBackground(new java.awt.Color(153, 153, 153));
+        btnMostrarProva.setForeground(new java.awt.Color(255, 255, 255));
+        btnMostrarProva.setText("Ver Prova");
+        btnMostrarProva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showCompetitionBtnActionPerformed(evt);
+                btnMostrarProvaActionPerformed(evt);
             }
         });
 
-        showEnrollmentsBtn.setBackground(new java.awt.Color(153, 153, 153));
-        showEnrollmentsBtn.setForeground(new java.awt.Color(255, 255, 255));
-        showEnrollmentsBtn.setText("Ver Inscritos");
-        showEnrollmentsBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnVerInscritos.setBackground(new java.awt.Color(153, 153, 153));
+        btnVerInscritos.setForeground(new java.awt.Color(255, 255, 255));
+        btnVerInscritos.setText("Ver Inscritos");
+        btnVerInscritos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showEnrollmentsBtnActionPerformed(evt);
+                btnVerInscritosActionPerformed(evt);
             }
         });
 
-        importEnrollmentBtn.setBackground(new java.awt.Color(153, 153, 153));
-        importEnrollmentBtn.setForeground(new java.awt.Color(255, 255, 255));
-        importEnrollmentBtn.setText("Importar Inscrição");
-        importEnrollmentBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnImportarInscricao.setBackground(new java.awt.Color(153, 153, 153));
+        btnImportarInscricao.setForeground(new java.awt.Color(255, 255, 255));
+        btnImportarInscricao.setText("Importar Inscrição");
+        btnImportarInscricao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                importEnrollmentBtnActionPerformed(evt);
+                btnImportarInscricaoActionPerformed(evt);
             }
         });
 
-        startEventBtn.setBackground(new java.awt.Color(153, 153, 153));
-        startEventBtn.setForeground(new java.awt.Color(255, 255, 255));
-        startEventBtn.setText("Lançar Evento");
-        startEventBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnLancarEvento.setBackground(new java.awt.Color(153, 153, 153));
+        btnLancarEvento.setForeground(new java.awt.Color(255, 255, 255));
+        btnLancarEvento.setText("Lançar Evento");
+        btnLancarEvento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                startEventBtnActionPerformed(evt);
+                btnLancarEventoActionPerformed(evt);
             }
         });
 
-        showCalendarBtn.setBackground(new java.awt.Color(153, 153, 153));
-        showCalendarBtn.setForeground(new java.awt.Color(255, 255, 255));
-        showCalendarBtn.setText("Ver Calendário");
-        showCalendarBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnVerCalendario.setBackground(new java.awt.Color(153, 153, 153));
+        btnVerCalendario.setForeground(new java.awt.Color(255, 255, 255));
+        btnVerCalendario.setText("Ver Calendário");
+        btnVerCalendario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showCalendarBtnActionPerformed(evt);
+                btnVerCalendarioActionPerformed(evt);
             }
         });
 
-        showMostMedalsBtn.setBackground(new java.awt.Color(153, 153, 153));
-        showMostMedalsBtn.setForeground(new java.awt.Color(255, 255, 255));
-        showMostMedalsBtn.setText("Ver Países mais Medalhados");
-        showMostMedalsBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnMostrarMedalhas.setBackground(new java.awt.Color(153, 153, 153));
+        btnMostrarMedalhas.setForeground(new java.awt.Color(255, 255, 255));
+        btnMostrarMedalhas.setText("Ver Países mais Medalhados");
+        btnMostrarMedalhas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showMostMedalsBtnActionPerformed(evt);
+                btnMostrarMedalhasActionPerformed(evt);
             }
         });
 
-        importCompetitionBtn.setBackground(new java.awt.Color(153, 153, 153));
-        importCompetitionBtn.setForeground(new java.awt.Color(255, 255, 255));
-        importCompetitionBtn.setText("Importar Prova");
-        importCompetitionBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnImportarProva.setBackground(new java.awt.Color(153, 153, 153));
+        btnImportarProva.setForeground(new java.awt.Color(255, 255, 255));
+        btnImportarProva.setText("Importar Prova");
+        btnImportarProva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                importCompetitionBtnActionPerformed(evt);
+                btnImportarProvaActionPerformed(evt);
             }
         });
 
@@ -222,24 +207,24 @@ public class PaginaEvento extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblProvas, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(importEnrollmentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnImportarInscricao, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(showMostMedalsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnMostrarMedalhas, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(showEnrollmentsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(importCompetitionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(showCompetitionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editCompetitionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(createCompetitionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(deleteCompetitionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(showCalendarBtn)
-                            .addComponent(startEventBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnVerInscritos, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnImportarProva, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnMostrarProva, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnEditarProva, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCriarProva, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnEliminarProva, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnVerCalendario)
+                            .addComponent(btnLancarEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -247,30 +232,30 @@ public class PaginaEvento extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
-                .addComponent(jLabel2)
+                .addComponent(lblProvas)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(showCompetitionBtn)
+                        .addComponent(btnMostrarProva)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(createCompetitionBtn)
+                        .addComponent(btnCriarProva)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(editCompetitionBtn)
+                        .addComponent(btnEditarProva)
                         .addGap(12, 12, 12)
-                        .addComponent(deleteCompetitionBtn)
+                        .addComponent(btnEliminarProva)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(importCompetitionBtn)
+                        .addComponent(btnImportarProva)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(showEnrollmentsBtn)
+                        .addComponent(btnVerInscritos)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(showCalendarBtn)
+                        .addComponent(btnVerCalendario)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(startEventBtn))
+                        .addComponent(btnLancarEvento))
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(showMostMedalsBtn)
-                    .addComponent(importEnrollmentBtn))
+                    .addComponent(btnMostrarMedalhas)
+                    .addComponent(btnImportarInscricao))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
@@ -294,78 +279,74 @@ public class PaginaEvento extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void showCompetitionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showCompetitionBtnActionPerformed
+    private void btnMostrarProvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarProvaActionPerformed
         
         JFrame home = new PaginaProva();
         home.show();
         dispose();  
-    }//GEN-LAST:event_showCompetitionBtnActionPerformed
+    }//GEN-LAST:event_btnMostrarProvaActionPerformed
 
-    private void deleteCompetitionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCompetitionBtnActionPerformed
+    private void btnEliminarProvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarProvaActionPerformed
         UIManager.put("OptionPane.noButtonText", "Cancelar");
         UIManager.put("OptionPane.yesButtonText", "Sim");
         int result = JOptionPane.showConfirmDialog(this, "Esta ação vai pagar a prova 'Prova X'. \n Deseja proceder?", "Eliminar Evento",  JOptionPane.YES_NO_OPTION);        // TODO add your handling code here:
-    }//GEN-LAST:event_deleteCompetitionBtnActionPerformed
+    }//GEN-LAST:event_btnEliminarProvaActionPerformed
 
-    private void editCompetitionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editCompetitionBtnActionPerformed
+    private void btnEditarProvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarProvaActionPerformed
         
         JFrame home = new PaginaEditarProva();
         home.show();
         dispose();   
-    }//GEN-LAST:event_editCompetitionBtnActionPerformed
+    }//GEN-LAST:event_btnEditarProvaActionPerformed
 
-    private void showEnrollmentsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showEnrollmentsBtnActionPerformed
+    private void btnVerInscritosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerInscritosActionPerformed
         
         JFrame home = new PaginaEventoIncritos();
         home.show();
         dispose();      
-    }//GEN-LAST:event_showEnrollmentsBtnActionPerformed
+    }//GEN-LAST:event_btnVerInscritosActionPerformed
 
-    private void importEnrollmentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importEnrollmentBtnActionPerformed
+    private void btnImportarInscricaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportarInscricaoActionPerformed
         
         JFrame home = new PaginaImportarInscricao();
         home.show();
         dispose();      
-    }//GEN-LAST:event_importEnrollmentBtnActionPerformed
+    }//GEN-LAST:event_btnImportarInscricaoActionPerformed
 
-    private void startEventBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startEventBtnActionPerformed
+    private void btnLancarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLancarEventoActionPerformed
         UIManager.put("OptionPane.noButtonText", "Cancelar");
         UIManager.put("OptionPane.yesButtonText", "Sim");
         int result = JOptionPane.showConfirmDialog(this, "Esta ação vai lançar o Evento X, abrindo as suas inscrições. \n Deseja proceder?", "Lançar Evento",  JOptionPane.YES_NO_OPTION);        
-    }//GEN-LAST:event_startEventBtnActionPerformed
+    }//GEN-LAST:event_btnLancarEventoActionPerformed
 
-    private void showCalendarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showCalendarBtnActionPerformed
+    private void btnVerCalendarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerCalendarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_showCalendarBtnActionPerformed
+    }//GEN-LAST:event_btnVerCalendarioActionPerformed
 
-    private void deleteCompetitionBtn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCompetitionBtn6ActionPerformed
+    private void btnMostrarMedalhasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarMedalhasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_deleteCompetitionBtn6ActionPerformed
+    }//GEN-LAST:event_btnMostrarMedalhasActionPerformed
 
-    private void showMostMedalsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showMostMedalsBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_showMostMedalsBtnActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
 
         JFrame home = new Home();
         home.show();
         dispose();         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
-    private void importCompetitionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importCompetitionBtnActionPerformed
+    private void btnImportarProvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportarProvaActionPerformed
         
         JFrame home = new PaginaImportarProva();
         home.show();
         dispose();         // T
-    }//GEN-LAST:event_importCompetitionBtnActionPerformed
+    }//GEN-LAST:event_btnImportarProvaActionPerformed
 
-    private void createCompetitionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCompetitionBtnActionPerformed
+    private void btnCriarProvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarProvaActionPerformed
         
         JFrame home = new PaginaCriarProva();
         home.show();
         dispose();   
-    }//GEN-LAST:event_createCompetitionBtnActionPerformed
+    }//GEN-LAST:event_btnCriarProvaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -403,25 +384,24 @@ public class PaginaEvento extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JList<String> competionList;
-    private javax.swing.JButton createCompetitionBtn;
-    private javax.swing.JButton deleteCompetitionBtn;
-    private javax.swing.JButton deleteCompetitionBtn6;
-    private javax.swing.JButton editCompetitionBtn;
-    private javax.swing.JButton importCompetitionBtn;
-    private javax.swing.JButton importEnrollmentBtn;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnCriarProva;
+    private javax.swing.JButton btnEditarProva;
+    private javax.swing.JButton btnEliminarProva;
+    private javax.swing.JButton btnImportarInscricao;
+    private javax.swing.JButton btnImportarProva;
+    private javax.swing.JButton btnLancarEvento;
+    private javax.swing.JButton btnMostrarMedalhas;
+    private javax.swing.JButton btnMostrarProva;
+    private javax.swing.JButton btnVerCalendario;
+    private javax.swing.JButton btnVerInscritos;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblProvas;
     private java.awt.List list1;
-    private javax.swing.JButton showCalendarBtn;
-    private javax.swing.JButton showCompetitionBtn;
-    private javax.swing.JButton showEnrollmentsBtn;
-    private javax.swing.JButton showMostMedalsBtn;
-    private javax.swing.JButton startEventBtn;
+    private javax.swing.JList<String> provasList;
     // End of variables declaration//GEN-END:variables
 }

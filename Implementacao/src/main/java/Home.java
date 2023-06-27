@@ -38,25 +38,25 @@ public class Home extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        eventList = new javax.swing.JList<>();
+        listEventos = new javax.swing.JList<>();
         jPanel4 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        listAtletas = new javax.swing.JScrollPane();
         athleteList = new javax.swing.JList<>();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        createEventBtn = new javax.swing.JButton();
-        editEventBtn = new javax.swing.JButton();
-        deleteEventBtn = new javax.swing.JButton();
-        showMostMedalsCountryBtn = new javax.swing.JButton();
-        createAthleteBtn = new javax.swing.JButton();
-        editAthleteBtn = new javax.swing.JButton();
-        showAthleteHistoryBtn = new javax.swing.JButton();
-        showAtheleteEnrollmentsBtn = new javax.swing.JButton();
-        exitBtn = new javax.swing.JButton();
-        importEventsBtn = new javax.swing.JButton();
-        importAthletesBtn = new javax.swing.JButton();
-        showAthleteBtn = new javax.swing.JButton();
-        showEventBtn = new javax.swing.JButton();
+        lblEventos = new javax.swing.JLabel();
+        lblAtletas = new javax.swing.JLabel();
+        btnCriarEvento = new javax.swing.JButton();
+        btnEditarEvento = new javax.swing.JButton();
+        btnEliminarEvento = new javax.swing.JButton();
+        btnMostrarMaisMedalhasPais = new javax.swing.JButton();
+        btnCriarAtleta = new javax.swing.JButton();
+        btnEditarAtleta = new javax.swing.JButton();
+        btnMostrarHistoricoAtleta = new javax.swing.JButton();
+        btnMostraInscricoes = new javax.swing.JButton();
+        btnSair = new javax.swing.JButton();
+        btnImportarEventos = new javax.swing.JButton();
+        btnImportarAtletas = new javax.swing.JButton();
+        btnMostrarAtleta = new javax.swing.JButton();
+        btnMostrarEvento = new javax.swing.JButton();
 
         jButton3.setText("Eliminar Evento");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -87,12 +87,12 @@ public class Home extends javax.swing.JFrame {
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        eventList.setModel(new javax.swing.AbstractListModel<String>() {
+        listEventos.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Evento X - 2023-06-23/2023-06-26" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(eventList);
+        jScrollPane1.setViewportView(listEventos);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -110,114 +110,114 @@ public class Home extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane2.setViewportView(athleteList);
+        listAtletas.setViewportView(athleteList);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
+            .addComponent(listAtletas, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+            .addComponent(listAtletas, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
         );
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Gestão Eventos");
+        lblEventos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblEventos.setText("Gestão Eventos");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setText("Gestão Atletas");
+        lblAtletas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblAtletas.setText("Gestão Atletas");
 
-        createEventBtn.setBackground(new java.awt.Color(153, 153, 153));
-        createEventBtn.setForeground(new java.awt.Color(255, 255, 255));
-        createEventBtn.setText("Criar Evento");
-        createEventBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnCriarEvento.setBackground(new java.awt.Color(153, 153, 153));
+        btnCriarEvento.setForeground(new java.awt.Color(255, 255, 255));
+        btnCriarEvento.setText("Criar Evento");
+        btnCriarEvento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createEventBtnActionPerformed(evt);
+                btnCriarEventoActionPerformed(evt);
             }
         });
 
-        editEventBtn.setBackground(new java.awt.Color(153, 153, 153));
-        editEventBtn.setForeground(new java.awt.Color(255, 255, 255));
-        editEventBtn.setText("Editar Evento");
-        editEventBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnEditarEvento.setBackground(new java.awt.Color(153, 153, 153));
+        btnEditarEvento.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditarEvento.setText("Editar Evento");
+        btnEditarEvento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editEventBtnActionPerformed(evt);
+                btnEditarEventoActionPerformed(evt);
             }
         });
 
-        deleteEventBtn.setBackground(new java.awt.Color(153, 153, 153));
-        deleteEventBtn.setForeground(new java.awt.Color(255, 255, 255));
-        deleteEventBtn.setText("Eiminar Evento");
-        deleteEventBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnEliminarEvento.setBackground(new java.awt.Color(153, 153, 153));
+        btnEliminarEvento.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminarEvento.setText("Eiminar Evento");
+        btnEliminarEvento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteEventBtnActionPerformed(evt);
+                btnEliminarEventoActionPerformed(evt);
             }
         });
 
-        showMostMedalsCountryBtn.setBackground(new java.awt.Color(153, 153, 153));
-        showMostMedalsCountryBtn.setForeground(new java.awt.Color(255, 255, 255));
-        showMostMedalsCountryBtn.setText("Ver Países mais Medalhados");
+        btnMostrarMaisMedalhasPais.setBackground(new java.awt.Color(153, 153, 153));
+        btnMostrarMaisMedalhasPais.setForeground(new java.awt.Color(255, 255, 255));
+        btnMostrarMaisMedalhasPais.setText("Ver Países mais Medalhados");
 
-        createAthleteBtn.setBackground(new java.awt.Color(153, 153, 153));
-        createAthleteBtn.setForeground(new java.awt.Color(255, 255, 255));
-        createAthleteBtn.setText("Criar Atleta");
-        createAthleteBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnCriarAtleta.setBackground(new java.awt.Color(153, 153, 153));
+        btnCriarAtleta.setForeground(new java.awt.Color(255, 255, 255));
+        btnCriarAtleta.setText("Criar Atleta");
+        btnCriarAtleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createAthleteBtnActionPerformed(evt);
+                btnCriarAtletaActionPerformed(evt);
             }
         });
 
-        editAthleteBtn.setBackground(new java.awt.Color(153, 153, 153));
-        editAthleteBtn.setForeground(new java.awt.Color(255, 255, 255));
-        editAthleteBtn.setText("Editar Atleta");
-        editAthleteBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnEditarAtleta.setBackground(new java.awt.Color(153, 153, 153));
+        btnEditarAtleta.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditarAtleta.setText("Editar Atleta");
+        btnEditarAtleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editAthleteBtnActionPerformed(evt);
+                btnEditarAtletaActionPerformed(evt);
             }
         });
 
-        showAthleteHistoryBtn.setBackground(new java.awt.Color(153, 153, 153));
-        showAthleteHistoryBtn.setForeground(new java.awt.Color(255, 255, 255));
-        showAthleteHistoryBtn.setText("Ver Histórico");
+        btnMostrarHistoricoAtleta.setBackground(new java.awt.Color(153, 153, 153));
+        btnMostrarHistoricoAtleta.setForeground(new java.awt.Color(255, 255, 255));
+        btnMostrarHistoricoAtleta.setText("Ver Histórico");
 
-        showAtheleteEnrollmentsBtn.setBackground(new java.awt.Color(153, 153, 153));
-        showAtheleteEnrollmentsBtn.setForeground(new java.awt.Color(255, 255, 255));
-        showAtheleteEnrollmentsBtn.setText("Ver Inscrições");
+        btnMostraInscricoes.setBackground(new java.awt.Color(153, 153, 153));
+        btnMostraInscricoes.setForeground(new java.awt.Color(255, 255, 255));
+        btnMostraInscricoes.setText("Ver Inscrições");
 
-        exitBtn.setBackground(new java.awt.Color(255, 0, 0));
-        exitBtn.setForeground(new java.awt.Color(255, 255, 255));
-        exitBtn.setText("Sair");
+        btnSair.setBackground(new java.awt.Color(255, 0, 0));
+        btnSair.setForeground(new java.awt.Color(255, 255, 255));
+        btnSair.setText("Sair");
 
-        importEventsBtn.setBackground(new java.awt.Color(153, 153, 153));
-        importEventsBtn.setForeground(new java.awt.Color(255, 255, 255));
-        importEventsBtn.setText("Importar Evento");
-        importEventsBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnImportarEventos.setBackground(new java.awt.Color(153, 153, 153));
+        btnImportarEventos.setForeground(new java.awt.Color(255, 255, 255));
+        btnImportarEventos.setText("Importar Evento");
+        btnImportarEventos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                importEventsBtnActionPerformed(evt);
+                btnImportarEventosActionPerformed(evt);
             }
         });
 
-        importAthletesBtn.setBackground(new java.awt.Color(153, 153, 153));
-        importAthletesBtn.setForeground(new java.awt.Color(255, 255, 255));
-        importAthletesBtn.setText("Importar Atletas");
+        btnImportarAtletas.setBackground(new java.awt.Color(153, 153, 153));
+        btnImportarAtletas.setForeground(new java.awt.Color(255, 255, 255));
+        btnImportarAtletas.setText("Importar Atletas");
 
-        showAthleteBtn.setBackground(new java.awt.Color(153, 153, 153));
-        showAthleteBtn.setForeground(new java.awt.Color(255, 255, 255));
-        showAthleteBtn.setLabel("Ver Atleta");
-        showAthleteBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnMostrarAtleta.setBackground(new java.awt.Color(153, 153, 153));
+        btnMostrarAtleta.setForeground(new java.awt.Color(255, 255, 255));
+        btnMostrarAtleta.setLabel("Ver Atleta");
+        btnMostrarAtleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showAthleteBtnActionPerformed(evt);
+                btnMostrarAtletaActionPerformed(evt);
             }
         });
 
-        showEventBtn.setBackground(new java.awt.Color(153, 153, 153));
-        showEventBtn.setForeground(new java.awt.Color(255, 255, 255));
-        showEventBtn.setLabel("Ver Evento");
-        showEventBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnMostrarEvento.setBackground(new java.awt.Color(153, 153, 153));
+        btnMostrarEvento.setForeground(new java.awt.Color(255, 255, 255));
+        btnMostrarEvento.setLabel("Ver Evento");
+        btnMostrarEvento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showEventBtnActionPerformed(evt);
+                btnMostrarEventoActionPerformed(evt);
             }
         });
 
@@ -229,35 +229,33 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 639, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblAtletas, javax.swing.GroupLayout.PREFERRED_SIZE, 639, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(importEventsBtn)
+                            .addComponent(btnImportarEventos)
                             .addGap(18, 18, 18)
-                            .addComponent(importAthletesBtn))
+                            .addComponent(btnImportarAtletas))
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblEventos, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(showMostMedalsCountryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnMostrarMaisMedalhasPais, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(editEventBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                    .addComponent(createEventBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                    .addComponent(deleteEventBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(createAthleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(editAthleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(showAthleteHistoryBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(showAtheleteEnrollmentsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(showAthleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(showEventBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnEditarEvento, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                        .addComponent(btnCriarEvento, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                        .addComponent(btnEliminarEvento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCriarAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnEditarAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnMostrarHistoricoAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnMostraInscricoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnMostrarAtleta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnMostrarEvento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnSair))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(exitBtn)
-                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -266,47 +264,42 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
-                        .addComponent(jLabel2))
+                        .addComponent(lblEventos))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(showMostMedalsCountryBtn)))
+                        .addComponent(btnMostrarMaisMedalhasPais)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(showEventBtn)
+                        .addComponent(btnMostrarEvento)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(createEventBtn)
+                        .addComponent(btnCriarEvento)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(editEventBtn)
+                        .addComponent(btnEditarEvento)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(deleteEventBtn)))
+                        .addComponent(btnEliminarEvento)))
                 .addGap(33, 33, 33)
-                .addComponent(jLabel3)
+                .addComponent(lblAtletas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(showAthleteBtn)
+                        .addComponent(btnMostrarAtleta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(createAthleteBtn)
+                        .addComponent(btnCriarAtleta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(editAthleteBtn)
+                        .addComponent(btnEditarAtleta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(showAthleteHistoryBtn)
+                        .addComponent(btnMostrarHistoricoAtleta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(showAtheleteEnrollmentsBtn)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(exitBtn)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(importAthletesBtn)
-                            .addComponent(importEventsBtn))
-                        .addContainerGap(7, Short.MAX_VALUE))))
+                        .addComponent(btnMostraInscricoes)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnImportarAtletas)
+                    .addComponent(btnImportarEventos)
+                    .addComponent(btnSair))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -327,65 +320,65 @@ public class Home extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void editEventBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editEventBtnActionPerformed
+    private void btnEditarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarEventoActionPerformed
           
         JFrame home = new PaginaEditarEvento();
         home.show();
         dispose();
-    }//GEN-LAST:event_editEventBtnActionPerformed
+    }//GEN-LAST:event_btnEditarEventoActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void deleteEventBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteEventBtnActionPerformed
+    private void btnEliminarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarEventoActionPerformed
                
         UIManager.put("OptionPane.noButtonText", "Cancelar");
         UIManager.put("OptionPane.yesButtonText", "Sim");
         int result = JOptionPane.showConfirmDialog(this, "Deseja apagar o evento 'Evento X'", "Confirme Alterações",  JOptionPane.YES_NO_OPTION);
-    }//GEN-LAST:event_deleteEventBtnActionPerformed
+    }//GEN-LAST:event_btnEliminarEventoActionPerformed
 
-    private void showEventBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showEventBtnActionPerformed
+    private void btnMostrarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarEventoActionPerformed
                           
         JFrame home = new PaginaEvento();
         home.show();
         dispose();
-    }//GEN-LAST:event_showEventBtnActionPerformed
+    }//GEN-LAST:event_btnMostrarEventoActionPerformed
 
-    private void createEventBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createEventBtnActionPerformed
+    private void btnCriarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarEventoActionPerformed
         
         JFrame home = new PaginaCriarEvento();
         home.show();
         dispose();
-    }//GEN-LAST:event_createEventBtnActionPerformed
+    }//GEN-LAST:event_btnCriarEventoActionPerformed
 
-    private void importEventsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importEventsBtnActionPerformed
+    private void btnImportarEventosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportarEventosActionPerformed
         
         JFrame home = new PaginaImportarEvento();
         home.show();
         dispose();
-    }//GEN-LAST:event_importEventsBtnActionPerformed
+    }//GEN-LAST:event_btnImportarEventosActionPerformed
 
-    private void showAthleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showAthleteBtnActionPerformed
+    private void btnMostrarAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarAtletaActionPerformed
 
         JFrame home = new PaginaAtleta();
         home.show();
         dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_showAthleteBtnActionPerformed
+    }//GEN-LAST:event_btnMostrarAtletaActionPerformed
 
-    private void createAthleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAthleteBtnActionPerformed
+    private void btnCriarAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarAtletaActionPerformed
         
         JFrame home = new PaginaCriarAtleta();
         home.show();
         dispose();
-    }//GEN-LAST:event_createAthleteBtnActionPerformed
+    }//GEN-LAST:event_btnCriarAtletaActionPerformed
 
-    private void editAthleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAthleteBtnActionPerformed
+    private void btnEditarAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarAtletaActionPerformed
         
         JFrame home = new PaginaEditarAtleta();
         home.show();
         dispose();
-    }//GEN-LAST:event_editAthleteBtnActionPerformed
+    }//GEN-LAST:event_btnEditarAtletaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -424,29 +417,29 @@ public class Home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JList<String> athleteList;
-    private javax.swing.JButton createAthleteBtn;
-    private javax.swing.JButton createEventBtn;
-    private javax.swing.JButton deleteEventBtn;
-    private javax.swing.JButton editAthleteBtn;
-    private javax.swing.JButton editEventBtn;
-    private javax.swing.JList<String> eventList;
-    private javax.swing.JButton exitBtn;
-    private javax.swing.JButton importAthletesBtn;
-    private javax.swing.JButton importEventsBtn;
+    private javax.swing.JButton btnCriarAtleta;
+    private javax.swing.JButton btnCriarEvento;
+    private javax.swing.JButton btnEditarAtleta;
+    private javax.swing.JButton btnEditarEvento;
+    private javax.swing.JButton btnEliminarEvento;
+    private javax.swing.JButton btnImportarAtletas;
+    private javax.swing.JButton btnImportarEventos;
+    private javax.swing.JButton btnMostraInscricoes;
+    private javax.swing.JButton btnMostrarAtleta;
+    private javax.swing.JButton btnMostrarEvento;
+    private javax.swing.JButton btnMostrarHistoricoAtleta;
+    private javax.swing.JButton btnMostrarMaisMedalhasPais;
+    private javax.swing.JButton btnSair;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JButton showAtheleteEnrollmentsBtn;
-    private javax.swing.JButton showAthleteBtn;
-    private javax.swing.JButton showAthleteHistoryBtn;
-    private javax.swing.JButton showEventBtn;
-    private javax.swing.JButton showMostMedalsCountryBtn;
+    private javax.swing.JLabel lblAtletas;
+    private javax.swing.JLabel lblEventos;
+    private javax.swing.JScrollPane listAtletas;
+    private javax.swing.JList<String> listEventos;
     // End of variables declaration//GEN-END:variables
 }
