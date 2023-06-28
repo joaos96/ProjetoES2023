@@ -204,8 +204,9 @@ Caminho  Principal
 5. Utilizador navega pelos diretórios e seleciona ficheiro pretendido a importar
 6. Utilizado carrega no botão "Importar"
 7. Aplicação valida ficheiro (Caso de Uso "Validar Ficheiro para Importação")
-8. Aplicação importa dados do ficheiro
-9. Aplicação indica que a importação foi bem sucedida e provas importadas aparecem na lista.
+8. Aplicação verifica que o provas do ficheiro correspondem às características do evento (ter género, categoria de peso e escalão etário do evento)
+9. Aplicação importa dados do ficheiro
+10. Aplicação indica que a importação foi bem sucedida e provas importadas aparecem na lista.
 
 
 Caminhos Alternativos
@@ -219,9 +220,15 @@ Caminhos Alternativos
 6.1.1 Aplicação fecha janela de importação e volta a mostrar página do Evento;
 7.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Ficheiro para Importação")
 7.1.1 O caso de uso de continua no ponto 2
-8.1 Importação não é bem sucedida
-8.1.1 Aplicação indica "Erro ao importar ficheiro" ao utilizador;
-8.1.2 O caso de uso continua no ponto 2.
+8.1 Uma ou mais provas do ficheiro têm um género não incluído para o Evento
+8.1.2 A validação falha e aplicação mostra mensagem de erro "Prova(s) do ficheiro não corresponde(m) com as características do Evento (não inclui o Género da(s) prova(s))"
+8.2 Uma ou mais provas do ficheiro têm uma ou mais Categorias de Peso não incluídas para o Evento
+8.2.2 A validação falha e aplicação mostra mensagem de erro "Prova(s) do ficheiro não corresponde(m) com as características do Evento (não inclui a(s) Categoria(s) de Peso da(s) prova(s))"
+8.3 Uma ou mais provas do ficheiro têm um ou mais Escalões Etários não incluídos para o Evento
+8.3.2 A validação falha e aplicação mostra mensagem de erro "Prova(s) do ficheiro não corresponde(m) com as características do Evento (não inclui o(s) Escalão(ões) Etário(s) da(s) prova(s))"
+9.1 Importação não é bem sucedida
+9.1.1 Aplicação indica "Erro ao importar ficheiro" ao utilizador;
+9.1.2 O caso de uso continua no ponto 2.
 
 
 ------------------------------------------
