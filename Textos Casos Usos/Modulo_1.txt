@@ -1,3 +1,4 @@
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Homepage" (Caso de Uso "Login"))
 ##########################################
 
 
