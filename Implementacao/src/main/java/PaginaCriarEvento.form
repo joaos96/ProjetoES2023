@@ -59,76 +59,71 @@
                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jLabel3" min="-2" pref="102" max="-2" attributes="0"/>
+                          <Component id="lblNome" min="-2" pref="102" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField1" max="32767" attributes="0"/>
+                          <Component id="txtNome" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jLabel4" max="32767" attributes="0"/>
-                                      <Component id="jLabel5" min="-2" pref="102" max="-2" attributes="0"/>
-                                      <Component id="jLabel2" pref="112" max="32767" attributes="0"/>
+                                      <Component id="lblEscaloes" max="32767" attributes="0"/>
+                                      <Component id="lblGeneros" min="-2" pref="102" max="-2" attributes="0"/>
+                                      <Component id="lblCategoriaPeso" pref="112" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                              <Component id="jCheckBox1" min="-2" pref="85" max="-2" attributes="0"/>
+                                              <Component id="cbJunior" min="-2" pref="85" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jCheckBox6" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jCheckBox4" min="-2" pref="85" max="-2" attributes="0"/>
-                                                  <Component id="jCheckBox7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jCheckBox8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jCheckBox9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jCheckBox10" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jCheckBox11" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jCheckBox12" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
+                                          <Component id="cbPesoMasculino55" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cbMasculino" min="-2" pref="85" max="-2" attributes="0"/>
+                                          <Component id="cbPesoMasculino62" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cbPesoMasculino69" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cbPesoMasculino77" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cbPesoMasculino85" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cbPesoMasculino94" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cbPesoMasculinoMais94" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField2" min="-2" pref="174" max="-2" attributes="0"/>
-                                              <Component id="jButton2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="dateChooserInicio" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtLocal" min="-2" pref="174" max="-2" attributes="0"/>
+                                              <Component id="btnCriar" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
                               </Group>
-                              <Component id="jLabel7" min="-2" pref="79" max="-2" attributes="0"/>
-                              <Component id="jLabel6" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                              <Component id="lblLocal" min="-2" pref="79" max="-2" attributes="0"/>
+                              <Component id="lblDataInicio" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jCheckBox2" min="-2" pref="85" max="-2" attributes="0"/>
+                                  <Component id="cbAdulto" min="-2" pref="85" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jCheckBox3" min="-2" pref="85" max="-2" attributes="0"/>
+                                  <Component id="cbSenior" min="-2" pref="85" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jCheckBox13" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox5" min="-2" pref="85" max="-2" attributes="0"/>
-                              <Component id="jCheckBox14" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox15" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox16" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox17" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox18" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbPesoFeminino45" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbFeminino" min="-2" pref="85" max="-2" attributes="0"/>
+                              <Component id="cbPesoFeminino48" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbPesoFeminino52" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbPesoFeminino57" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbPesoFeminino63" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbPesoFeminino70" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jLabel8" min="-2" pref="79" max="-2" attributes="0"/>
-                                      <Component id="jCheckBox19" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel9" alignment="1" min="-2" pref="79" max="-2" attributes="0"/>
+                                      <Component id="lblDataFim" min="-2" pref="79" max="-2" attributes="0"/>
+                                      <Component id="cbPesoFemininoMais70" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblPais" alignment="1" min="-2" pref="79" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jDateChooser2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField3" min="-2" pref="149" max="-2" attributes="0"/>
-                                      <Component id="exitBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="dateChooserFim" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtPais" min="-2" pref="149" max="-2" attributes="0"/>
+                                      <Component id="btnCancelar" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -144,82 +139,82 @@
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtNome" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblEscaloes" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbJunior" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbAdulto" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbSenior" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblGeneros" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbMasculino" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbFeminino" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox13" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblCategoriaPeso" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPesoMasculino55" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPesoFeminino45" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jCheckBox7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox14" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPesoMasculino62" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPesoFeminino48" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jCheckBox8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox15" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPesoMasculino69" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPesoFeminino52" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jCheckBox9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox16" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPesoMasculino77" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPesoFeminino57" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jCheckBox10" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox17" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPesoMasculino85" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPesoFeminino63" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jCheckBox11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox18" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPesoMasculino94" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbPesoFeminino70" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBox12" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox19" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbPesoMasculinoMais94" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbPesoFemininoMais70" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblDataInicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblDataFim" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
+                              <Component id="dateChooserInicio" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jDateChooser2" min="-2" max="-2" attributes="0"/>
+                      <Component id="dateChooserFim" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblLocal" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblPais" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtLocal" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtPais" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="47" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="exitBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCriar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
               </Group>
@@ -238,23 +233,23 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jButton1" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="btnVoltar" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="760" max="-2" attributes="0"/>
+                      <Component id="lblTitulo" min="-2" pref="760" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="jLabel1" alignment="3" pref="40" max="32767" attributes="0"/>
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTitulo" alignment="3" pref="40" max="32767" attributes="0"/>
+                      <Component id="btnVoltar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="lblTitulo">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -267,17 +262,17 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="btnVoltar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="&lt;-"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="exitBtn">
+        <Component class="javax.swing.JButton" name="btnCancelar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -288,10 +283,10 @@
             <Property name="text" type="java.lang.String" value="Cancelar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btnCriar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="99" red="0" type="rgb"/>
@@ -303,174 +298,174 @@
             <Property name="name" type="java.lang.String" value="loginButton" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCriarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="lblNome">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nome do Evento:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="txtNome">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="lblEscaloes">
           <Properties>
             <Property name="text" type="java.lang.String" value="Escal&#xf5;es Et&#xe1;rios"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="lblGeneros">
           <Properties>
             <Property name="text" type="java.lang.String" value="G&#xe9;neros:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+        <Component class="javax.swing.JCheckBox" name="cbJunior">
           <Properties>
             <Property name="text" type="java.lang.String" value="Junior"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+        <Component class="javax.swing.JCheckBox" name="cbAdulto">
           <Properties>
             <Property name="text" type="java.lang.String" value="Adulto"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+        <Component class="javax.swing.JCheckBox" name="cbSenior">
           <Properties>
             <Property name="text" type="java.lang.String" value="Senior"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+        <Component class="javax.swing.JCheckBox" name="cbMasculino">
           <Properties>
             <Property name="text" type="java.lang.String" value="Masculino"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox5">
+        <Component class="javax.swing.JCheckBox" name="cbFeminino">
           <Properties>
             <Property name="text" type="java.lang.String" value="Feminino"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lblCategoriaPeso">
           <Properties>
             <Property name="text" type="java.lang.String" value="Categorias de Peso:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox6">
+        <Component class="javax.swing.JCheckBox" name="cbPesoMasculino55">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menos 55kgs"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox7">
+        <Component class="javax.swing.JCheckBox" name="cbPesoMasculino62">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menos 62kgs"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox8">
+        <Component class="javax.swing.JCheckBox" name="cbPesoMasculino69">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menos 69kgs"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox9">
+        <Component class="javax.swing.JCheckBox" name="cbPesoMasculino77">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menos 77kgs"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox10">
+        <Component class="javax.swing.JCheckBox" name="cbPesoMasculino85">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menos 85kgs"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox11">
+        <Component class="javax.swing.JCheckBox" name="cbPesoMasculino94">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menos 94kgs"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox12">
+        <Component class="javax.swing.JCheckBox" name="cbPesoMasculinoMais94">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mais 94kgs"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox13">
+        <Component class="javax.swing.JCheckBox" name="cbPesoFeminino45">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menos 45kgs"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox13ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbPesoFeminino45ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox14">
+        <Component class="javax.swing.JCheckBox" name="cbPesoFeminino48">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menos 48kgs"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox14ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbPesoFeminino48ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox15">
+        <Component class="javax.swing.JCheckBox" name="cbPesoFeminino52">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menos 52kgs"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox15ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbPesoFeminino52ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox16">
+        <Component class="javax.swing.JCheckBox" name="cbPesoFeminino57">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menos 57kgs"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox16ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbPesoFeminino57ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox17">
+        <Component class="javax.swing.JCheckBox" name="cbPesoFeminino63">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menos 63kgs"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox17ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbPesoFeminino63ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox18">
+        <Component class="javax.swing.JCheckBox" name="cbPesoFeminino70">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menos 70kgs"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox18ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbPesoFeminino70ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox19">
+        <Component class="javax.swing.JCheckBox" name="cbPesoFemininoMais70">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mais 70kgs"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox19ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbPesoFemininoMais70ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="lblDataInicio">
           <Properties>
             <Property name="text" type="java.lang.String" value="Data do In&#xed;cio:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="lblLocal">
           <Properties>
             <Property name="text" type="java.lang.String" value="Local:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="lblDataFim">
           <Properties>
             <Property name="text" type="java.lang.String" value="Data do Fim:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="lblPais">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pa&#xed;s:"/>
           </Properties>
         </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
+        <Component class="com.toedter.calendar.JDateChooser" name="dateChooserInicio">
         </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser2">
+        <Component class="com.toedter.calendar.JDateChooser" name="dateChooserFim">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
+        <Component class="javax.swing.JTextField" name="txtLocal">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
+        <Component class="javax.swing.JTextField" name="txtPais">
         </Component>
       </SubComponents>
     </Container>

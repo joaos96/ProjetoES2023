@@ -33,42 +33,42 @@ public class PaginaEditarEvento extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        exitBtn = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jLabel2 = new javax.swing.JLabel();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
-        jCheckBox9 = new javax.swing.JCheckBox();
-        jCheckBox10 = new javax.swing.JCheckBox();
-        jCheckBox11 = new javax.swing.JCheckBox();
-        jCheckBox12 = new javax.swing.JCheckBox();
-        jCheckBox13 = new javax.swing.JCheckBox();
-        jCheckBox14 = new javax.swing.JCheckBox();
-        jCheckBox15 = new javax.swing.JCheckBox();
-        jCheckBox16 = new javax.swing.JCheckBox();
-        jCheckBox17 = new javax.swing.JCheckBox();
-        jCheckBox18 = new javax.swing.JCheckBox();
-        jCheckBox19 = new javax.swing.JCheckBox();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        lblTitulo = new javax.swing.JLabel();
+        btnVoltar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        btnEditar = new javax.swing.JButton();
+        lblNome = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
+        lblEscaloes = new javax.swing.JLabel();
+        lblGeneros = new javax.swing.JLabel();
+        cbJunior = new javax.swing.JCheckBox();
+        cbAdulto = new javax.swing.JCheckBox();
+        cbSenior = new javax.swing.JCheckBox();
+        cbMasculino = new javax.swing.JCheckBox();
+        cbFeminino = new javax.swing.JCheckBox();
+        lblCategoriaPeso = new javax.swing.JLabel();
+        cbPesoMasculino55 = new javax.swing.JCheckBox();
+        cbPesoMasculino62 = new javax.swing.JCheckBox();
+        cbPesoMasculino69 = new javax.swing.JCheckBox();
+        cbPesoMasculino77 = new javax.swing.JCheckBox();
+        cbPesoMasculino85 = new javax.swing.JCheckBox();
+        cbPesoMasculino94 = new javax.swing.JCheckBox();
+        cbPesoMasculinoMais94 = new javax.swing.JCheckBox();
+        cbPesoFeminino45 = new javax.swing.JCheckBox();
+        cbPesoFeminino48 = new javax.swing.JCheckBox();
+        cbPesoFeminino52 = new javax.swing.JCheckBox();
+        cbPesoFeminino57 = new javax.swing.JCheckBox();
+        cbPesoFeminino63 = new javax.swing.JCheckBox();
+        cbPesoFeminino70 = new javax.swing.JCheckBox();
+        cbPesoFemininoMais70 = new javax.swing.JCheckBox();
+        lblDataInicio = new javax.swing.JLabel();
+        lblLocal = new javax.swing.JLabel();
+        lblDataFim = new javax.swing.JLabel();
+        lblPais = new javax.swing.JLabel();
+        dateChooserInicio = new com.toedter.calendar.JDateChooser();
+        dateChooserFim = new com.toedter.calendar.JDateChooser();
+        txtLocal = new javax.swing.JTextField();
+        txtPais = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,14 +77,14 @@ public class PaginaEditarEvento extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Editar Evento X");
-        jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0));
+        lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitulo.setText("Editar Evento");
+        lblTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0));
 
-        jButton1.setText("<-");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnVoltar.setText("<-");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnVoltarActionPerformed(evt);
             }
         });
 
@@ -93,142 +93,146 @@ public class PaginaEditarEvento extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                .addComponent(jButton1))
+                .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addComponent(btnVoltar))
         );
 
-        exitBtn.setBackground(new java.awt.Color(255, 0, 0));
-        exitBtn.setForeground(new java.awt.Color(255, 255, 255));
-        exitBtn.setText("Cancelar");
-        exitBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnCancelar.setBackground(new java.awt.Color(255, 0, 0));
+        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBtnActionPerformed(evt);
+                btnCancelarActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 51, 255));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Editar Evento");
-        jButton2.setName("loginButton"); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnEditar.setBackground(new java.awt.Color(0, 51, 255));
+        btnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditar.setText("Editar Evento");
+        btnEditar.setName("loginButton"); // NOI18N
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnEditarActionPerformed(evt);
             }
         });
 
-        jLabel3.setText("Nome do Evento:");
+        lblNome.setText("Nome do Evento:");
 
-        jTextField1.setText("Evento X");
+        txtNome.setText("Evento X");
 
-        jLabel4.setText("Escalões Etários");
+        lblEscaloes.setText("Escalões Etários");
 
-        jLabel5.setText("Géneros:");
+        lblGeneros.setText("Géneros:");
 
-        jCheckBox1.setSelected(true);
-        jCheckBox1.setText("Junior");
+        cbJunior.setSelected(true);
+        cbJunior.setText("Junior");
 
-        jCheckBox2.setSelected(true);
-        jCheckBox2.setText("Adulto");
+        cbAdulto.setText("Adulto");
 
-        jCheckBox3.setText("Senior");
+        cbSenior.setSelected(true);
+        cbSenior.setText("Senior");
 
-        jCheckBox4.setSelected(true);
-        jCheckBox4.setText("Masculino");
+        cbMasculino.setSelected(true);
+        cbMasculino.setText("Masculino");
 
-        jCheckBox5.setSelected(true);
-        jCheckBox5.setText("Feminino");
+        cbFeminino.setSelected(true);
+        cbFeminino.setText("Feminino");
 
-        jLabel2.setText("Categorias de Peso:");
+        lblCategoriaPeso.setText("Categorias de Peso:");
 
-        jCheckBox6.setSelected(true);
-        jCheckBox6.setText("Menos 55kgs");
+        cbPesoMasculino55.setSelected(true);
+        cbPesoMasculino55.setText("Menos 55kgs");
 
-        jCheckBox7.setSelected(true);
-        jCheckBox7.setText("Menos 62kgs");
+        cbPesoMasculino62.setSelected(true);
+        cbPesoMasculino62.setText("Menos 62kgs");
 
-        jCheckBox8.setText("Menos 69kgs");
+        cbPesoMasculino69.setText("Menos 69kgs");
 
-        jCheckBox9.setText("Menos 77kgs");
+        cbPesoMasculino77.setText("Menos 77kgs");
 
-        jCheckBox10.setText("Menos 85kgs");
+        cbPesoMasculino85.setText("Menos 85kgs");
 
-        jCheckBox11.setText("Menos 94kgs");
+        cbPesoMasculino94.setText("Menos 94kgs");
 
-        jCheckBox12.setSelected(true);
-        jCheckBox12.setText("Mais 94kgs");
+        cbPesoMasculinoMais94.setText("Mais 94kgs");
 
-        jCheckBox13.setText("Menos 45kgs");
-        jCheckBox13.addActionListener(new java.awt.event.ActionListener() {
+        cbPesoFeminino45.setText("Menos 45kgs");
+        cbPesoFeminino45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox13ActionPerformed(evt);
+                cbPesoFeminino45ActionPerformed(evt);
             }
         });
 
-        jCheckBox14.setText("Menos 48kgs");
-        jCheckBox14.addActionListener(new java.awt.event.ActionListener() {
+        cbPesoFeminino48.setText("Menos 48kgs");
+        cbPesoFeminino48.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox14ActionPerformed(evt);
+                cbPesoFeminino48ActionPerformed(evt);
             }
         });
 
-        jCheckBox15.setText("Menos 52kgs");
-        jCheckBox15.addActionListener(new java.awt.event.ActionListener() {
+        cbPesoFeminino52.setText("Menos 52kgs");
+        cbPesoFeminino52.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox15ActionPerformed(evt);
+                cbPesoFeminino52ActionPerformed(evt);
             }
         });
 
-        jCheckBox16.setText("Menos 57kgs");
-        jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
+        cbPesoFeminino57.setSelected(true);
+        cbPesoFeminino57.setText("Menos 57kgs");
+        cbPesoFeminino57.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox16ActionPerformed(evt);
+                cbPesoFeminino57ActionPerformed(evt);
             }
         });
 
-        jCheckBox17.setText("Menos 63kgs");
-        jCheckBox17.addActionListener(new java.awt.event.ActionListener() {
+        cbPesoFeminino63.setText("Menos 63kgs");
+        cbPesoFeminino63.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox17ActionPerformed(evt);
+                cbPesoFeminino63ActionPerformed(evt);
             }
         });
 
-        jCheckBox18.setText("Menos 70kgs");
-        jCheckBox18.addActionListener(new java.awt.event.ActionListener() {
+        cbPesoFeminino70.setText("Menos 70kgs");
+        cbPesoFeminino70.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox18ActionPerformed(evt);
+                cbPesoFeminino70ActionPerformed(evt);
             }
         });
 
-        jCheckBox19.setSelected(true);
-        jCheckBox19.setText("Mais 70kgs");
-        jCheckBox19.addActionListener(new java.awt.event.ActionListener() {
+        cbPesoFemininoMais70.setText("Mais 70kgs");
+        cbPesoFemininoMais70.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox19ActionPerformed(evt);
+                cbPesoFemininoMais70ActionPerformed(evt);
             }
         });
 
-        jLabel6.setText("Data do Início:");
+        lblDataInicio.setText("Data do Início:");
 
-        jLabel7.setText("Local:");
+        lblLocal.setText("Local:");
 
-        jLabel8.setText("Data do Fim:");
+        lblDataFim.setText("Data do Fim:");
 
-        jLabel9.setText("País:");
+        lblPais.setText("País:");
 
-        jDateChooser1.setDate(new Date(2023, 06, 23));
+        dateChooserInicio.setDate(new Date(2023, 06, 23));
 
-        jDateChooser2.setDate(new Date(2023, 06, 26));
+        dateChooserFim.setDate(new Date(2023, 06, 26));
 
-        jTextField2.setText("Casino Estoril");
+        txtLocal.setText("Torres Novas");
 
-        jTextField3.setText("Portugal");
+        txtPais.setText("Portugal");
+        txtPais.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaisActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -239,60 +243,60 @@ public class PaginaEditarEvento extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblNome, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1))
+                        .addComponent(txtNome))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
+                                    .addComponent(lblEscaloes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblGeneros, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblCategoriaPeso, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addGap(4, 4, 4)
-                                            .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jCheckBox6)
-                                        .addComponent(jCheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jCheckBox7)
-                                        .addComponent(jCheckBox8)
-                                        .addComponent(jCheckBox9)
-                                        .addComponent(jCheckBox10)
-                                        .addComponent(jCheckBox11)
-                                        .addComponent(jCheckBox12))
+                                            .addComponent(cbJunior, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(cbPesoMasculino55)
+                                        .addComponent(cbMasculino, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cbPesoMasculino62)
+                                        .addComponent(cbPesoMasculino69)
+                                        .addComponent(cbPesoMasculino77)
+                                        .addComponent(cbPesoMasculino85)
+                                        .addComponent(cbPesoMasculino94)
+                                        .addComponent(cbPesoMasculinoMais94))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                                            .addComponent(jButton2)
-                                            .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(dateChooserInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btnEditar)))))
+                            .addComponent(lblLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDataInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(149, 149, 149)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbAdulto, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jCheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jCheckBox13)
-                            .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox14)
-                            .addComponent(jCheckBox15)
-                            .addComponent(jCheckBox16)
-                            .addComponent(jCheckBox17)
-                            .addComponent(jCheckBox18)
+                                .addComponent(cbSenior, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cbPesoFeminino45)
+                            .addComponent(cbFeminino, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbPesoFeminino48)
+                            .addComponent(cbPesoFeminino52)
+                            .addComponent(cbPesoFeminino57)
+                            .addComponent(cbPesoFeminino63)
+                            .addComponent(cbPesoFeminino70)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCheckBox19)
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblDataFim, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbPesoFemininoMais70)
+                                    .addComponent(lblPais, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                                    .addComponent(exitBtn)
-                                    .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(dateChooserFim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtPais, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnCancelar))))))
                 .addGap(44, 44, 44))
         );
         jPanel1Layout.setVerticalGroup(
@@ -301,67 +305,67 @@ public class PaginaEditarEvento extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblNome)
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3))
+                    .addComponent(lblEscaloes)
+                    .addComponent(cbJunior)
+                    .addComponent(cbAdulto)
+                    .addComponent(cbSenior))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox5))
+                    .addComponent(lblGeneros)
+                    .addComponent(cbMasculino)
+                    .addComponent(cbFeminino))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jCheckBox6)
-                    .addComponent(jCheckBox13))
+                    .addComponent(lblCategoriaPeso)
+                    .addComponent(cbPesoMasculino55)
+                    .addComponent(cbPesoFeminino45))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox7)
-                    .addComponent(jCheckBox14))
+                    .addComponent(cbPesoMasculino62)
+                    .addComponent(cbPesoFeminino48))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox8)
-                    .addComponent(jCheckBox15))
+                    .addComponent(cbPesoMasculino69)
+                    .addComponent(cbPesoFeminino52))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox9)
-                    .addComponent(jCheckBox16))
+                    .addComponent(cbPesoMasculino77)
+                    .addComponent(cbPesoFeminino57))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox10)
-                    .addComponent(jCheckBox17))
+                    .addComponent(cbPesoMasculino85)
+                    .addComponent(cbPesoFeminino63))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox11)
-                    .addComponent(jCheckBox18))
+                    .addComponent(cbPesoMasculino94)
+                    .addComponent(cbPesoFeminino70))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox12)
-                            .addComponent(jCheckBox19))
+                            .addComponent(cbPesoMasculinoMais94)
+                            .addComponent(cbPesoFemininoMais70))
                         .addGap(20, 20, 20)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel8))
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lblDataInicio)
+                                .addComponent(lblDataFim))
+                            .addComponent(dateChooserInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(dateChooserFim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel9)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblLocal)
+                    .addComponent(lblPais)
+                    .addComponent(txtLocal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(exitBtn)
-                    .addComponent(jButton2))
+                    .addComponent(btnCancelar)
+                    .addComponent(btnEditar))
                 .addGap(85, 85, 85))
         );
 
@@ -385,54 +389,58 @@ public class PaginaEditarEvento extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         
         JFrame home = new Home();
         home.show();
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnEditarActionPerformed
 
-    private void jCheckBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox13ActionPerformed
+    private void cbPesoFeminino45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPesoFeminino45ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox13ActionPerformed
+    }//GEN-LAST:event_cbPesoFeminino45ActionPerformed
 
-    private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
+    private void cbPesoFeminino48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPesoFeminino48ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox14ActionPerformed
+    }//GEN-LAST:event_cbPesoFeminino48ActionPerformed
 
-    private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
+    private void cbPesoFeminino52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPesoFeminino52ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox15ActionPerformed
+    }//GEN-LAST:event_cbPesoFeminino52ActionPerformed
 
-    private void jCheckBox16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox16ActionPerformed
+    private void cbPesoFeminino57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPesoFeminino57ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox16ActionPerformed
+    }//GEN-LAST:event_cbPesoFeminino57ActionPerformed
 
-    private void jCheckBox17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox17ActionPerformed
+    private void cbPesoFeminino63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPesoFeminino63ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox17ActionPerformed
+    }//GEN-LAST:event_cbPesoFeminino63ActionPerformed
 
-    private void jCheckBox18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox18ActionPerformed
+    private void cbPesoFeminino70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPesoFeminino70ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox18ActionPerformed
+    }//GEN-LAST:event_cbPesoFeminino70ActionPerformed
 
-    private void jCheckBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox19ActionPerformed
+    private void cbPesoFemininoMais70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPesoFemininoMais70ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox19ActionPerformed
+    }//GEN-LAST:event_cbPesoFemininoMais70ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
 
         JFrame home = new Home();
         home.show();
         dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
-    private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
 
         JFrame home = new Home();
         home.show();
         dispose();
-    }//GEN-LAST:event_exitBtnActionPerformed
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void txtPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaisActionPerformed
 
     /**
      * @param args the command line arguments
@@ -470,43 +478,43 @@ public class PaginaEditarEvento extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton exitBtn;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox10;
-    private javax.swing.JCheckBox jCheckBox11;
-    private javax.swing.JCheckBox jCheckBox12;
-    private javax.swing.JCheckBox jCheckBox13;
-    private javax.swing.JCheckBox jCheckBox14;
-    private javax.swing.JCheckBox jCheckBox15;
-    private javax.swing.JCheckBox jCheckBox16;
-    private javax.swing.JCheckBox jCheckBox17;
-    private javax.swing.JCheckBox jCheckBox18;
-    private javax.swing.JCheckBox jCheckBox19;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JCheckBox jCheckBox9;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnEditar;
+    private javax.swing.JButton btnVoltar;
+    private javax.swing.JCheckBox cbAdulto;
+    private javax.swing.JCheckBox cbFeminino;
+    private javax.swing.JCheckBox cbJunior;
+    private javax.swing.JCheckBox cbMasculino;
+    private javax.swing.JCheckBox cbPesoFeminino45;
+    private javax.swing.JCheckBox cbPesoFeminino48;
+    private javax.swing.JCheckBox cbPesoFeminino52;
+    private javax.swing.JCheckBox cbPesoFeminino57;
+    private javax.swing.JCheckBox cbPesoFeminino63;
+    private javax.swing.JCheckBox cbPesoFeminino70;
+    private javax.swing.JCheckBox cbPesoFemininoMais70;
+    private javax.swing.JCheckBox cbPesoMasculino55;
+    private javax.swing.JCheckBox cbPesoMasculino62;
+    private javax.swing.JCheckBox cbPesoMasculino69;
+    private javax.swing.JCheckBox cbPesoMasculino77;
+    private javax.swing.JCheckBox cbPesoMasculino85;
+    private javax.swing.JCheckBox cbPesoMasculino94;
+    private javax.swing.JCheckBox cbPesoMasculinoMais94;
+    private javax.swing.JCheckBox cbSenior;
+    private com.toedter.calendar.JDateChooser dateChooserFim;
+    private com.toedter.calendar.JDateChooser dateChooserInicio;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel lblCategoriaPeso;
+    private javax.swing.JLabel lblDataFim;
+    private javax.swing.JLabel lblDataInicio;
+    private javax.swing.JLabel lblEscaloes;
+    private javax.swing.JLabel lblGeneros;
+    private javax.swing.JLabel lblLocal;
+    private javax.swing.JLabel lblNome;
+    private javax.swing.JLabel lblPais;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JTextField txtLocal;
+    private javax.swing.JTextField txtNome;
+    private javax.swing.JTextField txtPais;
     // End of variables declaration//GEN-END:variables
 }
