@@ -1,36 +1,30 @@
-Caso de Uso "Registar Progresso dos Combates" 
+----------------------------------------------------------------------------------------------------------------
+
+Caso de Uso "Registar Progresso dos Combates"
 
 Caminho Principal
-1. O utilizador está autenticado e é mostrada a página "Homepage"
-2. O utilizador escolhe a opção "Ver" na lista de eventos disponíveis na página "Homepage" e é mostrada a página do "Evento X"
-3. O utilizador escolhe a opção "Ver" na lista de provas disponíveis na página "Evento X" e é mostrada a página da "Prova X"
-4. O utilizador escolhe a fase em que a prova se encontra (caso de uso "Escolher Fase da Prova")
-5. O utilizador escolhe a opção "Registar Resultado" de um combate que ainda não tenha sido registado
-6. A aplicação mostra o formulário de registar o resultado do combate
-7. O utilizador insere os pontos que cada atleta teve, seleciona o vencedor e o motivo de ter ganho
-8. O utilizador escolhe a opção "Registar Resultado"
-9. A aplicação mostra uma janela para confirmar o registo do resultado e o utilizador escolha a opção "Sim"
-10. A aplicação valida os resultados (caso de uso "Validar Registo de Combate") e é mostrada uma mensagem de sucesso
-11. A aplicação regista os valores inseridos
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Ver Prova" (Caso de Uso "Ver Prova"))
+1. O utilizador escolhe a fase em que a prova se encontra (caso de uso "Escolher Fase da Prova")
+2. O utilizador escolhe a opção "Registar Resultado" de um combate que ainda não tenha sido registado
+3. A aplicação mostra o formulário de registar o resultado do combate
+4. O utilizador insere os pontos que cada atleta teve, seleciona o vencedor e o motivo de ter ganho
+5. O utilizador escolhe a opção "Registar Resultado"
+6. A aplicação mostra uma janela para confirmar o registo do resultado e o utilizador escolha a opção "Sim"
+7. A aplicação valida os resultados (caso de uso "Validar Registo de Combate") e é mostrada uma mensagem de sucesso
+8. A aplicação regista os valores inseridos
 
-Caminhos Alternativos 
-1.1 O utilizador não está autenticado
-1.1.1 O caso de usa continua no caso de uso "Login"
-2.1 Não existem eventos criados
-2.1.1 O caso de usa continua no caso de uso "Criar Evento"
-2.1.2 O caso de usa continua no caso de uso "Importar Evento"
-3.1 Não existem provas criadas
-3.1.1 O caso de usa continua no caso de uso "Criar Prova"
-3.1.2 O caso de usa continua no caso de uso "Importar Prova"
-3.2 As provas listadas já se encontram finalizadas
-3.2.1 O caso de uso continua no ponto 3
-8.1 O utilizador escolhe a opção "Cancelar"
-8.1.1 O caso de uso continua no ponto 4
-9.1 O utilizador escolhe a opção "Cancelar"
-9.1.1 O caso de uso continua no ponto 7
-10.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Registo de Combate")
-10.1.1 O caso de uso de continua no ponto 4
-11.1 Caso o combate se encontra na fase final da prova o caso de uso continua no caso de uso "Registar Resultado da Prova"
+Caminhos Alternativos
+4.1 O utlizador carrega no botão para nevegar para trás
+4.1.1 A aplicação navega para a página "Ver Prova"
+5.1 O utilizador escolhe a opção "Cancelar"
+5.1.1 A aplicação navega para a página "Ver Prova"
+6.1 O utilizador escolhe a opção "Cancelar"
+6.1.1 O caso de uso continua no ponto 3
+7.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Registo de Combate")
+7.1.1 O caso de uso de continua no ponto 4
+8.1 Caso o combate se encontra na fase final da prova o caso de uso continua no caso de uso "Registar Resultado da Prova"
+
+----------------------------------------------------------------------------------------------------------------
 
 Caso de uso "Validar Registo de Combate"
 
@@ -61,6 +55,120 @@ Caminhos Alternativos
 3.1 O utilizador não escolheu um vencedor
 3.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
 4.1 utilizador não escolheu uma razão de vitória
-4.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
-
+4.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório
 *(no Jiu-Jitsu é extremamente improvável o valor de pontos de um combate ultrapassar 100 pontos)
+
+----------------------------------------------------------------------------------------------------------------
+
+Caso de uso "Ver Inscritos" 
+Caminho Principal
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Ver Prova" (Caso de Uso "Ver Prova"))
+1.O utilizador clica no botão “Ver Inscritos”
+2.A aplicação navega para a página de Inscritos da Prova e mostra a lista dos inscritos
+
+Caminhos Secundários
+1.1	O utilizador clica no botão de navegação para voltar para trás
+1.1.1 A aplicação navega para a página "Ver Evento"
+
+----------------------------------------------------------------------------------------------------------------
+
+Caso de uso "Iniciar Prova"
+Caminho Principal
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Ver Prova" (Caso de Uso "Ver Prova"))
+1.O utilizador clica no botão “Iniciar Prova”
+2.Continua no Caso de Uso "Validar Pesos"
+3.Os inscritos são inseridos em combates
+4.A aplicação mostra uma mensagem de sucesso
+
+Caminhos Secundários
+1.1	O utilizador clica no botão de navegação para voltar para trás
+1.1.1 A aplicação navega para a página "Ver Evento"
+3.1 Os inscritos que não têm o peso certo para a sua categoria de peso são inseridos na mesma mas são automaticamente desclassificados
+
+----------------------------------------------------------------------------------------------------------------
+
+Caso de uso "Validar Pesos"
+Caminho Principal
+1. A aplicação percorre os atletas inscritos todos e verifica se para cada um dos atletas foi inserido o peso atual na página "Ver Inscritos"
+2. A validação é feita com sucesso 
+
+Caminho Alternativos
+1.1 A aplicação verifica que ainda existem pesos que não foram inseridos
+1.1.1 A aplicação mostra a mensagem de erro "Ainda existem atletas em que o peso não foi inserido"
+
+----------------------------------------------------------------------------------------------------------------
+
+Caso de uso "Registar Pesos"
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Ver Prova" (Caso de Uso "Ver Prova"))
+Caminho Principal
+1. O utilizador clica no botão "Ver Inscritos"
+2. A aplicação navega para a página "Ver Inscritos" e lista os atletas inscritos
+3. O utilizador seleciona um utilizador e clica no botão "Registar Peso"
+4. Uma janela modal é mostrada e o utilizador insere o peso e escolhe a opção "Ok"
+5. A aplicação mostra uma mensagem de sucesso
+
+Caminho Alternativos
+1.1	O utilizador clica no botão de navegação para voltar para trás
+1.1.1 A aplicação navega para a página "Ver Evento"
+4.1 O utilizor escolhe a opção "Cancelar"
+4.1.1 O caso de uso continua no ponto 2
+4.2 O valor do campo de peso não está preenchido
+4.2.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+4.2.2 O caso de uso continua no ponto 4
+4.2 O valor do campo de peso tem um valor menor que 40 e maior que 200
+4.2.1 A aplicação mostra a mensagem de erro "O campo de peso tem que ter um valor entre 40 e 200"
+4.2.2 O caso de uso continua no ponto 4
+
+----------------------------------------------------------------------------------------------------------------
+
+Caso de uso "Dessociar Evento" 
+Caminho Principal
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Ver Prova" (Caso de Uso "Ver Prova"))
+1.O utilizador clica no botão “Dessociar Evento”
+2.A mostra uma janela modal para confirmar a ação e o utilizador clica ok
+3.A prova é desassociada do evento
+
+Caminhos Secundários
+1.1	O utilizador clica no botão de navegação para voltar para trás
+1.1.1 A aplicação navega para a página "Ver Evento"
+2.1 O clica na opção "cancelar"
+2.1.1 O caso de uso continua na Pré-Condição
+
+----------------------------------------------------------------------------------------------------------------
+
+Caso de uso "Associar Evento" 
+Caminho Principal
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Ver Prova" (Caso de Uso "Ver Prova"))
+1.O utilizador clica no botão “Associar Evento”
+2.A mostra uma janela modal com a lista de eventos, o utilizador seleciona um evento e clica na opção "ok"
+3.A prova é associada ao evento selecionado
+
+Caminhos Secundários
+1.1	O utilizador clica no botão de navegação para voltar para trás
+1.1.1 A aplicação navega para a página "Ver Evento"
+2.1 O clica na opção "cancelar"
+2.1.1 O caso de uso continua na Pré-Condição
+
+----------------------------------------------------------------------------------------------------------------
+
+Caso de uso "Definir Calendário" 
+
+Caminho Principal
+
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Ver Evento" e executa o Caso de Uso "Lançar Evento")
+1.	A aplicação percorre as provas pré-definidas
+2.  A aplicação insere os atletas inscritos no evento de acordo com a sua idade, género e peso
+3.	A aplicação valida se a prova tem os pré-requisitos corretos para ser iniciada
+4.	A aplicação retorna uma mensagem de sucesso
+
+Caminhos Secundários
+3.1 A prova não tem inscritos suficientes (mínimo 4 atletas) e é mostrada a mensagem de erro "A prova X não tem atletas inscritos suficientes" como janela modal
+3.1.1 O utilizador clica no botão "Continuar"
+3.1.1.1 O caso de uso continua no passo 1
+3.1.2 O utilizador clica no botão "Cancelar"
+3.1.2.1 O processo é interrompido e aplicação mostra a mensagem de informação "Processo de Lançar Evento cancelado"
+3.2 A prova não tem inscritos suficientes (potência de 2) para iniciar uma prova completa a mensagem de erro "A prova X não tem atletas inscritos suficientes para criar uma prova completa" como janela modal
+3.2.1 O utilizador clica no botão "Continuar"
+3.2.1.1 O caso de uso continua no passo 1
+3.2.2 O utilizador clica no botão "Cancelar"
+3.2.2.1 O processo é interrompido e aplicação mostra a mensagem de informação "Processo de Lançar Evento cancelado"
