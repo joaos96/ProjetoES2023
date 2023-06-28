@@ -12,12 +12,12 @@ import javax.swing.JFrame;
  *
  * @author joaom
  */
-public class PaginaImportarAtleta extends javax.swing.JFrame {
+public class PaginaProvaImportar extends javax.swing.JFrame {
 
     /**
      * Creates new form Home
      */
-    public PaginaImportarAtleta() {
+    public PaginaProvaImportar() {
         initComponents();
     }
 
@@ -48,7 +48,7 @@ public class PaginaImportarAtleta extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitulo.setText("Importar Atleta");
+        lblTitulo.setText("Importar Prova");
         lblTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0));
 
         btnVoltar.setText("<-");
@@ -88,7 +88,7 @@ public class PaginaImportarAtleta extends javax.swing.JFrame {
 
         btnImportar.setBackground(new java.awt.Color(0, 153, 0));
         btnImportar.setForeground(new java.awt.Color(255, 255, 255));
-        btnImportar.setText("Importar Atleta");
+        btnImportar.setText("Importar Prova");
         btnImportar.setName("loginButton"); // NOI18N
         btnImportar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,21 +182,21 @@ public class PaginaImportarAtleta extends javax.swing.JFrame {
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
 
-        JFrame home = new Home();
+        JFrame home = new PaginaEvento();
         home.show();
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnVoltarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
 
-        JFrame home = new Home();
+        JFrame home = new PaginaEvento();
         home.show();
         dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnImportarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportarActionPerformed
 
-        JFrame home = new Home();
+        JFrame home = new PaginaEvento();
         home.show();
         dispose();
     }//GEN-LAST:event_btnImportarActionPerformed

@@ -264,21 +264,21 @@ public class PaginaAtleta extends javax.swing.JFrame {
 
     private void btnVerInscricoesAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerInscricoesAtletaActionPerformed
 
-        JFrame home = new PaginaInscricoesAtleta();
+        JFrame home = new PaginaAtletaInscricoes();
         home.show();
         dispose();
     }//GEN-LAST:event_btnVerInscricoesAtletaActionPerformed
 
     private void btnVerHistoricoAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerHistoricoAtletaActionPerformed
         
-        JFrame home = new PaginaHistoricoResultadosAtleta();
+        JFrame home = new PaginaAtletaHistorico();
         home.show();
         dispose();
     }//GEN-LAST:event_btnVerHistoricoAtletaActionPerformed
 
     private void btnEditarAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarAtletaActionPerformed
         
-        JFrame home = new PaginaEditarAtleta();
+        JFrame home = new PaginaAtletaEditar();
         home.show();
         dispose();
     }//GEN-LAST:event_btnEditarAtletaActionPerformed

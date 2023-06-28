@@ -12,12 +12,12 @@ import javax.swing.JList;
  *
  * @author joaom
  */
-public class PaginaCriarEvento extends javax.swing.JFrame {
+public class PaginaEventoCriar extends javax.swing.JFrame {
 
     /**
      * Creates new form Home
      */
-    public PaginaCriarEvento() {
+    public PaginaEventoCriar() {
         initComponents();
     }
 

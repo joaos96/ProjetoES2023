@@ -12,12 +12,12 @@ import javax.swing.JList;
  *
  * @author joaom
  */
-public class PaginaCriarProva extends javax.swing.JFrame {
+public class PaginaProvaEditar extends javax.swing.JFrame {
 
     /**
      * Creates new form Home
      */
-    public PaginaCriarProva() {
+    public PaginaProvaEditar() {
         initComponents();
     }
 
@@ -51,7 +51,7 @@ public class PaginaCriarProva extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Criar Prova");
+        jLabel1.setText("Editar Prova X");
         jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0));
 
         jButton1.setText("<-");
@@ -92,9 +92,9 @@ public class PaginaCriarProva extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 0));
+        jButton2.setBackground(new java.awt.Color(0, 51, 255));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Criar Prova");
+        jButton2.setText("Editar Prova");
         jButton2.setName("loginButton"); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,10 +103,13 @@ public class PaginaCriarProva extends javax.swing.JFrame {
         });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Junior", "Adulto", "Senior" }));
+        jComboBox1.setSelectedIndex(1);
+        jComboBox1.setToolTipText("");
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menos 56kgs", "Menos 94kgs", "Mais 94kgs" }));
+        jComboBox3.setSelectedIndex(2);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -178,7 +181,7 @@ public class PaginaCriarProva extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        JFrame home = new Home();
+        JFrame home = new PaginaEvento();
         home.show();
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -322,7 +322,7 @@ public class Home extends javax.swing.JFrame {
 
     private void btnEditarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarEventoActionPerformed
           
-        JFrame home = new PaginaEditarEvento();
+        JFrame home = new PaginaEventoEditar();
         home.show();
         dispose();
     }//GEN-LAST:event_btnEditarEventoActionPerformed
@@ -347,14 +347,14 @@ public class Home extends javax.swing.JFrame {
 
     private void btnCriarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarEventoActionPerformed
         
-        JFrame home = new PaginaCriarEvento();
+        JFrame home = new PaginaEventoCriar();
         home.show();
         dispose();
     }//GEN-LAST:event_btnCriarEventoActionPerformed
 
     private void btnImportarEventosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportarEventosActionPerformed
         
-        JFrame home = new PaginaImportarEvento();
+        JFrame home = new PaginaEventoImportar();
         home.show();
         dispose();
     }//GEN-LAST:event_btnImportarEventosActionPerformed
@@ -368,14 +368,14 @@ public class Home extends javax.swing.JFrame {
 
     private void btnCriarAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarAtletaActionPerformed
         
-        JFrame home = new PaginaCriarAtleta();
+        JFrame home = new PaginaAtletaCriar();
         home.show();
         dispose();
     }//GEN-LAST:event_btnCriarAtletaActionPerformed
 
     private void btnEditarAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarAtletaActionPerformed
         
-        JFrame home = new PaginaEditarAtleta();
+        JFrame home = new PaginaAtletaEditar();
         home.show();
         dispose();
     }//GEN-LAST:event_btnEditarAtletaActionPerformed

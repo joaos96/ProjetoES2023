@@ -294,21 +294,21 @@ public class PaginaEvento extends javax.swing.JFrame {
 
     private void btnEditarProvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarProvaActionPerformed
         
-        JFrame home = new PaginaEditarProva();
+        JFrame home = new PaginaProvaEditar();
         home.show();
         dispose();   
     }//GEN-LAST:event_btnEditarProvaActionPerformed
 
     private void btnVerInscritosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerInscritosActionPerformed
         
-        JFrame home = new PaginaEventoIncritos();
+        JFrame home = new PaginaEventoInscritos();
         home.show();
         dispose();      
     }//GEN-LAST:event_btnVerInscritosActionPerformed
 
     private void btnImportarInscricaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportarInscricaoActionPerformed
         
-        JFrame home = new PaginaImportarInscricao();
+        JFrame home = new PaginaInscricaoImportar();
         home.show();
         dispose();      
     }//GEN-LAST:event_btnImportarInscricaoActionPerformed
@@ -336,14 +336,14 @@ public class PaginaEvento extends javax.swing.JFrame {
 
     private void btnImportarProvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportarProvaActionPerformed
         
-        JFrame home = new PaginaImportarProva();
+        JFrame home = new PaginaProvaImportar();
         home.show();
         dispose();         // T
     }//GEN-LAST:event_btnImportarProvaActionPerformed
 
     private void btnCriarProvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarProvaActionPerformed
         
-        JFrame home = new PaginaCriarProva();
+        JFrame home = new PaginaProvaCriar();
         home.show();
         dispose();   
     }//GEN-LAST:event_btnCriarProvaActionPerformed

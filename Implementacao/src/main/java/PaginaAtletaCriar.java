@@ -12,12 +12,12 @@ import javax.swing.JFrame;
  *
  * @author joaom
  */
-public class PaginaCriarAtleta extends javax.swing.JFrame {
+public class PaginaAtletaCriar extends javax.swing.JFrame {
 
     /**
      * Creates new form Home
      */
-    public PaginaCriarAtleta() {
+    public PaginaAtletaCriar() {
         initComponents();
     }
 

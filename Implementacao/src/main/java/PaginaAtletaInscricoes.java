@@ -14,12 +14,12 @@ import javax.swing.UIManager;
  *
  * @author joaom
  */
-public class PaginaInscreverAtleta extends javax.swing.JFrame {
+public class PaginaAtletaInscricoes extends javax.swing.JFrame {
 
     /**
      * Creates new form Home
      */
-    public PaginaInscreverAtleta() {
+    public PaginaAtletaInscricoes() {
         initComponents();
     }
 
@@ -41,7 +41,9 @@ public class PaginaInscreverAtleta extends javax.swing.JFrame {
         competionList = new javax.swing.JList<>();
         deleteCompetitionBtn6 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        submitEnrollmentBtn = new javax.swing.JButton();
+        createCompetitionBtn = new javax.swing.JButton();
+        editCompetitionBtn = new javax.swing.JButton();
+        showCompetitionBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,7 +53,7 @@ public class PaginaInscreverAtleta extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Inscrever Atleta X");
+        jLabel1.setText("Atleta X - Incrições");
         jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0));
 
         jButton1.setText("<-");
@@ -78,7 +80,7 @@ public class PaginaInscreverAtleta extends javax.swing.JFrame {
         );
 
         competionList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "'Evento X' - 2023-06-22/2023-06-26", "'Evento Y' - 2023-04-14/2023-04/23", "'Evento Z' - 2023-02-12/2023-02-30" };
+            String[] strings = { "Incrição 'Evento X' - 2023-06-22", "Incrição 'Evento Y' - 2023-04-14", "Incrição 'Evento Z' - 2023-01-02" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -97,10 +99,10 @@ public class PaginaInscreverAtleta extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(deleteCompetitionBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,14 +114,32 @@ public class PaginaInscreverAtleta extends javax.swing.JFrame {
         );
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Eventos Disponíveis");
+        jLabel2.setText("Incrições");
 
-        submitEnrollmentBtn.setBackground(new java.awt.Color(0, 204, 0));
-        submitEnrollmentBtn.setForeground(new java.awt.Color(255, 255, 255));
-        submitEnrollmentBtn.setText("Submeter Inscrição");
-        submitEnrollmentBtn.addActionListener(new java.awt.event.ActionListener() {
+        createCompetitionBtn.setBackground(new java.awt.Color(255, 0, 0));
+        createCompetitionBtn.setForeground(new java.awt.Color(255, 255, 255));
+        createCompetitionBtn.setText("Cancelar Incrição");
+        createCompetitionBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitEnrollmentBtnActionPerformed(evt);
+                createCompetitionBtnActionPerformed(evt);
+            }
+        });
+
+        editCompetitionBtn.setBackground(new java.awt.Color(153, 153, 153));
+        editCompetitionBtn.setForeground(new java.awt.Color(255, 255, 255));
+        editCompetitionBtn.setText("Importar Inscrição");
+        editCompetitionBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editCompetitionBtnActionPerformed(evt);
+            }
+        });
+
+        showCompetitionBtn.setBackground(new java.awt.Color(0, 204, 0));
+        showCompetitionBtn.setForeground(new java.awt.Color(255, 255, 255));
+        showCompetitionBtn.setText("Criar Incrição");
+        showCompetitionBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showCompetitionBtnActionPerformed(evt);
             }
         });
 
@@ -132,10 +152,12 @@ public class PaginaInscreverAtleta extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(submitEnrollmentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(editCompetitionBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(createCompetitionBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(showCompetitionBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -146,7 +168,12 @@ public class PaginaInscreverAtleta extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(submitEnrollmentBtn)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(showCompetitionBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(createCompetitionBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(editCompetitionBtn))
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
@@ -171,12 +198,12 @@ public class PaginaInscreverAtleta extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void submitEnrollmentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitEnrollmentBtnActionPerformed
+    private void showCompetitionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showCompetitionBtnActionPerformed
 
-        JFrame home = new PaginaInscricoesAtleta();
+        JFrame home = new PaginaAtletaInscrever();
         home.show();
         dispose();            // TODO add your handling code here:
-    }//GEN-LAST:event_submitEnrollmentBtnActionPerformed
+    }//GEN-LAST:event_showCompetitionBtnActionPerformed
 
     private void deleteCompetitionBtn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCompetitionBtn6ActionPerformed
         // TODO add your handling code here:
@@ -184,10 +211,23 @@ public class PaginaInscreverAtleta extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        JFrame home = new PaginaInscricoesAtleta();
+        JFrame home = new Home();
         home.show();
-        dispose();          // TODO add your handling code here:
+        dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void createCompetitionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCompetitionBtnActionPerformed
+        UIManager.put("OptionPane.noButtonText", "Cancelar");
+        UIManager.put("OptionPane.yesButtonText", "Sim");
+        int result = JOptionPane.showConfirmDialog(this, "Esta ação vai cancelar a inscrição do atleta X no evento X. \nDeseja proceder?", "Lançar Evento",  JOptionPane.YES_NO_OPTION);        
+    }//GEN-LAST:event_createCompetitionBtnActionPerformed
+
+    private void editCompetitionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editCompetitionBtnActionPerformed
+
+        JFrame home = new PaginaInscricaoImportar();
+        home.show();
+        dispose();
+    }//GEN-LAST:event_editCompetitionBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -226,7 +266,9 @@ public class PaginaInscreverAtleta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JList<String> competionList;
+    private javax.swing.JButton createCompetitionBtn;
     private javax.swing.JButton deleteCompetitionBtn6;
+    private javax.swing.JButton editCompetitionBtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -234,6 +276,6 @@ public class PaginaInscreverAtleta extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton submitEnrollmentBtn;
+    private javax.swing.JButton showCompetitionBtn;
     // End of variables declaration//GEN-END:variables
 }

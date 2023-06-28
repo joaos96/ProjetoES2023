@@ -14,12 +14,12 @@ import javax.swing.UIManager;
  *
  * @author joaom
  */
-public class PaginaProva extends javax.swing.JFrame {
+public class PaginaEventoInscritos extends javax.swing.JFrame {
 
     /**
      * Creates new form Home
      */
-    public PaginaProva() {
+    public PaginaEventoInscritos() {
         initComponents();
     }
 
@@ -38,14 +38,9 @@ public class PaginaProva extends javax.swing.JFrame {
         btnVoltar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        listCombates = new javax.swing.JList<>();
+        listInscritos = new javax.swing.JList<>();
         lblHeader = new javax.swing.JLabel();
-        cbFases = new javax.swing.JComboBox<>();
-        btnDesassociarEvento = new javax.swing.JButton();
-        btnIniciarProva = new javax.swing.JButton();
-        btnAssociarEvento = new javax.swing.JButton();
-        btnRegistarResultado = new javax.swing.JButton();
-        btnVerInscritos = new javax.swing.JButton();
+        cbProvas = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,7 +50,7 @@ public class PaginaProva extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitulo.setText("Prova X");
+        lblTitulo.setText("Evento X - Inscritos");
         lblTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0));
 
         btnVoltar.setText("<-");
@@ -81,12 +76,12 @@ public class PaginaProva extends javax.swing.JFrame {
                 .addComponent(btnVoltar))
         );
 
-        listCombates.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Combate X - 2023-06-23 | Pontos Atleta 4:  Atleta 1:  | Vencedor:  | Razão da Vitória: Ainda não ocorreu", "Combate X - 2023-06-23 | Pontos Atleta 3: 50 Atleta 2: 10 | Vencedor: Atleta 1 | Razão da Vitória: Submissão" };
+        listInscritos.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Atleta X", "Atleta Y", "Atleta Z" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(listCombates);
+        jScrollPane1.setViewportView(listInscritos);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -102,57 +97,9 @@ public class PaginaProva extends javax.swing.JFrame {
         );
 
         lblHeader.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblHeader.setText("Combates");
+        lblHeader.setText("Inscritos - Prova X");
 
-        cbFases.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Quartos-Final", "Semi-Final", "Final" }));
-        cbFases.setSelectedIndex(1);
-
-        btnDesassociarEvento.setBackground(new java.awt.Color(153, 153, 153));
-        btnDesassociarEvento.setForeground(new java.awt.Color(255, 255, 255));
-        btnDesassociarEvento.setText("Desassociar Evento");
-        btnDesassociarEvento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDesassociarEventoActionPerformed(evt);
-            }
-        });
-
-        btnIniciarProva.setBackground(new java.awt.Color(153, 153, 153));
-        btnIniciarProva.setForeground(new java.awt.Color(255, 255, 255));
-        btnIniciarProva.setText("Iniciar Prova");
-        btnIniciarProva.setEnabled(false);
-        btnIniciarProva.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIniciarProvaActionPerformed(evt);
-            }
-        });
-
-        btnAssociarEvento.setBackground(new java.awt.Color(153, 153, 153));
-        btnAssociarEvento.setForeground(new java.awt.Color(255, 255, 255));
-        btnAssociarEvento.setText("Associar a Evento");
-        btnAssociarEvento.setEnabled(false);
-        btnAssociarEvento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssociarEventoActionPerformed(evt);
-            }
-        });
-
-        btnRegistarResultado.setBackground(new java.awt.Color(153, 153, 153));
-        btnRegistarResultado.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegistarResultado.setText("Registar Resultado");
-        btnRegistarResultado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistarResultadoActionPerformed(evt);
-            }
-        });
-
-        btnVerInscritos.setBackground(new java.awt.Color(153, 153, 153));
-        btnVerInscritos.setForeground(new java.awt.Color(255, 255, 255));
-        btnVerInscritos.setText("Ver Inscritos");
-        btnVerInscritos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVerInscritosActionPerformed(evt);
-            }
-        });
+        cbProvas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Prova X", "Prova Y", "Prova Z" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -162,17 +109,11 @@ public class PaginaProva extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnIniciarProva, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(cbFases, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnDesassociarEvento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAssociarEvento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnRegistarResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnVerInscritos, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(cbProvas, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -182,20 +123,9 @@ public class PaginaProva extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addComponent(lblHeader)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnIniciarProva)
-                        .addGap(11, 11, 11)
-                        .addComponent(btnVerInscritos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnRegistarResultado)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cbFases, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAssociarEvento)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnDesassociarEvento))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbProvas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
 
@@ -225,29 +155,6 @@ public class PaginaProva extends javax.swing.JFrame {
         home.show();
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnVoltarActionPerformed
-
-    private void btnRegistarResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistarResultadoActionPerformed
-
-    }//GEN-LAST:event_btnRegistarResultadoActionPerformed
-
-    private void btnDesassociarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesassociarEventoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDesassociarEventoActionPerformed
-
-    private void btnIniciarProvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarProvaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnIniciarProvaActionPerformed
-
-    private void btnAssociarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssociarEventoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAssociarEventoActionPerformed
-
-    private void btnVerInscritosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerInscritosActionPerformed
-        // TODO add your handling code here:
-        JFrame home = new PaginaProvaInscritos();
-        home.show();
-        dispose();   
-    }//GEN-LAST:event_btnVerInscritosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -285,19 +192,14 @@ public class PaginaProva extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssociarEvento;
-    private javax.swing.JButton btnDesassociarEvento;
-    private javax.swing.JButton btnIniciarProva;
-    private javax.swing.JButton btnRegistarResultado;
-    private javax.swing.JButton btnVerInscritos;
     private javax.swing.JButton btnVoltar;
-    private javax.swing.JComboBox<String> cbFases;
+    private javax.swing.JComboBox<String> cbProvas;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblTitulo;
-    private javax.swing.JList<String> listCombates;
+    private javax.swing.JList<String> listInscritos;
     // End of variables declaration//GEN-END:variables
 }
