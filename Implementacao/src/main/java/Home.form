@@ -338,6 +338,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Ver Pa&#xed;ses mais Medalhados"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarMaisMedalhasPaisActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCriarAtleta">
           <Properties>
@@ -377,6 +380,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Ver Hist&#xf3;rico"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarHistoricoAtletaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnMostraInscricoes">
           <Properties>
@@ -388,6 +394,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Ver Inscri&#xe7;&#xf5;es"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostraInscricoesActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnSair">
           <Properties>
@@ -424,6 +433,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Importar Atletas"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnImportarAtletasActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnMostrarAtleta">
           <Properties>

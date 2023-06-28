@@ -159,6 +159,11 @@ public class Home extends javax.swing.JFrame {
         btnMostrarMaisMedalhasPais.setBackground(new java.awt.Color(153, 153, 153));
         btnMostrarMaisMedalhasPais.setForeground(new java.awt.Color(255, 255, 255));
         btnMostrarMaisMedalhasPais.setText("Ver Países mais Medalhados");
+        btnMostrarMaisMedalhasPais.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarMaisMedalhasPaisActionPerformed(evt);
+            }
+        });
 
         btnCriarAtleta.setBackground(new java.awt.Color(153, 153, 153));
         btnCriarAtleta.setForeground(new java.awt.Color(255, 255, 255));
@@ -181,10 +186,20 @@ public class Home extends javax.swing.JFrame {
         btnMostrarHistoricoAtleta.setBackground(new java.awt.Color(153, 153, 153));
         btnMostrarHistoricoAtleta.setForeground(new java.awt.Color(255, 255, 255));
         btnMostrarHistoricoAtleta.setText("Ver Histórico");
+        btnMostrarHistoricoAtleta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarHistoricoAtletaActionPerformed(evt);
+            }
+        });
 
         btnMostraInscricoes.setBackground(new java.awt.Color(153, 153, 153));
         btnMostraInscricoes.setForeground(new java.awt.Color(255, 255, 255));
         btnMostraInscricoes.setText("Ver Inscrições");
+        btnMostraInscricoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostraInscricoesActionPerformed(evt);
+            }
+        });
 
         btnSair.setBackground(new java.awt.Color(255, 0, 0));
         btnSair.setForeground(new java.awt.Color(255, 255, 255));
@@ -202,6 +217,11 @@ public class Home extends javax.swing.JFrame {
         btnImportarAtletas.setBackground(new java.awt.Color(153, 153, 153));
         btnImportarAtletas.setForeground(new java.awt.Color(255, 255, 255));
         btnImportarAtletas.setText("Importar Atletas");
+        btnImportarAtletas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImportarAtletasActionPerformed(evt);
+            }
+        });
 
         btnMostrarAtleta.setBackground(new java.awt.Color(153, 153, 153));
         btnMostrarAtleta.setForeground(new java.awt.Color(255, 255, 255));
@@ -379,6 +399,34 @@ public class Home extends javax.swing.JFrame {
         home.show();
         dispose();
     }//GEN-LAST:event_btnEditarAtletaActionPerformed
+
+    private void btnMostrarMaisMedalhasPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarMaisMedalhasPaisActionPerformed
+        
+        JFrame home = new PaginaMedalhas();
+        home.show();
+        dispose();
+    }//GEN-LAST:event_btnMostrarMaisMedalhasPaisActionPerformed
+
+    private void btnImportarAtletasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportarAtletasActionPerformed
+        
+        JFrame home = new PaginaAtletaImportar();
+        home.show();
+        dispose();
+    }//GEN-LAST:event_btnImportarAtletasActionPerformed
+
+    private void btnMostraInscricoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostraInscricoesActionPerformed
+       
+        JFrame home = new PaginaAtletaInscricoes();
+        home.show();
+        dispose();
+    }//GEN-LAST:event_btnMostraInscricoesActionPerformed
+
+    private void btnMostrarHistoricoAtletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarHistoricoAtletaActionPerformed
+
+        JFrame home = new PaginaAtletaHistorico();
+        home.show();
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMostrarHistoricoAtletaActionPerformed
 
     /**
      * @param args the command line arguments
