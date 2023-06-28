@@ -1,33 +1,48 @@
-CASO DE USO CRIAR DADOS DADOS DO ATLETA
+
+CASO DE USO ENTRA NA PÁGINA ATLETA
 
 Caminho principal
 
 
 1. O Utilizador introduz os dados para realizar o login;
 2. A app verifica se os dados estão corretos e valida a operação;
-3. Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
-4. O Utilizador carrega no botão Criar Atleta;
-5. A página Criar Atleta é aberta;
-6. O utilizador preenche todos os dados do atleta: Primeiro Nome, Último Nome, País,
-Cinturão, Género, Peso e Telefone;
-7. O Utilizador carrega no botão inserir;
-8. A app valida a operação (Caso de uso Verificar Atleta);
-9. O Utilizador volta para Home/Dashboard "Gestão Jiu-Jitsu";
-
+3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+4. Na secção "Gestão Atletas" o Utilizador carrega no Atleta que pretende;
 
 Caminho secundário
 
 1.1 O Utilizador introduz os dados incorretos e parece mensagem de erro "Dados introduzidos inválidos!"
 1.2 O Utilizador carrega no botão "Sair";
-5.1 O Utilizador carrega na seta voltar para trás;
+4.1 Na secção "Gestão Atletas" o Utilizador não carrega no Atleta que pretende;
+
+
+CASO DE USO CRIAR DADOS DADOS DO ATLETA
+
+Caminho principal
+
+(Pré-Condição: Caso de uso entra na página atleta, menos o ponto 4 do CP")
+
+1. O Utilizador carrega no botão Criar Atleta;
+2. A página Criar Atleta é aberta;
+3. O Utilizador preenche todos os dados do atleta: Primeiro Nome, Último Nome, País,
+Cinturão, Género, Peso e Telefone;
+4. O Utilizador carrega no botão inserir;
+5. A app valida a operação (Caso de uso Verificar Atleta);
+6. O Utilizador volta para Home/Dashboard "Gestão Jiu-Jitsu";
+
+
+Caminho secundário
+
+
+2.1 O Utilizador carrega na seta voltar para trás;
+2.1.1 O caso de uso continua no ponto 3 do CP;
+3.1 O Utilizador não preenche todos os dados do atleta;
+4.1 O Utilizador carrega no botão cancelar;
+4.1.1 A operação é cancelada e o caso de uso continua no ponto 2 do CP; 
+5.1 A operação não é validada pela falta de dados inseridos, a app apresenta a mensagem "Faltam parametros!";
 5.1.1 O caso de uso continua no ponto 3 do CP;
-6.1 O Utilizador não preenche todos os dados do atleta;
-7.1 O Utilizador carrega no botão cancelar;
-7.1.1 A operação é cancelada e o caso de uso continua no ponto 1 do CP; 
-8.1 A operação não é validada pela falta de dados inseridos, a app apresenta a mensagem "Faltam parametros!";
-8.1.1 O caso de uso continua no ponto 6 do CP;
-8.2 A operação não é validada por um ou mais parametros serem iguais a outro atleta;
-8.2.1 O caso de uso continua no ponto 6 do CP;
+5.2 A operação não é validada por um ou mais parametros serem iguais a outro atleta;
+5.2.1 O caso de uso continua no ponto 3 do CP;
 
 
 
@@ -35,42 +50,36 @@ CASO DE USO FAZER INSCRICAO DO ATLETA NO EVENTO
 
 
 
-
 Caminho principal
 
+(Pré-Condição: Caso de uso entra na página atleta")
 
-1. O Utilizador introduz os dados para realizar o login;
-2. A app verifica se os dados estão corretos e valida a operação;
-3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
-4. Na secção "Gestão Atletas" o Ultilizador carrega no Atleta que pretende inscrever;
-5. O Ultizador carrega no botão "Ver Inscriões";
-6. É aberta a página "Inscrição - Atleta "Nome Atleta" ";
-7. O Utilizador carrega no botão verde "Criar Inscrição";
-8. São mostrados os Eventos que estão criados;
-9. O Utilizador carrega no Evento que pretende inscrever o Atleta;
-10. O Utilizador carrega no botão "Criar Inscrição";
-11. A app valida a operação (Caso de uso Verificar Inscrição);
-12. O Utilizador retorna ao Home/Dashboard "Gestão Jiu-Jitsu";
+1. O Utilizador carrega no botão "Ver Inscriões";
+2. É aberta a página "Inscrição - Atleta "Nome Atleta" ";
+3. O Utilizador carrega no botão verde "Criar Inscrição";
+4. São mostrados os Eventos que estão criados;
+5. O Utilizador carrega no Evento que pretende inscrever o Atleta;
+6. O Utilizador carrega no botão "Criar Inscrição";
+7. A app valida a operação (Caso de uso Verificar Inscrição);
+8. O Utilizador retorna ao Home/Dashboard "Gestão Jiu-Jitsu";
 
 
 Caminho secundário
 
-1.1 O Utilizador introduz os dados incorretos e parece mensagem de erro "Dados introduzidos inválidos!"
-1.2 O Utilizador carrega no botão "Sair";
-4.1 Na secção "Gestão Atletas" o Ultilizador não carrega no Atleta que pretende inscrever;
-5.1 Não é possivel carregar no botão "Ver Inscrições" pois o Atleta não foi selecionado;
-5.1.1 O caso de uso continua no ponto 4 do CP;
-6.1 O Utilizador carrega na seta para voltar a trás;
-6.1.1 O caso de uso continua no ponto 3 do CP;
-8.1 Não são mostrados eventos pois estes ainda não foram criados;
-8.1.1 Não é possivel inscrever o Atleta no Evento;
-9.1 O utilizador carrega na seta para voltar a trás;
-9.1.1 O caso de uso continua no ponto 6 do CP;
-9.2 O Utilizador não seleciona o Evento pretendido;
-10.1 O Utilizador não consegue carregar no botão "Criar Inscrição" pois o Evento não foi selecionado;
-10.1.1 O caso de uso continua no ponto 9 do CP;
-11.1 A app invalida a operação e aparece uma mensagem de erro;
-11.1.1 O caso de uso continua no ponto 9 do CP;
+
+1.1 Não é possivel carregar no botão "Ver Inscrições" pois o Atleta não foi selecionado;
+1.1.1 O caso de uso continua no ponto 2 do CP;
+2.1 O Utilizador carrega na seta para voltar a trás;
+2.1.1 O Utilizador volta para o Atleta X - Inscrições;
+4.1 Não são mostrados eventos pois estes ainda não foram criados;
+4.1.1 Não é possivel inscrever o Atleta no Evento;
+5.1 O utilizador carrega na seta para voltar a trás;
+5.1.1 O caso de uso continua no ponto 2 do CP;
+5.2 O Utilizador não seleciona o Evento pretendido;
+6.1 O Utilizador não consegue carregar no botão "Criar Inscrição" pois o Evento não foi selecionado;
+6.1.1 O caso de uso continua no ponto 5 do CP;
+6.1 A app invalida a operação e aparece uma mensagem de erro;
+6.1.1 O caso de uso continua no ponto 5 do CP;
 
 
 CASO DE USO EDITAR O ATLETA
@@ -78,35 +87,53 @@ CASO DE USO EDITAR O ATLETA
 
 Caminho principal
 
+(Pré-Condição: Caso de uso entra na página atleta")
 
-1. O Utilizador introduz os dados para realizar o login;
-2. A app verifica se os dados estão corretos e valida a operação;
-3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+1. O Utilizador carrega no botão "Editar Atleta";
+2. É aberta a página "Editar Atleta" ";
+3. O Utilizador altera os dados do Atleta;
+4. O Utilizador carrega no botão "Inserir";
+5. A app ir Verificar o Atleta e o Atleta é editado com sucesso;
+6. O Utilizador retorna ao Home/Dashboard "Gestão Jiu-Jitsu";
 
+Caminho secundário
+
+
+3.1 O Utilizador nao altera os dados do Atleta;
+3.1.1 O Utilizador carrega no botao cancelar;
+3.1.2 O caso de uso continua no ponto 2 do CP;
+4.1 Os dados foram mal inseridos aparece uma mensagem de erro;
+4.1.1 O Utilizador volta a preencher os dados do Atleta;
+4.2 Faltam parametros a serem assinalados pelo Utilizador;
+4.2.1 O Utilizador volta a preencher os dados do Atleta;
+5.1 A app invalida a operação e aparece uma mensagem de erro;
+5.1.1 O caso de uso continua no ponto 3 do CP;
 
 
 CASO DE USO IMPORTAR O ATLETA
 
-
 Caminho principal
 
+(Pré-Condição: Caso de uso entra na página atleta, exepto o ponto 4 do CP")
 
-1. O Utilizador introduz os dados para realizar o login;
-2. A app verifica se os dados estão corretos e valida a operação;
-3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+1. O Utilizador carrega no botão "Importar Atleta";
+2. É aberta a página "Importar Atleta" ";
+3. O Utilizador carrega no botao "Procurar Ficheiro"
+4. O Utilizador escolhe o ficheiro do Atleta que pretende importar;
+5. O Utilizador carrega no botao "Importar";
+6. A app Verifica o Atleta e valida a operacao;
+7. O Utilizador retorna ao Home/Dashboard "Gestão Jiu-Jitsu";
+
+Caminho secundário
 
 
-
-CASO DE USO VER HISTÓRICO ATLETA
-
-
-Caminho principal
-
-
-1. O Utilizador introduz os dados para realizar o login;
-2. A app verifica se os dados estão corretos e valida a operação;
-3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
-
+3.1 O Utilizador carrega no botão "Cancelar";
+5.1 O Utilizador cancela a operação;
+5.1.1 O Utilizador volta para o Home/Dashboard;
+6.1 A app verifica que já existe um ficheiro com os dados iguais!
+6.1.1 O caso de uso continua no ponto 2 do CP;
+6.2 Aparece mensagem de erro "Tem de ser um ficheiro .txt!", pois ele selecionou um ficheiro inválido;
+6.2.1 O caso de uso continua no ponto 2 do CP;
 
 
 CASO DE USO VER ATLETA
@@ -114,10 +141,41 @@ CASO DE USO VER ATLETA
 
 Caminho principal
 
+(Pré-Condição: Caso de uso entra na página atleta")
 
-1. O Utilizador introduz os dados para realizar o login;
-2. A app verifica se os dados estão corretos e valida a operação;
-3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+1. Na secção "Gestão Atletas" o Ultilizador carrega no botão "Ver" do Atleta que em pretende observar;
+2. É aberta a página "Ver Atleta - X" ";
+
+
+Caminho secundário
+
+
+1.1 Nao havendo atletas criados, nao é possivel carregar no "Ver";
+2.1 O Utilizador carrega no botão "Editar";
+2.1.1 Caso de uso Editar Atleta a partir do ponto 2 do CP; 
+2.2 O Utilizador carrega no botão "Ver Histórico";
+2.2.1 Caso de uso Ver Histórico a partir do ponto 2 do CP; 
+2.3 O Utilizador carrega no botão "Ver Inscrições";
+2.3.1 Caso de uso Ver Inscrição a partir do ponto 2 do CP;
+
+
+CASO DE USO VER HISTÓRICO ATLETA
+
+
+Caminho principal
+
+(Pré-Condição: Caso de uso entra na página atleta")
+
+1. O Utilizador carrega no botão "Ver Histórico";
+2. É aberta a página "Atleta - X - Histórico de Resultados"; 
+3. O Utilizador filtra os dados que pretende obter;
+
+
+Caminho secundário
+
+
+2.1 O Utilizador carrega na seta voltar para trás;
+2.1.1 O Utilizador volta o Home/Dashboard;
 
 
 
@@ -126,33 +184,22 @@ CASO DE USO VER INSCRIÇOES ATLETA
 
 Caminho principal
 
+(Pré-Condição: Caso de uso entra na página atleta")
 
-1. O Utilizador introduz os dados para realizar o login;
-2. A app verifica se os dados estão corretos e valida a operação;
-3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
-
-
-CASO DE USO VER HISTÓRICO ATLETA
+1. O Utilizador carrega no botão "Ver Inscrição";
+2. É aberta a página "Atleta X - Inscrições ";
+3. O Utilizador consegue ver todas as Inscrições do Atleta;
 
 
-Caminho principal
+Caminho secundário
 
 
-1. O Utilizador introduz os dados para realizar o login;
-2. A app verifica se os dados estão corretos e valida a operação;
-3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
-
-
-
-CASO DE USO IMPORTAR INSCRICAO
-
-
-Caminho principal
-
-
-1. O Utilizador introduz os dados para realizar o login;
-2. A app verifica se os dados estão corretos e valida a operação;
-3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
+3.1 O Utilizador carrega no botão "Criar Inscrição";
+3.1.1 Caso de uso fazer inscrição do atleta no evento no ponto 2 do CP;
+3.2 O Utilizador carrega no botão "Cancelar Inscrição";
+3.2.1 Caso de uso cancelar inscrição do atleta no evento no ponto 5 do CP;
+3.3 O Utilizador carrega no botão "Importar Inscrição";
+3.3.1 Caso de uso importar inscrição do atleta no ponto 4 do CP;
 
 
 
@@ -161,17 +208,52 @@ CASO DE USO CANCELAR INSCRICAO
 
 Caminho principal
 
+(Pré-Condição: Caso de uso entra na página atleta")
 
-1. O Utilizador introduz os dados para realizar o login;
-2. A app verifica se os dados estão corretos e valida a operação;
-3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
 
+1. O Utilizador carrega no botão "Ver Inscriões";
+2. É aberta a página "Atleta X - Inscrições";
+3. O Utilizador seleciona a Inscrição que pretende cancelar;
+4. O Utilizador carrega no botão "Cancelar Inscrição";
+5. É mostrado uma mensagem de aviso ao Utilizador se ele deseja continuar;
+6. O Utilizador carrega no botão "Proceder";
+7. A app valida a operação e o Atleta deixa de estar inscrito; 
+
+Caminho secundário
+
+3.1 Não existem inscrições do atleta;
+3.1.1 O Utilizador carrega na seta para voltar ao Home/Dashboard;
+6.1 O Utilizador carrega no botão cancelar;
+6.1.1 O Atleta continua Inscrito e o caso de uso continua no ponto 2 do CP;
+
+
+CASO DE USO IMPORTAR INSCRICAO
+
+
+Caminho principal
+
+(Pré-Condição: Caso de uso entra na página atleta")
+
+1. O Utilizador carrega no botão "Ver Inscrição";
+2. É aberta a página "Atleta X - Inscrições ";
+3. O Utilizador carrega no botao "Importar Inscrições"
+4. É aberta a página "Importar Inscritos ";
+5. O Utilizador escolhe o ficheiro da Inscrição que pretende importar;
+6. O Utilizador carrega no botao "Importar";
+7. A app Verifica a Inscrição e valida a operacao;
+8. O Utilizador retorna ao Home/Dashboard "Gestão Jiu-Jitsu";
+
+Caminho secundário
+
+
+3.1 O Utilizador carrega no botão "Cancelar";
+3.1.1 O caso de uso continua no ponto 2 do CP;
+6.1 O Utilizador carrega no botão "Cancelar":
+6.1.1 O caso de uso continua no ponto 5 do CP;
+7.1 Aparece mensagem de erro "Tem de ser um ficheiro .txt!", pois ele selecionou um ficheiro inválido;
+7.1.1 O caso de uso continua no ponto 5 do CP;
 
 
 
 ____________________________//__________________________________________//________________________________________
-
-
-
-
 
