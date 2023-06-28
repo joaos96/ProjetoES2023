@@ -33,6 +33,7 @@ public class PaginaEvento extends javax.swing.JFrame {
     private void initComponents() {
 
         list1 = new java.awt.List();
+        panel1 = new java.awt.Panel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -48,9 +49,20 @@ public class PaginaEvento extends javax.swing.JFrame {
         btnVerInscritos = new javax.swing.JButton();
         btnImportarInscricao = new javax.swing.JButton();
         btnLancarEvento = new javax.swing.JButton();
-        btnVerCalendario = new javax.swing.JButton();
         btnMostrarMedalhas = new javax.swing.JButton();
         btnImportarProva = new javax.swing.JButton();
+        btnPrograma = new javax.swing.JButton();
+
+        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
+        panel1.setLayout(panel1Layout);
+        panel1Layout.setHorizontalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        panel1Layout.setVerticalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -172,15 +184,6 @@ public class PaginaEvento extends javax.swing.JFrame {
             }
         });
 
-        btnVerCalendario.setBackground(new java.awt.Color(153, 153, 153));
-        btnVerCalendario.setForeground(new java.awt.Color(255, 255, 255));
-        btnVerCalendario.setText("Ver Calendário");
-        btnVerCalendario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVerCalendarioActionPerformed(evt);
-            }
-        });
-
         btnMostrarMedalhas.setBackground(new java.awt.Color(153, 153, 153));
         btnMostrarMedalhas.setForeground(new java.awt.Color(255, 255, 255));
         btnMostrarMedalhas.setText("Ver Países mais Medalhados");
@@ -196,6 +199,15 @@ public class PaginaEvento extends javax.swing.JFrame {
         btnImportarProva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnImportarProvaActionPerformed(evt);
+            }
+        });
+
+        btnPrograma.setBackground(new java.awt.Color(153, 153, 153));
+        btnPrograma.setForeground(new java.awt.Color(255, 255, 255));
+        btnPrograma.setText("Ver Programa");
+        btnPrograma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProgramaActionPerformed(evt);
             }
         });
 
@@ -223,8 +235,9 @@ public class PaginaEvento extends javax.swing.JFrame {
                             .addComponent(btnEditarProva, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnCriarProva, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnEliminarProva, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnVerCalendario)
-                            .addComponent(btnLancarEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(btnPrograma, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnLancarEvento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -248,12 +261,12 @@ public class PaginaEvento extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnVerInscritos)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnVerCalendario)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnPrograma)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnLancarEvento))
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnMostrarMedalhas)
                     .addComponent(btnImportarInscricao))
                 .addContainerGap(29, Short.MAX_VALUE))
@@ -319,12 +332,11 @@ public class PaginaEvento extends javax.swing.JFrame {
         int result = JOptionPane.showConfirmDialog(this, "Esta ação vai lançar o Evento X, abrindo as suas inscrições. \n Deseja proceder?", "Lançar Evento",  JOptionPane.YES_NO_OPTION);        
     }//GEN-LAST:event_btnLancarEventoActionPerformed
 
-    private void btnVerCalendarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerCalendarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnVerCalendarioActionPerformed
-
     private void btnMostrarMedalhasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarMedalhasActionPerformed
-        // TODO add your handling code here:
+
+        JFrame home = new PaginaEventoMedalhas();
+        home.show();
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnMostrarMedalhasActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
@@ -347,6 +359,13 @@ public class PaginaEvento extends javax.swing.JFrame {
         home.show();
         dispose();   
     }//GEN-LAST:event_btnCriarProvaActionPerformed
+
+    private void btnProgramaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProgramaActionPerformed
+        
+        JFrame home = new PaginaEventoPrograma();
+        home.show();
+        dispose();   
+    }//GEN-LAST:event_btnProgramaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -392,7 +411,7 @@ public class PaginaEvento extends javax.swing.JFrame {
     private javax.swing.JButton btnLancarEvento;
     private javax.swing.JButton btnMostrarMedalhas;
     private javax.swing.JButton btnMostrarProva;
-    private javax.swing.JButton btnVerCalendario;
+    private javax.swing.JButton btnPrograma;
     private javax.swing.JButton btnVerInscritos;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
@@ -402,6 +421,7 @@ public class PaginaEvento extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblProvas;
     private java.awt.List list1;
+    private java.awt.Panel panel1;
     private javax.swing.JList<String> provasList;
     // End of variables declaration//GEN-END:variables
 }

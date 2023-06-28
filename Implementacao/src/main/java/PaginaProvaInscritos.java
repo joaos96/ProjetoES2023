@@ -40,7 +40,7 @@ public class PaginaProvaInscritos extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         listInscritos = new javax.swing.JList<>();
         lblHeader = new javax.swing.JLabel();
-        cbProvas = new javax.swing.JComboBox<>();
+        btnRegistarPeso = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,7 +50,7 @@ public class PaginaProvaInscritos extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitulo.setText("Evento X - Inscritos");
+        lblTitulo.setText("Prova X - Inscritos");
         lblTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0));
 
         btnVoltar.setText("<-");
@@ -99,7 +99,14 @@ public class PaginaProvaInscritos extends javax.swing.JFrame {
         lblHeader.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblHeader.setText("Inscritos - Prova X");
 
-        cbProvas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Prova X", "Prova Y", "Prova Z" }));
+        btnRegistarPeso.setBackground(new java.awt.Color(0, 51, 255));
+        btnRegistarPeso.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegistarPeso.setText("Registar Peso");
+        btnRegistarPeso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistarPesoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -112,8 +119,8 @@ public class PaginaProvaInscritos extends javax.swing.JFrame {
                     .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(cbProvas, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnRegistarPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -125,7 +132,7 @@ public class PaginaProvaInscritos extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbProvas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnRegistarPeso))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
 
@@ -155,6 +162,12 @@ public class PaginaProvaInscritos extends javax.swing.JFrame {
         home.show();
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void btnRegistarPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistarPesoActionPerformed
+        UIManager.put("OptionPane.noButtonText", "Cancelar");
+        UIManager.put("OptionPane.yesButtonText", "Ok");
+        String result = JOptionPane.showInputDialog(this, "Insira o peso atual do Atleta X", 90);  
+    }//GEN-LAST:event_btnRegistarPesoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,8 +205,8 @@ public class PaginaProvaInscritos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnRegistarPeso;
     private javax.swing.JButton btnVoltar;
-    private javax.swing.JComboBox<String> cbProvas;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

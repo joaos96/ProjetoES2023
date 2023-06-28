@@ -2,6 +2,8 @@
 import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -12,12 +14,12 @@ import javax.swing.JList;
  *
  * @author joaom
  */
-public class PaginaProvaCriar extends javax.swing.JFrame {
+public class PaginaEventoPrograma extends javax.swing.JFrame {
 
     /**
      * Creates new form Home
      */
-    public PaginaProvaCriar() {
+    public PaginaEventoPrograma() {
         initComponents();
     }
 
@@ -34,14 +36,11 @@ public class PaginaProvaCriar extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
         btnVoltar = new javax.swing.JButton();
-        lblEscalao = new javax.swing.JLabel();
-        lblGenero = new javax.swing.JLabel();
-        lblCategoriaPeso = new javax.swing.JLabel();
-        btnCancelar = new javax.swing.JButton();
-        btnCriar = new javax.swing.JButton();
-        cbEscalao = new javax.swing.JComboBox<>();
-        cbGenero = new javax.swing.JComboBox<>();
-        cbCategoriaPeso = new javax.swing.JComboBox<>();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        listCombates = new javax.swing.JList<>();
+        lblHeader = new javax.swing.JLabel();
+        btnVerProva = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,7 +50,7 @@ public class PaginaProvaCriar extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitulo.setText("Criar Prova");
+        lblTitulo.setText("Evento X - Programa");
         lblTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0));
 
         btnVoltar.setText("<-");
@@ -77,36 +76,37 @@ public class PaginaProvaCriar extends javax.swing.JFrame {
                 .addComponent(btnVoltar))
         );
 
-        lblEscalao.setText("Escalões Etário:");
+        listCombates.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "\t\tQuartos-de-Final", "Prova X - Combate Y - 2023-06-23 18:00", "Prova X - Combate X - 2023-06-23 18:00", "Prova X - Combate Z - 2023-06-23 19:00", "Prova X - Combate D - 2023-06-23 19:00", "\t\tSemi-Final", "Prova X - Combate A - 2023-06-24 19:00", "Prova X - Combate B - 2023-06-24 19:00", "\t\tFinal", "Prova X - Combate Final - 2023-06-25 19:00", " " };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(listCombates);
 
-        lblGenero.setText("Género:");
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
-        lblCategoriaPeso.setText("Categoria de Peso:");
+        lblHeader.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblHeader.setText("Programa");
 
-        btnCancelar.setBackground(new java.awt.Color(255, 0, 0));
-        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar.setText("Cancelar");
-        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+        btnVerProva.setBackground(new java.awt.Color(153, 153, 153));
+        btnVerProva.setForeground(new java.awt.Color(255, 255, 255));
+        btnVerProva.setText("Ver");
+        btnVerProva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarActionPerformed(evt);
+                btnVerProvaActionPerformed(evt);
             }
         });
-
-        btnCriar.setBackground(new java.awt.Color(0, 153, 0));
-        btnCriar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCriar.setText("Criar Prova");
-        btnCriar.setName("loginButton"); // NOI18N
-        btnCriar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCriarActionPerformed(evt);
-            }
-        });
-
-        cbEscalao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Junior", "Adulto", "Senior" }));
-
-        cbGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
-
-        cbCategoriaPeso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menos 56kgs", "Menos 94kgs", "Mais 94kgs" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -114,46 +114,26 @@ public class PaginaProvaCriar extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblEscalao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblCategoriaPeso, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cbEscalao, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cbGenero, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cbCategoriaPeso, 0, 592, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(205, 205, 205)
-                        .addComponent(btnCriar)
-                        .addGap(217, 217, 217)
-                        .addComponent(btnCancelar)))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnVerProva, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEscalao)
-                    .addComponent(cbEscalao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
+                .addComponent(lblHeader)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblGenero)
-                    .addComponent(cbGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCategoriaPeso)
-                    .addComponent(cbCategoriaPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 300, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCancelar)
-                    .addComponent(btnCriar))
-                .addGap(68, 68, 68))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVerProva))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -178,24 +158,17 @@ public class PaginaProvaCriar extends javax.swing.JFrame {
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
 
-        JFrame home = new Home();
+        JFrame home = new PaginaEvento();
         home.show();
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnVoltarActionPerformed
 
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-
-        JFrame home = new PaginaEvento();
+    private void btnVerProvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerProvaActionPerformed
+        
+        JFrame home = new PaginaProva();
         home.show();
-        dispose();
-    }//GEN-LAST:event_btnCancelarActionPerformed
-
-    private void btnCriarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarActionPerformed
-
-        JFrame home = new PaginaEvento();
-        home.show();
-        dispose();
-    }//GEN-LAST:event_btnCriarActionPerformed
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVerProvaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,17 +206,14 @@ public class PaginaProvaCriar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnCriar;
+    private javax.swing.JButton btnVerProva;
     private javax.swing.JButton btnVoltar;
-    private javax.swing.JComboBox<String> cbCategoriaPeso;
-    private javax.swing.JComboBox<String> cbEscalao;
-    private javax.swing.JComboBox<String> cbGenero;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel lblCategoriaPeso;
-    private javax.swing.JLabel lblEscalao;
-    private javax.swing.JLabel lblGenero;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblTitulo;
+    private javax.swing.JList<String> listCombates;
     // End of variables declaration//GEN-END:variables
 }
