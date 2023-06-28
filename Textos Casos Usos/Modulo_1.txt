@@ -1,3 +1,33 @@
+##########################################
+##########################################
+
+Caso de Uso "Login"
+
+Caminho  Principal
+1. Programa mostra Página de Login
+2. O Utilizador introduz o email
+3. O Utilizador introduz a password
+4. O utilizador clica em Login
+5. O valor do campo email é validado
+6. O valor do campo password é validado
+7. A aplicação mostra a página Homepage
+
+Caminhos Alternativos
+4.1 O Utilizador carrega no botão "Sair"
+4.1.1 A aplicação fecha
+5.1 O valor do campo de login não está preenchido
+5.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+5.2 O valor do campo de login não tem o formato correto (conter string seguida de "@" seguido de string seguida de "." seguido de string)
+5.2.1 A aplicação mostra a mensagem de erro "Este campo necessita de um email"
+5.3 O valor do campo de login não está guardado na Base de Dados
+5.3.1 A aplicação mostra a mensagem de erro "Email não registado"
+6.1 O valor do campo de password não está preenchido
+6.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+6.2 O valor do campo de password não tem o formato correto (mínimo de 6 caracteres)
+6.2.1 A aplicação mostra a mensagem de erro "Mínimo de 6 caracteres"
+6.3 A hash do valor do campo de password não corresponde ao respetivo hash da Base de Dados
+6.3.1 A aplicação mostra a mensagem de erro "Dados Introduzidos Inválidos"
+
 
 -----------------------------------------
 
@@ -5,94 +35,358 @@
 Caso de Uso "Criar Evento"
 
 Caminho  Principal
+1. O utilizador está autenticado e é mostrada a página "Homepage"
+2. Utilizador escolhe opção "Criar Evento" e é mostrada a página "Criar Evento" para inserir dados do evento
+3. Utilizador insere os dados pretendidos para o evento (Nome, Escalões Etários, Géneros, Categorias de Peso, Data Inicio, Data Fim, Local, País)
+4. O Utilizador escolhe a opção "Criar Evento"
+5. Aplicação valida os dados  (Caso de estudo "Validar Dados Evento")
+6. Aplicação regista o novo Evento e é mostrada a página "Homepage"
 
-1. Programa mostra Página de Login;
-2. O Utilizador introduz os dados para realizar o login;
-3. A app verifica se os dados estão corretos e valida a operação;
-4. Plataforma mostra página "Home" (Com possibilidade de Gerir Atletas e Gerir Eventos);
-5. Utilizador escolhe opção "Criar Evento";
-6. Plataforma mostra-lhe janela para inserir dados do evento;
-7. Utilizador insere os dados pretendidos para o evento;
-8. Utilizador clica em "Criar Evento";
-9. Plataforma valida os dados;
-10. Plataforma regista evento e abre-o para os atletas poderem se inscrever.
+Caminhos Alternativos
+1.1 O utilizador não está autenticado
+1.1.1 O caso de usa continua no caso de uso "Login"
+2.1 O Utilizador carrega no botão "Sair"
+2.1.1 A aplicação fecha
+4.1 O utilizador escolhe a opção "Cancelar"
+4.1.1 O caso de uso continua no ponto 1
+5.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Dados Evento")
+5.1.1 O caso de uso de continua no ponto 3
+
+
+---------------------------------------
+
+Caso de Uso "Editar Evento"
+
+Caminho  Principal
+1. O utilizador está autenticado e é mostrada a página "Homepage"
+2. Utilizador seleciona um Evento da Lista e escolhe a opção "Editar Evento" 
+3. É mostrada a página "Editar Evento" para editar dados do evento
+4. Utilizador altera os dados pretendidos para o evento (Nome, Escalões Etários, Géneros, Categorias de Peso, Data Inicio, Data Fim, Local, País)
+5. O Utilizador escolhe a opção "Guardar"
+6. Aplicação valida os dados  (Caso de estudo "Validar Dados Evento")
+7. Aplicação regista as alterações ao Evento e é mostrada a página "Homepage"
+
+Caminhos Alternativos
+1.1 O utilizador não está autenticado
+1.1.1 O caso de usa continua no caso de uso "Login"
+2.1 O Utilizador carrega no botão "Sair"
+2.1.1 A aplicação fecha
+2.2 Não existem Eventos
+2.2.1 Botão "Editar Evento" não retorna qualquer ação
+5.1 O utilizador escolhe a opção "Cancelar"
+5.1.1 O caso de uso continua no ponto 1
+6.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Dados Evento")
+6.1.1 O caso de uso de continua no ponto 3
+
+---------------------------------------
+
+Caso de Uso "Validar Dados Evento"
+
+Caminho  Principal
+1. O valor do campo "Nome do Evento" é validado
+2. O valor do campo "Escalões Etários" é validado
+3. O valor do campo "Géneros" é validado
+4. O valor do campo "Categorias de Peso" é validado
+5. O valor do campo "Data Início" é validado
+6. O valor do campo "Data Fim" é validado
+7. O valor do campo "Local" é validado
+8. O valor do campo "País" é validado
+9. A validação é feita com sucesso
 
 
 Caminhos Alternativos
+1.1 O valor do campo "Nome do Evento" não está preenchido
+1.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+1.2 O valor do campo "Nome do Evento" é igual a outro Evento existente
+1.2.1 A aplicação mostra a mensagem de erro "Nome de Evento já existe"
+2.1 Nenhum dos campos correspondente aos "Escalões Etários" é selecionado
+2.1.1 A aplicação mostra a mensagem de erro "Pelo menos um escalão tem de ser selecionado"
+3.1 Nenhum dos campos correspondente aos "Géneros" é selecionado
+3.1.1 A aplicação mostra a mensagem de erro "Pelo menos um género tem de ser selecionado"
+4.1 Nenhum dos campos correspondente às "Categorias de Peso" (correspondente ao respetivo género) é selecionado
+4.1.1 A aplicação mostra a mensagem de erro "Pelo menos uma Categoria de Peso tem de ser selecionada para cada género selecionado"
+5.1 O valor do campo "Data Inicio" não está preenchido
+5.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+5.1.2 O valor do campo "Data Inicio" não tem o formato correto
+5.1.1 A aplicação mostra a mensagem de erro "Este campo deve ter o formato dd-mm-yyyy"
+6.1 O valor do campo "Data Fim" não está preenchido
+6.1.1 A aplicação mostra a mensagem de erro "Este campo deve ter o formato dd-mm-yyyy"
+6.2 O valor da Data Fim é a uma data anterior à Data Inicio inserida
+6.2.1 A aplicação mostra a mensagem de erro "Data Fim tem de ser posterior à Data Inicio"
+7.1 O valor do campo "Local" não está preenchido
+7.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+8.1 O valor do campo "País" não está preenchido
+8.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
 
-2.1 O Utilizador introduz os dados incorretos;
-2.1.2 Aparece mensagem de erro "Dados introduzidos inválidos";
-2.2 O Utilizador carrega no botão "Sair";
-2.2.1 Programa fecha;
-5.1 Utilizador carrega no botão "Sair";
-5.1.1 Programa fecha;
-7.1 Utilizador carrega no botão "Cancelar";
-7.1.1 Plataforma volta à página "Home";
-9.1 Plataforma verifica que nem todos os campos foram completos;
-9.1.1 Plataforma dá aviso sobre os campos em falta;
-9.1.2 O caso de uso continua no ponto 7;
-9.2 Plataforma verifica que evento a ser criado já existe;
-9.2.1 Plataforma dá aviso sobre um evento igual já existir;
-9.2.2 O caso de uso continua no ponto 7;
-9.3 Plataforma verifica que os dados inseridos são inválidos;
-9.3.1 Plataforma dá aviso sobre os campos inseridos inválidos;
-9.3.2 O caso de uso continua no ponto 7.
+--------------------------------
 
+Caso de Uso "Entrar Página Evento"
+
+Caminho  Principal
+1. O utilizador está autenticado e é mostrada a página "Homepage"
+2. O utilizador escolhe a opção "Ver" correspondente a um evento na lista de eventos disponíveis
+3. É mostrada a página "Evento X"
+
+Caminhos Alternativos
+1.1 O utilizador não está autenticado
+1.1.1 O caso de usa continua no caso de uso "Login"
+2.1 O Utilizador carrega no botão "Sair"
+2.1.1 A aplicação fecha
+
+----------------------------------------------
+
+
+Caso de Uso "Eliminar Evento"
+
+Caminho  Principal
+1. O utilizador está autenticado e é mostrada a página "Homepage"
+2. Utilizador seleciona um Evento da Lista e escolhe a opção "Eliminar Evento" 
+4. Aplicação mostra janela de confirmação
+5. Utilizador escolhe opção "Proceder"
+6. Aplicação elimina o evento do sistema
+
+Caminhos Alternativos
+1.1 O utilizador não está autenticado
+1.1.1 O caso de usa continua no caso de uso "Login"
+2.1 O Utilizador carrega no botão "Sair"
+2.1.1 A aplicação fecha
+2.2 Não existem Eventos
+2.2.1 Botão "Eliminar Evento" não retorna qualquer ação
+5.1 Utilizador escolhe opção "Cancelar"
+5.1.1 Aplicação fecha janela de confirmação, voltando à página "Homepage"
 
 
 
 ------------------------------------------
 
+Caso de Uso "Importar Evento(s) de Ficheiro"
+
+Caminho  Principal
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Homepage")
+1. Utilizador carrega no botão "Importar Eventos"
+2. Aplicação mostra janela com opçao para fazer upload de ficheiros com os eventos a serem importados
+3. Utilizador carrega no botão "Procurar ficheiro"
+4. Aplicação mostra janela para escolha do ficheiro
+5. Utilizador navega pelos diretórios e seleciona ficheiro pretendido a importar
+6. Utilizado carrega no botão "Importar"
+7. Aplicação valida ficheiro (Caso de Uso "Validar Ficheiro para Importação")
+8. Aplicação importa dados do ficheiro
+9. Aplicação indica que a importação foi bem sucedida e eventos importados aparecem na lista.
+
+
+Caminhos Alternativos
+1.1 Utilizador clica em "Sair"
+1.1.1 Aplicação fecha
+3.1 Utilizador carrega no botão "Cancelar"
+3.1.1 Aplicação fecha janela de importação e volta a mostrar página "Homepage";
+5.1 Utilizador cola ou escreve caminho para o ficheiro;
+5.1.1 O caso de uso continua no ponto 6
+6.1 Utilizador clica em "Cancelar"
+6.1.1 Aplicação fecha janela de importação e volta a mostrar página "Homepage";
+7.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Ficheiro para Importação")
+7.1.1 O caso de uso de continua no ponto 2
+8.1 Importação não é bem sucedida
+8.1.1 Aplicação indica "Erro ao importar ficheiro" ao utilizador;
+8.1.2 O caso de uso continua no ponto 2.
+
+
+------------------------------------------
 
 Caso de Uso "Importar Prova(s) de Ficheiro"
 
 Caminho  Principal
-
-1. Programa mostra Página de Login;
-2. O Utilizador introduz os dados para realizar o login;
-3. A app verifica se os dados estão corretos e valida a operação;
-4. Plataforma mostra página "Home" (com possibilidade de Gerir Atletas e Gerir Eventos);
-5 Utilizador carrega no botão "Ver" de um evento da lista;
-6 Plataforma mostra página desse Evento (com lista das suas provas);
-7 Utilizador carrega no botão "Importar Provas";
-8 Plataforma mostra janela com opçao para fazer upload de ficheiros com as provas a serem importadas;
-9 Utilizador carrega no botão "Procurar ficheiro";
-10 Plataforma mostra janela para escolha do ficheiro;
-11 Utilizador navega pelos diretórios e seleciona ficheiro pretendido a importar;
-12 Utilizado carrega no botão "Importar";
-13 Plataforma valida ficheiro;
-14 Plataforma importa dados do ficheiro;
-15 Plataforma indica que a importação foi bem sucedida e provas aparecerão na lista.
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
+1. Utilizador carrega no botão "Importar Provas"
+2. Aplicação mostra janela com opçao para fazer upload de ficheiros com as provas a serem importadas
+3. Utilizador carrega no botão "Procurar ficheiro"
+4. Aplicação mostra janela para escolha do ficheiro
+5. Utilizador navega pelos diretórios e seleciona ficheiro pretendido a importar
+6. Utilizado carrega no botão "Importar"
+7. Aplicação valida ficheiro (Caso de Uso "Validar Ficheiro para Importação")
+8. Aplicação importa dados do ficheiro
+9. Aplicação indica que a importação foi bem sucedida e provas importadas aparecem na lista.
 
 
 Caminhos Alternativos
+1.1 Utilizador clica em "Voltar"
+1.1.1 Aplicação volta a mostrar página "Home"
+3.1 Utilizador carrega no botão "Cancelar"
+3.1.1 Aplicação fecha janela de importação e volta a mostrar página do Evento;
+5.1 Utilizador cola ou escreve caminho para o ficheiro;
+5.1.1 O caso de uso continua no ponto 6
+6.1 Utilizador clica em "Cancelar"
+6.1.1 Aplicação fecha janela de importação e volta a mostrar página do Evento;
+7.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Ficheiro para Importação")
+7.1.1 O caso de uso de continua no ponto 2
+8.1 Importação não é bem sucedida
+8.1.1 Aplicação indica "Erro ao importar ficheiro" ao utilizador;
+8.1.2 O caso de uso continua no ponto 2.
 
-2.1 O Utilizador introduz os dados incorretos;
-2.1.2 Aparece mensagem de erro "Dados introduzidos inválidos";
-2.2 O Utilizador carrega no botão "Sair";
-2.2.1 Programa fecha;
-5.1 Utilizador carrega no botão "Sair";
-5.1.1 Programa fecha;
-7.1 Utilizador clica em "Voltar";
-7.1.1 Plataforma volta à página "Home";
-9.1 Utilizador carrega no botão "Cancelar";
-9.1.1 Plataforma volta à página do Evento;
-9.2 Utilizador cola ou escreve caminho para o ficheiro;
-9.2.1 O caso de uso continua no ponto 12;
-11.1 Utilizador clica em "Cancelar";
-11.1.2 Plataforma fecha janela de procura de ficheiro;
-11.1.3 O caso de uso continua no ponto 8;
-13.1 Plataforma verifica que nenhum ficheiro foi selecionado;
-13.1.1 Plataforma indica "Nenhum ficheiro selecionado" ao utilizador;
-13.1.2 O caso de uso continua no ponto 8;
-13.2 Plataforma verifica que o formato do ficheiro é inválido;
-13.2.1 Plataforma indica "Formato de ficheiro inválido" ao utilizador;
-13.2.2 O caso de uso continua no ponto 8;
-13.3 Plataforma verifica que os dados do ficheiro são inválidos ou corrompidos;
-13.3.1 Plataforma indica "Dados de ficheiro inválidos ou corrompidos" ao utilizador;
-13.3.2 O caso de uso continua no ponto 8;
-14.1 Importação não é bem sucedida;
-14.1.1 Plataforma indica "Erro ao importar ficheiro" ao utilizador;
-14.1.2 O caso de uso continua no ponto 8.
+
+------------------------------------------
+
+Caso de Uso "Validar Ficheiro para Importação"
+
+Caminho  Principal
+1 Aplicação verifica se caminho inserido para o ficheiro existe
+2 Formato do ficheiro é validado
+3 Dados do ficheiro são validados
+4 Ficheiro é validado com sucesso
+
+Caminhos Alternativos
+1.1 Nenhum ficheiro foi selecionado;
+1.1.1 Aplicação mostra a mensagem de erro "Nenhum ficheiro selecionado" ao utilizador;
+2.2 Formato do ficheiro selcionado é inválido;
+2.2.1 Aplicação mostra a mensagem de erro "Formato de ficheiro inválido" ao utilizador;
+3.3 Dados do ficheiro são inválidos ou corrompidos;
+3.3.1 Aplicação mostra a mensagem de erro "Dados de ficheiro inválidos ou corrompidos" ao utilizador;
+
 
 ----------------------------------------------
+
+
+Caso de Uso "Criar Prova"
+
+Cenário  Principal
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
+1. Utilizador escolhe opção "Criar Prova" e é mostrada a página "Criar Prova"
+2. Utilizador escolhe as opções para a Prova (campos dropdown para Escalão Etário, Categoria de Peso e Género)
+3. Utilizador clica em "Criar Prova"
+4. Aplicação valida os dados  (Caso de estudo "Validar Dados Prova")
+5. Aplicação regista a nova Prova nos dados do Sistema (adicionando-a ao programa do Evento) e é mostrada a página "Homepage"
+
+Cenário Secundário
+1.1 Utilizador seleciona "voltar"
+1.1.1 Aplicação volta a mostrar página "Homepage"
+3.1 Utilizador seleciona "Cancelar"
+3.1.1 Aplicação volta a mostrar página "Evento X"
+4.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Dados Prova")
+4.1.1 O caso de uso de continua no ponto 2
+
+
+----------------------------------------------
+
+
+Caso de Uso "Editar Prova"
+
+Cenário  Principal
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
+1. Utilizador seleciona uma Prova da Lista e escolhe a opção "Editar Prova" 
+2. É mostrada a página "Editar Prova" para editar dados da Prova
+3. Utilizador altera as opções da Prova (campos dropdown para Escalão Etário, Categoria de Peso e Género)
+4. Utilizador clica em "Guardar"
+5. Aplicação valida os dados  (Caso de estudo "Validar Dados Prova")
+6. Aplicação guarda as alterações à Prova e é mostrada a página "Homepage"
+
+Cenário Secundário
+1.1 Utilizador seleciona "voltar"
+1.1.1 Aplicação volta a mostrar página "Homepage"
+1.2 Não existem Provas
+1.2.1 Botão "Editar Prova" não retorna qualquer ação
+4.1 Utilizador seleciona "Cancelar"
+4.1.1 Aplicação volta a mostrar página "Evento X"
+5.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Dados Prova")
+5.1.1 O caso de uso de continua no ponto 3
+
+---------------------------------------
+
+Caso de Uso "Validar Dados Prova"
+
+Caminho  Principal
+1. O valor do campo "Escalão Etário" é validados
+2. O valor do campo "Categoria de Peso" é validado
+3. O valor do campo "Género" é validado
+4. A validação é feita com sucesso
+
+
+Caminhos Alternativos
+1.1 Nenhum valor do campo "Escalão Etário" foi selecionado
+1.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+1.2 O Escalão Etário selecionado não faz parte dos Escalões Etários do Evento
+1.2.1 A aplicação mostra a mensagem de erro "Este escalão não está disponível para este Evento"
+2.1 Nenhum valor do campo "Categoria de Peso" foi selecionado
+2.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+2.2 A categoria de peso selecionada não faz parte das categorias de peso do Evento
+2.2.1 A aplicação mostra a mensagem de erro "Esta categoria de peso não está disponível para este Evento"
+3.1 Nenhum valor do campo "Género" foi selecionado
+3.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
+3.2 O género selecionado não faz parte dos géneros do Evento
+3.2.1 A aplicação mostra a mensagem de erro "Este género não está disponível para este Evento"
+
+----------------------------------------------
+
+
+Caso de Uso "Eliminar Prova"
+
+Caminho  Principal
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
+1. Utilizador seleciona uma Prova da Lista e escolhe a opção "Eliminar Prova" 
+2. Aplicação mostra janela de confirmação
+3. Utilizador escolhe opção "Proceder"
+4. Aplicação elimina o Prova dos dados do Sistema (removendo-a do programa do Evento)
+
+Caminhos Alternativos
+1.1 Utilizador seleciona "voltar"
+1.1.1 Aplicação volta a mostrar página "Homepage"
+1.2 Não existem Provas
+1.2.1 Botão "Eliminar Prova" não retorna qualquer ação
+3.1 Utilizador escolhe opção "Cancelar"
+3.1.1 Aplicação fecha janela de confirmação, voltando à página "Evento X"
+
+----------------------------------------------
+
+
+Caso de Uso "Apresentar Programa" 
+Caminho  Principal
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
+
+1. Utilizador seleciona opção "Ver Programa"
+2. Aplicação lê dados das provas existentes do Evento e apresenta uma lista com as mesmas, separadas por fase
+
+Caminhos Alternativos
+1.1 Utilizador seleciona "voltar"
+1.1.1 Aplicação volta a mostrar página "Homepage"
+
+
+----------------------------------------------
+##########################################
+
+Caso de Uso "Lançar Evento" 
+Caminho  Principal
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
+1. Utilizador escolhe opção "Lançar Evento"
+2. Aplicação mostra janela de confirmação
+3. Utilizador escolhe opção "Proceder"
+4. Aplicação percorre os Atletas Inscritos e verifica que existem pelo menos 2 Inscritos
+5. Aplicação percorre as Provas do Evento e verifica que existe pelo menos 1 Prova
+6. Caso de Uso continua no Caso de Uso "Definir Calendário" (Módulo 3)
+
+Caminhos Alternativos
+1.1 Utilizador seleciona "voltar"
+1.1.1 Aplicação volta a mostrar página "Homepage"
+3.1 Utilizador escolhe opção "Cancelar"
+3.1.1 Aplicação fecha janela de confirmação, voltando à página "Evento X"
+4.1 Aplicação percorre os Atletas Inscritos e verifica que não existem pelo menos 2 Inscritos
+4.1.1 A aplicação mostra a mensagem de erro "Tem de existir pelo menos 2 atletas inscritos para poder lançar evento"
+4.1.2 A aplicação fecha janela de confirmação e volta a mostrar página "Evento X"
+5.1 Aplicação percorre as Provas do Evento e verifica que não existe pelo menos 1 Prova
+5.1.1 A aplicação mostra a mensagem de erro "Tem de existir pelo menos 1 prova criada para o evento para poder lançar evento"
+5.1.2 A aplicação fecha janela de confirmação e volta a mostrar página "Evento X"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
