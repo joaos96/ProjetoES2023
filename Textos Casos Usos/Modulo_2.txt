@@ -1,5 +1,5 @@
 
-CASO DE USO ENTRA NA PÁGINA ATLETA
+CASO DE USO LOGIN 
 
 Caminho principal
 
@@ -7,20 +7,20 @@ Caminho principal
 1. O Utilizador introduz os dados para realizar o login;
 2. A app verifica se os dados estão corretos e valida a operação;
 3. O Utilizador encontra-se na Home/Dashboard "Gestão Jiu-Jitsu";
-4. Na secção "Gestão Atletas" o Utilizador carrega no Atleta que pretende;
+
 
 Caminho secundário
 
 1.1 O Utilizador introduz os dados incorretos e parece mensagem de erro "Dados introduzidos inválidos!"
 1.2 O Utilizador carrega no botão "Sair";
-4.1 Na secção "Gestão Atletas" o Utilizador não carrega no Atleta que pretende;
+
 
 
 CASO DE USO CRIAR DADOS DADOS DO ATLETA
 
 Caminho principal
 
-(Pré-Condição: Caso de uso entra na página atleta, menos o ponto 4 do CP")
+(Pré-Condição: Caso de uso login)
 
 1. O Utilizador carrega no botão Criar Atleta;
 2. A página Criar Atleta é aberta;
@@ -52,7 +52,7 @@ CASO DE USO FAZER INSCRICAO DO ATLETA NO EVENTO
 
 Caminho principal
 
-(Pré-Condição: Caso de uso entra na página atleta")
+(Pré-Condição: Caso de uso login e o atleta tem de estar selecionado)
 
 1. O Utilizador carrega no botão "Ver Inscriões";
 2. É aberta a página "Inscrição - Atleta "Nome Atleta" ";
@@ -87,7 +87,8 @@ CASO DE USO EDITAR O ATLETA
 
 Caminho principal
 
-(Pré-Condição: Caso de uso entra na página atleta")
+(Pré-Condição: Caso de uso login e o atleta tem de estar selecionado)
+
 
 1. O Utilizador carrega no botão "Editar Atleta";
 2. É aberta a página "Editar Atleta" ";
@@ -114,7 +115,7 @@ CASO DE USO IMPORTAR O ATLETA
 
 Caminho principal
 
-(Pré-Condição: Caso de uso entra na página atleta, exepto o ponto 4 do CP")
+(Pré-Condição: Caso de uso login)
 
 1. O Utilizador carrega no botão "Importar Atleta";
 2. É aberta a página "Importar Atleta" ";
@@ -141,7 +142,7 @@ CASO DE USO VER ATLETA
 
 Caminho principal
 
-(Pré-Condição: Caso de uso entra na página atleta")
+(Pré-Condição: Caso de uso login e o atleta tem de estar selecionado)
 
 1. Na secção "Gestão Atletas" o Ultilizador carrega no botão "Ver" do Atleta que em pretende observar;
 2. É aberta a página "Ver Atleta - X" ";
@@ -164,7 +165,7 @@ CASO DE USO VER HISTÓRICO ATLETA
 
 Caminho principal
 
-(Pré-Condição: Caso de uso entra na página atleta")
+(Pré-Condição: Caso de uso login)
 
 1. O Utilizador carrega no botão "Ver Histórico";
 2. É aberta a página "Atleta - X - Histórico de Resultados"; 
@@ -184,7 +185,7 @@ CASO DE USO VER INSCRIÇOES ATLETA
 
 Caminho principal
 
-(Pré-Condição: Caso de uso entra na página atleta")
+(Pré-Condição: Caso de uso login e o atleta tem de estar selecionado)
 
 1. O Utilizador carrega no botão "Ver Inscrição";
 2. É aberta a página "Atleta X - Inscrições ";
@@ -208,7 +209,7 @@ CASO DE USO CANCELAR INSCRICAO
 
 Caminho principal
 
-(Pré-Condição: Caso de uso entra na página atleta")
+(Pré-Condição: Caso de uso login e o atleta tem de estar selecionado)
 
 
 1. O Utilizador carrega no botão "Ver Inscriões";
@@ -232,7 +233,7 @@ CASO DE USO IMPORTAR INSCRICAO
 
 Caminho principal
 
-(Pré-Condição: Caso de uso entra na página atleta")
+(Pré-Condição: Caso de uso login e o atleta tem de estar selecionado)
 
 1. O Utilizador carrega no botão "Ver Inscrição";
 2. É aberta a página "Atleta X - Inscrições ";
