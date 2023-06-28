@@ -250,19 +250,17 @@ Caso de Uso "Criar Prova"
 
 Cenário  Principal
 (Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
-1. Utilizador escolhe opção "Criar Prova" e é mostrada a página "Criar Prova"
-2. Utilizador escolhe as opções para a Prova (campos dropdown para Escalão Etário, Categoria de Peso e Género)
-3. Utilizador clica em "Criar Prova"
-4. Aplicação valida os dados  (Caso de estudo "Validar Dados Prova")
+1. Utilizador escolhe opção "Criar Prova"
+2. Aplicação lê os dados do evento para disponibilizar nos campos dropdown apenas os Géneros, Escalões e Categorias do evento e é mostrada a página "Criar Prova"
+3. Utilizador escolhe as opções para a Prova (campos dropdown para Escalão Etário, Categoria de Peso e Género)
+4. Utilizador clica em "Criar Prova"
 5. Aplicação regista a nova Prova nos dados do Sistema (adicionando-a ao programa do Evento) e é mostrada a página "Homepage"
 
 Cenário Secundário
 1.1 Utilizador seleciona "voltar"
 1.1.1 Aplicação volta a mostrar página "Homepage"
-3.1 Utilizador seleciona "Cancelar"
-3.1.1 Aplicação volta a mostrar página "Evento X"
-4.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Dados Prova")
-4.1.1 O caso de uso de continua no ponto 2
+4.1 Utilizador seleciona "Cancelar"
+4.1.1 Aplicação volta a mostrar página "Evento X"
 
 
 ----------------------------------------------
@@ -273,11 +271,10 @@ Caso de Uso "Editar Prova"
 Cenário  Principal
 (Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
 1. Utilizador seleciona uma Prova da Lista e escolhe a opção "Editar Prova" 
-2. É mostrada a página "Editar Prova" para editar dados da Prova
+2. Aplicação lê os dados do evento para disponibilizar nos campos dropdown apenas os Géneros, Escalões e Categorias do evento e é mostrada a página "Editar Prova"
 3. Utilizador altera as opções da Prova (campos dropdown para Escalão Etário, Categoria de Peso e Género)
 4. Utilizador clica em "Guardar"
-5. Aplicação valida os dados  (Caso de estudo "Validar Dados Prova")
-6. Aplicação guarda as alterações à Prova e é mostrada a página "Homepage"
+5. Aplicação guarda as alterações à Prova e é mostrada a página "Homepage"
 
 Cenário Secundário
 1.1 Utilizador seleciona "voltar"
@@ -286,33 +283,7 @@ Cenário Secundário
 1.2.1 Botão "Editar Prova" não retorna qualquer ação
 4.1 Utilizador seleciona "Cancelar"
 4.1.1 Aplicação volta a mostrar página "Evento X"
-5.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Dados Prova")
-5.1.1 O caso de uso de continua no ponto 3
 
----------------------------------------
-
-Caso de Uso "Validar Dados Prova"
-
-Caminho  Principal
-1. O valor do campo "Escalão Etário" é validados
-2. O valor do campo "Categoria de Peso" é validado
-3. O valor do campo "Género" é validado
-4. A validação é feita com sucesso
-
-
-Caminhos Alternativos
-1.1 Nenhum valor do campo "Escalão Etário" foi selecionado
-1.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
-1.2 O Escalão Etário selecionado não faz parte dos Escalões Etários do Evento
-1.2.1 A aplicação mostra a mensagem de erro "Este escalão não está disponível para este Evento"
-2.1 Nenhum valor do campo "Categoria de Peso" foi selecionado
-2.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
-2.2 A categoria de peso selecionada não faz parte das categorias de peso do Evento
-2.2.1 A aplicação mostra a mensagem de erro "Esta categoria de peso não está disponível para este Evento"
-3.1 Nenhum valor do campo "Género" foi selecionado
-3.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
-3.2 O género selecionado não faz parte dos géneros do Evento
-3.2.1 A aplicação mostra a mensagem de erro "Este género não está disponível para este Evento"
 
 ----------------------------------------------
 
