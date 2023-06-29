@@ -1,4 +1,4 @@
-(Pré-Condição: Utilizador está autenticado e encontra-se na página "Homepage" (Caso de Uso "Login"))
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Home" (Caso de Uso "Login"))
 ##########################################
 
 
@@ -11,7 +11,7 @@ Caminho  Principal
 4. O utilizador clica em Login
 5. O valor do campo email é validado
 6. O valor do campo password é validado
-7. A aplicação mostra a página Homepage
+7. A aplicação vai buscar aos Dados a lista de Eventos e a lista de Atletas e mostra a página Home
 
 Caminhos Alternativos
 4.1 O Utilizador carrega no botão "Sair"
@@ -20,13 +20,13 @@ Caminhos Alternativos
 5.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
 5.2 O valor do campo de login não tem o formato correto (conter string seguida de "@" seguido de string seguida de "." seguido de string)
 5.2.1 A aplicação mostra a mensagem de erro "Este campo necessita de um email"
-5.3 O valor do campo de login não está guardado na Base de Dados
+5.3 O valor do campo de login não está guardado nos Dados
 5.3.1 A aplicação mostra a mensagem de erro "Email não registado"
 6.1 O valor do campo de password não está preenchido
 6.1.1 A aplicação mostra a mensagem de erro "Este campo é obrigatório"
 6.2 O valor do campo de password não tem o formato correto (mínimo de 6 caracteres)
 6.2.1 A aplicação mostra a mensagem de erro "Mínimo de 6 caracteres"
-6.3 A hash do valor do campo de password não corresponde ao respetivo hash da Base de Dados
+6.3 A hash do valor do campo de password não corresponde ao respetivo hash presente nos Dados
 6.3.1 A aplicação mostra a mensagem de erro "Dados Introduzidos Inválidos"
 
 
@@ -36,22 +36,20 @@ Caminhos Alternativos
 Caso de Uso "Criar Evento"
 
 Caminho  Principal
-1. O utilizador está autenticado e é mostrada a página "Homepage"
-2. Utilizador escolhe opção "Criar Evento" e é mostrada a página "Criar Evento" para inserir dados do evento
-3. Utilizador insere os dados pretendidos para o evento (Nome, Escalões Etários, Géneros, Categorias de Peso, Data Inicio, Data Fim, Local, País)
-4. O Utilizador escolhe a opção "Criar Evento"
-5. Aplicação valida os dados  (Caso de estudo "Validar Dados Evento")
-6. Aplicação regista o novo Evento e é mostrada a página "Homepage"
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Home" (Caso de Uso "Login"))
+1. Utilizador escolhe opção "Criar Evento" e é mostrada a página "Criar Evento" para inserir dados do evento
+2. Utilizador insere os dados pretendidos para o evento (Nome, Escalões Etários, Géneros, Categorias de Peso, Data Inicio, Data Fim, Local, País)
+3. O Utilizador escolhe a opção "Criar Evento"
+4. Aplicação valida os dados  (Caso de estudo "Validar Dados Evento")
+5. Aplicação regista o novo Evento e é mostrada a página "Home"
 
 Caminhos Alternativos
-1.1 O utilizador não está autenticado
-1.1.1 O caso de usa continua no caso de uso "Login"
-2.1 O Utilizador carrega no botão "Sair"
-2.1.1 A aplicação fecha
-4.1 O utilizador escolhe a opção "Cancelar"
-4.1.1 O caso de uso continua no ponto 1
-5.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Dados Evento")
-5.1.1 O caso de uso de continua no ponto 3
+1.1 O Utilizador carrega no botão "Sair"
+1.1.1 A aplicação fecha
+3.1 O utilizador escolhe a opção "Cancelar"
+3.1.1 O caso de uso continua no ponto 1
+4.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Dados Evento")
+4.1.1 O caso de uso de continua no ponto 3
 
 
 ---------------------------------------
@@ -59,25 +57,23 @@ Caminhos Alternativos
 Caso de Uso "Editar Evento"
 
 Caminho  Principal
-1. O utilizador está autenticado e é mostrada a página "Homepage"
-2. Utilizador seleciona um Evento da Lista e escolhe a opção "Editar Evento" 
-3. É mostrada a página "Editar Evento" para editar dados do evento
-4. Utilizador altera os dados pretendidos para o evento (Nome, Escalões Etários, Géneros, Categorias de Peso, Data Inicio, Data Fim, Local, País)
-5. O Utilizador escolhe a opção "Guardar"
-6. Aplicação valida os dados  (Caso de estudo "Validar Dados Evento")
-7. Aplicação regista as alterações ao Evento e é mostrada a página "Homepage"
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Home" (Caso de Uso "Login"))
+1. Utilizador seleciona um Evento da Lista e escolhe a opção "Editar Evento" 
+2. É mostrada a página "Editar Evento" para editar dados do evento
+3. Utilizador altera os dados pretendidos para o evento (Nome, Escalões Etários, Géneros, Categorias de Peso, Data Inicio, Data Fim, Local, País)
+4. O Utilizador escolhe a opção "Guardar"
+5. Aplicação valida os dados  (Caso de estudo "Validar Dados Evento")
+6. Aplicação regista as alterações ao Evento e é mostrada a página "Home"
 
 Caminhos Alternativos
-1.1 O utilizador não está autenticado
-1.1.1 O caso de usa continua no caso de uso "Login"
-2.1 O Utilizador carrega no botão "Sair"
-2.1.1 A aplicação fecha
-2.2 Não existem Eventos
-2.2.1 Botão "Editar Evento" não retorna qualquer ação
-5.1 O utilizador escolhe a opção "Cancelar"
-5.1.1 O caso de uso continua no ponto 1
-6.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Dados Evento")
-6.1.1 O caso de uso de continua no ponto 3
+1.1 O Utilizador carrega no botão "Sair"
+1.1.1 A aplicação fecha
+1.2 Não existem Eventos
+1.2.1 Botão "Editar Evento" não retorna qualquer ação
+4.1 O utilizador escolhe a opção "Cancelar"
+4.1.1 O caso de uso continua no ponto 1
+5.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Dados Evento")
+5.1.1 O caso de uso de continua no ponto 3
 
 ---------------------------------------
 
@@ -121,12 +117,12 @@ Caminhos Alternativos
 
 --------------------------------
 
-Caso de Uso "Entrar Página Evento"
+Caso de Uso "Entrar Página Evento" (Classe PaginaEvento)
 
 Caminho  Principal
-1. O utilizador está autenticado e é mostrada a página "Homepage"
+1. O utilizador está autenticado e é mostrada a página "Home"
 2. O utilizador escolhe a opção "Ver" correspondente a um evento na lista de eventos disponíveis
-3. É mostrada a página "Evento X"
+3. É mostrada a página "PaginaEvento"
 
 Caminhos Alternativos
 1.1 O utilizador não está autenticado
@@ -140,21 +136,19 @@ Caminhos Alternativos
 Caso de Uso "Eliminar Evento"
 
 Caminho  Principal
-1. O utilizador está autenticado e é mostrada a página "Homepage"
-2. Utilizador seleciona um Evento da Lista e escolhe a opção "Eliminar Evento" 
-4. Aplicação mostra janela de confirmação
-5. Utilizador escolhe opção "Proceder"
-6. Aplicação elimina o evento do sistema
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Home" (Caso de Uso "Login"))
+1. Utilizador seleciona um Evento da Lista e escolhe a opção "Eliminar Evento" 
+2. Aplicação mostra janela de confirmação
+3. Utilizador escolhe opção "Proceder"
+4. Aplicação elimina o evento do sistema
 
 Caminhos Alternativos
-1.1 O utilizador não está autenticado
-1.1.1 O caso de usa continua no caso de uso "Login"
-2.1 O Utilizador carrega no botão "Sair"
-2.1.1 A aplicação fecha
-2.2 Não existem Eventos
-2.2.1 Botão "Eliminar Evento" não retorna qualquer ação
-5.1 Utilizador escolhe opção "Cancelar"
-5.1.1 Aplicação fecha janela de confirmação, voltando à página "Homepage"
+1.1 O Utilizador carrega no botão "Sair"
+1.1.1 A aplicação fecha
+1.2 Não existem Eventos
+1.2.1 Botão "Eliminar Evento" não retorna qualquer ação
+3.1 Utilizador escolhe opção "Cancelar"
+3.1.1 Aplicação fecha janela de confirmação, voltando à página "Home"
 
 
 
@@ -163,7 +157,7 @@ Caminhos Alternativos
 Caso de Uso "Importar Evento(s) de Ficheiro"
 
 Caminho  Principal
-(Pré-Condição: Utilizador está autenticado e encontra-se na página "Homepage")
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Home")
 1. Utilizador carrega no botão "Importar Eventos"
 2. Aplicação mostra janela com opçao para fazer upload de ficheiros com os eventos a serem importados
 3. Utilizador carrega no botão "Procurar ficheiro"
@@ -179,11 +173,11 @@ Caminhos Alternativos
 1.1 Utilizador clica em "Sair"
 1.1.1 Aplicação fecha
 3.1 Utilizador carrega no botão "Cancelar"
-3.1.1 Aplicação fecha janela de importação e volta a mostrar página "Homepage";
+3.1.1 Aplicação fecha janela de importação e volta a mostrar página "Home";
 5.1 Utilizador cola ou escreve caminho para o ficheiro;
 5.1.1 O caso de uso continua no ponto 6
 6.1 Utilizador clica em "Cancelar"
-6.1.1 Aplicação fecha janela de importação e volta a mostrar página "Homepage";
+6.1.1 Aplicação fecha janela de importação e volta a mostrar página "Home";
 7.1 A validação falha e uma mensagem é mostrada (Caso de Uso "Validar Ficheiro para Importação")
 7.1.1 O caso de uso de continua no ponto 2
 8.1 Importação não é bem sucedida
@@ -196,7 +190,7 @@ Caminhos Alternativos
 Caso de Uso "Importar Prova(s) de Ficheiro"
 
 Caminho  Principal
-(Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "PaginaEvento")
 1. Utilizador carrega no botão "Importar Provas"
 2. Aplicação mostra janela com opçao para fazer upload de ficheiros com as provas a serem importadas
 3. Utilizador carrega no botão "Procurar ficheiro"
@@ -256,18 +250,18 @@ Caminhos Alternativos
 Caso de Uso "Criar Prova"
 
 Cenário  Principal
-(Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "PaginaEvento")
 1. Utilizador escolhe opção "Criar Prova"
 2. Aplicação lê os dados do evento para disponibilizar nos campos dropdown apenas os Géneros, Escalões e Categorias do evento e é mostrada a página "Criar Prova"
 3. Utilizador escolhe as opções para a Prova (campos dropdown para Escalão Etário, Categoria de Peso e Género)
 4. Utilizador clica em "Criar Prova"
-5. Aplicação regista a nova Prova nos dados do Sistema (adicionando-a ao programa do Evento) e é mostrada a página "Homepage"
+5. Aplicação regista a nova Prova nos dados do Sistema (adicionando-a ao programa do Evento) e é mostrada a página "Home"
 
 Cenário Secundário
 1.1 Utilizador seleciona "voltar"
-1.1.1 Aplicação volta a mostrar página "Homepage"
+1.1.1 Aplicação volta a mostrar página "Home"
 4.1 Utilizador seleciona "Cancelar"
-4.1.1 Aplicação volta a mostrar página "Evento X"
+4.1.1 Aplicação volta a mostrar página "PaginaEvento"
 
 
 ----------------------------------------------
@@ -276,20 +270,20 @@ Cenário Secundário
 Caso de Uso "Editar Prova"
 
 Cenário  Principal
-(Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "PaginaEvento")
 1. Utilizador seleciona uma Prova da Lista e escolhe a opção "Editar Prova" 
 2. Aplicação lê os dados do evento para disponibilizar nos campos dropdown apenas os Géneros, Escalões e Categorias do evento e é mostrada a página "Editar Prova"
 3. Utilizador altera as opções da Prova (campos dropdown para Escalão Etário, Categoria de Peso e Género)
 4. Utilizador clica em "Guardar"
-5. Aplicação guarda as alterações à Prova e é mostrada a página "Homepage"
+5. Aplicação guarda as alterações à Prova e é mostrada a página "Home"
 
 Cenário Secundário
 1.1 Utilizador seleciona "voltar"
-1.1.1 Aplicação volta a mostrar página "Homepage"
+1.1.1 Aplicação volta a mostrar página "Home"
 1.2 Não existem Provas
 1.2.1 Botão "Editar Prova" não retorna qualquer ação
 4.1 Utilizador seleciona "Cancelar"
-4.1.1 Aplicação volta a mostrar página "Evento X"
+4.1.1 Aplicação volta a mostrar página "PaginaEvento"
 
 
 ----------------------------------------------
@@ -298,7 +292,7 @@ Cenário Secundário
 Caso de Uso "Eliminar Prova"
 
 Caminho  Principal
-(Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "PaginaEvento")
 1. Utilizador seleciona uma Prova da Lista e escolhe a opção "Eliminar Prova" 
 2. Aplicação mostra janela de confirmação
 3. Utilizador escolhe opção "Proceder"
@@ -306,25 +300,25 @@ Caminho  Principal
 
 Caminhos Alternativos
 1.1 Utilizador seleciona "voltar"
-1.1.1 Aplicação volta a mostrar página "Homepage"
+1.1.1 Aplicação volta a mostrar página "Home"
 1.2 Não existem Provas
 1.2.1 Botão "Eliminar Prova" não retorna qualquer ação
 3.1 Utilizador escolhe opção "Cancelar"
-3.1.1 Aplicação fecha janela de confirmação, voltando à página "Evento X"
+3.1.1 Aplicação fecha janela de confirmação, voltando à página "PaginaEvento"
 
 ----------------------------------------------
 
 
 Caso de Uso "Apresentar Programa" 
 Caminho  Principal
-(Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "PaginaEvento")
 
 1. Utilizador seleciona opção "Ver Programa"
 2. Aplicação lê dados das provas existentes do Evento e apresenta uma lista com as mesmas, separadas por fase
 
 Caminhos Alternativos
 1.1 Utilizador seleciona "voltar"
-1.1.1 Aplicação volta a mostrar página "Homepage"
+1.1.1 Aplicação volta a mostrar página "Home"
 
 
 ----------------------------------------------
@@ -332,7 +326,7 @@ Caminhos Alternativos
 
 Caso de Uso "Lançar Evento" 
 Caminho  Principal
-(Pré-Condição: Utilizador está autenticado e encontra-se na página "Evento X")
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "PaginaEvento")
 1. Utilizador escolhe opção "Lançar Evento"
 2. Aplicação mostra janela de confirmação
 3. Utilizador escolhe opção "Proceder"
@@ -342,15 +336,15 @@ Caminho  Principal
 
 Caminhos Alternativos
 1.1 Utilizador seleciona "voltar"
-1.1.1 Aplicação volta a mostrar página "Homepage"
+1.1.1 Aplicação volta a mostrar página "Home"
 3.1 Utilizador escolhe opção "Cancelar"
-3.1.1 Aplicação fecha janela de confirmação, voltando à página "Evento X"
+3.1.1 Aplicação fecha janela de confirmação, voltando à página "PaginaEvento"
 4.1 Aplicação percorre os Atletas Inscritos e verifica que não existem pelo menos 2 Inscritos
 4.1.1 A aplicação mostra a mensagem de erro "Tem de existir pelo menos 2 atletas inscritos para poder lançar evento"
-4.1.2 A aplicação fecha janela de confirmação e volta a mostrar página "Evento X"
+4.1.2 A aplicação fecha janela de confirmação e volta a mostrar página "PaginaEvento"
 5.1 Aplicação percorre as Provas do Evento e verifica que não existe pelo menos 1 Prova
 5.1.1 A aplicação mostra a mensagem de erro "Tem de existir pelo menos 1 prova criada para o evento para poder lançar evento"
-5.1.2 A aplicação fecha janela de confirmação e volta a mostrar página "Evento X"
+5.1.2 A aplicação fecha janela de confirmação e volta a mostrar página "PaginaEvento"
 
 
 
