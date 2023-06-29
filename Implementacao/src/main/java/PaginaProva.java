@@ -228,6 +228,9 @@ public class PaginaProva extends javax.swing.JFrame {
 
     private void btnRegistarResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistarResultadoActionPerformed
 
+        JFrame home = new PaginaCombateRegistarResultado();
+        home.show();
+        dispose();     
     }//GEN-LAST:event_btnRegistarResultadoActionPerformed
 
     private void btnDesassociarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesassociarEventoActionPerformed
