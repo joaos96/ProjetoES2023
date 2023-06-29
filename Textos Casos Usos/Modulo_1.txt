@@ -328,23 +328,18 @@ Caso de Uso "Lançar Evento"
 Caminho  Principal
 (Pré-Condição: Utilizador está autenticado e encontra-se na página "PaginaEvento")
 1. Utilizador escolhe opção "Lançar Evento"
-2. Aplicação mostra janela de confirmação
-3. Utilizador escolhe opção "Proceder"
-4. Aplicação percorre os Atletas Inscritos e verifica que existem pelo menos 2 Inscritos
-5. Aplicação percorre as Provas do Evento e verifica que existe pelo menos 1 Prova
-6. Caso de Uso continua no Caso de Uso "Definir Calendário" (Módulo 3)
+2. Aplicação percorre os Atletas Inscritos e verifica que existem pelo menos 2 Inscritos
+3. Aplicação percorre as Provas do Evento e verifica que existe pelo menos 1 Prova
+4. Caso de Uso continua no Caso de Uso "Definir Calendário" (Módulo 3)
 
 Caminhos Alternativos
 1.1 Utilizador seleciona "voltar"
 1.1.1 Aplicação volta a mostrar página "Home"
-3.1 Utilizador escolhe opção "Cancelar"
-3.1.1 Aplicação fecha janela de confirmação, voltando à página "PaginaEvento"
-4.1 Aplicação percorre os Atletas Inscritos e verifica que não existem pelo menos 2 Inscritos
-4.1.1 A aplicação mostra a mensagem de erro "Tem de existir pelo menos 2 atletas inscritos para poder lançar evento"
-4.1.2 A aplicação fecha janela de confirmação e volta a mostrar página "PaginaEvento"
-5.1 Aplicação percorre as Provas do Evento e verifica que não existe pelo menos 1 Prova
-5.1.1 A aplicação mostra a mensagem de erro "Tem de existir pelo menos 1 prova criada para o evento para poder lançar evento"
-5.1.2 A aplicação fecha janela de confirmação e volta a mostrar página "PaginaEvento"
+2.1 Aplicação percorre os Atletas Inscritos e verifica que não existem pelo menos 2 Inscritos
+2.1.1 A aplicação mostra a mensagem de erro "Tem de existir pelo menos 2 atletas inscritos para poder lançar evento"
+3.1 Aplicação percorre as Provas do Evento e verifica que não existe pelo menos 1 Prova
+3.1.1 A aplicação mostra a mensagem de erro "Tem de existir pelo menos 1 prova criada para o evento para poder lançar evento"
+
 
 
 
