@@ -172,3 +172,17 @@ Caminhos Secundários
 3.2.1.1 O caso de uso continua no passo 1
 3.2.2 O utilizador clica no botão "Cancelar"
 3.2.2.1 O processo é interrompido e aplicação mostra a mensagem de informação "Processo de Lançar Evento cancelado"
+
+----------------------------------------------------------------------------------------------------------------
+
+Caso de uso "Listar Países Mais Medalhados"
+
+Caso de uso "Ver Inscritos" 
+Caminho Principal
+(Pré-Condição: Utilizador está autenticado e encontra-se na página "Home" (Caso de Uso "Login"))
+1.O utilizador clica no botão “Ver Países mais Medalhados”
+2.A aplicação navega para a página de "Países Mais Medalhados" e mostra a lista dos países
+
+Caminhos Secundários
+1.1	O utilizador clica no botão de navegação para voltar para trás
+1.1.1 A aplicação navega para a página "Ver Evento"
